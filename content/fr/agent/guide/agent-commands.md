@@ -2,14 +2,15 @@
 title: Commandes de l'Agent
 kind: guide
 aliases:
-  - /fr/agent/faq/agent-status-and-information
-  - /fr/agent/faq/start-stop-restart-the-datadog-agent
-  - /fr/agent/faq/agent-commands
+    - /agent/faq/agent-status-and-information
+    - /agent/faq/start-stop-restart-the-datadog-agent
+    - /agent/faq/agent-commands
 further_reading:
-  - link: /agent/troubleshooting/
-    tag: Documentation
-    text: Dépannage de l'Agent
+- link: /agent/troubleshooting/
+  tag: Documentation
+  text: Dépannage de l'Agent
 ---
+
 <div class="alert alert-warning">
 Pour les systèmes basés sur Linux où la commande <code>service</code> wrapper n'est pas disponible, <a href="/agent/faq/agent-v6-changes/?tab=linux#service-lifecycle-commands">consultez la liste des alternatives</a>.
 </div>
@@ -33,9 +34,9 @@ Liste des commandes pour démarrer l'Agent Datadog :
 | Source     | `sudo service datadog-agent start`                                 |
 | Windows    | Consultez la [documentation dédiée à l'Agent pour Windows][3].                          |
 
-[1]: /fr/agent/
-[2]: /fr/agent/docker/
-[3]: /fr/agent/basic_agent_usage/windows/
+[1]: /agent/
+[2]: /agent/docker/
+[3]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -48,7 +49,7 @@ Liste des commandes pour démarrer l'Agent Datadog :
 | Windows  | Consultez la [documentation dédiée à l'Agent pour Windows][2]. |
 
 [1]: https://github.com/DataDog/docker-dd-agent/blob/master/README.md
-[2]: /fr/agent/basic_agent_usage/windows/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -69,8 +70,8 @@ Liste des commandes pour arrêter l'Agent Datadog :
 | Source     | `sudo service datadog-agent stop`                                                |
 | Windows    | Consultez la [documentation dédiée à l'Agent pour Windows][2].                                        |
 
-[1]: /fr/agent/
-[2]: /fr/agent/basic_agent_usage/windows/
+[1]: /agent/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -83,7 +84,7 @@ Liste des commandes pour arrêter l'Agent Datadog :
 | Windows  | Consultez la [documentation dédiée à l'Agent pour Windows][2]. |
 
 [1]: https://github.com/DataDog/docker-dd-agent/blob/master/README.md
-[2]: /fr/agent/basic_agent_usage/windows/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -103,9 +104,9 @@ Liste des commandes pour redémarrer l'Agent Datadog :
 | Source     | *Plate-forme non prise en charge*                                                           |
 | Windows    | Consultez la [documentation dédiée à l'Agent sous Windows][3].                                        |
 
-[1]: /fr/agent/
-[2]: /fr/agent/docker/?tab=standard#setup
-[3]: /fr/agent/basic_agent_usage/windows/
+[1]: /agent/
+[2]: /agent/docker/?tab=standard#setup
+[3]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -118,7 +119,7 @@ Liste des commandes pour redémarrer l'Agent Datadog :
 | Windows  | Consultez la [documentation dédiée à l'Agent pour Windows][2]. |
 
 [1]: https://github.com/DataDog/docker-dd-agent/blob/master/README.md
-[2]: /fr/agent/basic_agent_usage/windows/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -141,7 +142,7 @@ Liste des commandes pour afficher le statut de l'Agent Datadog :
 | Source          | `sudo service datadog-agent status`                                           |
 
 
-[1]: /fr/agent/
+[1]: /agent/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -154,7 +155,7 @@ Liste des commandes pour afficher le statut de l'Agent Datadog :
 | Source          | `sudo ~/.datadog-agent/bin/agent status`                                 |
 | Windows         | Consultez la [documentation dédiée à l'Agent pour Windows][1].                                |
 
-[1]: /fr/agent/basic_agent_usage/windows/#status-and-information
+[1]: /agent/basic_agent_usage/windows/#status-and-information
 {{% /tab %}}
 {{% tab "Agent de cluster" %}}
 
@@ -196,8 +197,8 @@ Running Checks
     Average Execution Time : 0ms
 ```
 
-[1]: /fr/agent/basic_agent_usage/#gui
-[2]: /fr/agent/basic_agent_usage/windows/#status-and-information
+[1]: /agent/basic_agent_usage/#gui
+[2]: /agent/basic_agent_usage/windows/#status-and-information
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -221,7 +222,7 @@ Checks
    - Collected 15 metrics, 0 events & 1 service check
 ```
 
-[1]: /fr/agent/basic_agent_usage/windows/#status-and-information
+[1]: /agent/basic_agent_usage/windows/#status-and-information
 {{% /tab %}}
 {{% tab "Agent de cluster" %}}
 
@@ -266,15 +267,15 @@ Certaines options disposent de flags et d'options détaillées que vous pouvez c
 | `installservice`  | Installe l'Agent dans le gestionnaire de contrôle des services. Windows uniquement.         |
 | `jmx`             | Dépannage JMX.                                                        |
 | `launch-gui`      | Démarre l'interface graphique de l'Agent Datadog.                                                |
-| `regimport`       | Importe les paramètres de registre dans `datadog.yaml`. Windows uniquement.             |
+| `regimport`       | Importe les paramètres de registre dans `datadog.yaml`. Windows uniquement. Obsolète depuis la version 7.27.0.             |
 | `remove-service`  | Supprime l'Agent du gestionnaire de contrôle des services. Windows uniquement.            |
 | `restart-service` | Redémarre l'Agent dans le gestionnaire de contrôle des services. Windows uniquement.         |
 | `start-service`   | Démarre l'Agent dans le gestionnaire de contrôle des services. Windows uniquement.           |
 | `stopservice`     | Arrête l'Agent dans le gestionnaire de contrôle des services. Windows uniquement.            |
 | `version`         | Affiche les informations sur la version.                                                         |
 
-[1]: /fr/agent/troubleshooting/config/
-[2]: /fr/agent/troubleshooting/send_a_flare/
+[1]: /agent/troubleshooting/config/
+[2]: /agent/troubleshooting/send_a_flare/
 {{% /tab %}}
 {{< /tabs >}}
 
