@@ -2,15 +2,16 @@
 title: Schéma JSON des widgets
 kind: documentation
 aliases:
-  - /fr/graphing/graphing_json/widget_json/
+  - /graphing/graphing_json/widget_json/
 further_reading:
-  - link: /dashboards/graphing_json/
-    tag: Documentation
-    text: Créer des dashboards avec JSON
-  - link: /dashboards/graphing_json/request_json/
-    tag: Documentation
-    text: Schéma JSON des requêtes
+- link: /dashboards/graphing_json/
+  tag: Documentation
+  text: Créer des dashboards avec JSON
+- link: /dashboards/graphing_json/request_json/
+  tag: Documentation
+  text: Schéma JSON des requêtes
 ---
+
 Pour en savoir plus sur l'éditeur visuel, consultez la documentation sur l'[éditeur de graphiques][1].
 
 ## Schéma de l'axe des ordonnées
@@ -61,7 +62,7 @@ EVENTS_SCHEMA = {
 }
 ```
 
-Consultez la [documentation relative au flux d'événements][2] pour en savoir plus sur la syntaxe de la requête.
+Consultez la [documentation relative au flux d'événements][2] pour en savoir plus sur la syntaxe des requêtes.
 
 ### Exemples
 
@@ -229,5 +230,5 @@ Par exemple, pour indiquer que vous souhaitez afficher un intervalle de temps de
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/dashboards/querying/#graphing-editor
-[2]: /fr/events/
+[1]: /dashboards/querying/#graphing-editor
+[2]: /events/
