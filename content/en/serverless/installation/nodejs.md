@@ -117,10 +117,13 @@ To install and configure the Datadog Serverless Plugin, follow these steps:
     ```
     Find your Datadog API key on the [API Management page][3]. For additional settings, see the [plugin documentation][1].
 
+If you encounter the "Code uncompressed size is greater than max allowed size of 272629760" error after adding `serverless-plugin-datadog`, see this [troubleshooting guide][4]. 
+
 
 [1]: https://docs.datadoghq.com/serverless/serverless_integrations/plugin
 [2]: /serverless/libraries_integrations/extension
 [3]: https://app.datadoghq.com/organization-settings/api-keys
+[4]: /serverless/guide/serverless_package_too_large
 {{% /tab %}}
 {{% tab "AWS SAM" %}}
 
@@ -483,15 +486,6 @@ exports.handler = async (event) => {
   sendDistributionMetric(
     "coffee_house.order_value", // metric name
     12.45, // metric value
-    "product:latte", // tag
-    "order:online", // another tag
-  );
-
-  // submit a custom metric with timestamp
-  sendDistributionMetricWithDate(
-    "coffee_house.order_value", // metric name
-    12.45, // metric value
-    new Date(Date.now()), // date, must be within last 20 mins
     "product:latte", // tag
     "order:online", // another tag
   );
