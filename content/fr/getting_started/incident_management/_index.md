@@ -2,30 +2,31 @@
 title: Débuter avec la Gestion des incidents
 kind: documentation
 further_reading:
-  - link: /monitors/incident_management/datadog_clipboard
-    tag: Documentation
-    text: Presse-papiers Datadog
-  - link: https://www.youtube.com/watch?v=QIambwILy_M
-    tag: Vidéo
-    text: Datadog sur la Gestion des incidents
-  - link: /monitors/incident_management
-    tag: Documentation
-    text: Gestion des incidents
-  - link: https://www.datadoghq.com/blog/incident-response-with-datadog/
-    tag: Blog
-    text: Gestion des incidents avec Datadog
-  - link: /monitors/incident_management/notification_rules
-    tag: Documentation
-    text: Règles de notification
-  - link: /integrations/slack/?tab=slackapplicationus#using-datadog-incidents
-    tag: Documentation
-    text: Intégration de Slack avec les incidents
-  - link: https://www.datadoghq.com/blog/incident-postmortem-process-best-practices/
-    tag: Blog
-    text: Pratiques recommandées pour la création de post-mortems d'incident
+    - link: /monitors/incident_management/datadog_clipboard
+      tag: Documentation
+      text: Presse-papiers Datadog
+    - link: "https://www.youtube.com/watch?v=QIambwILy_M"
+      tag: Vidéo
+      text: Datadog sur la Gestion des incidents
+    - link: /monitors/incident_management
+      tag: Documentation
+      text: Gestion des incidents
+    - link: "https://www.datadoghq.com/blog/incident-response-with-datadog/"
+      tag: Blog
+      text: Gestion des incidents avec Datadog
+    - link: /monitors/incident_management/notification_rules
+      tag: Documentation
+      text: Règles de notification
+    - link: "/integrations/slack/?tab=slackapplicationus#using-datadog-incidents"
+      tag: Documentation
+      text: Intégration de Slack avec les incidents
+    - link: "https://www.datadoghq.com/blog/incident-postmortem-process-best-practices/"
+      tag: Blog
+      text: Pratiques recommandées pour la création de post-mortems d'incident
 ---
+
 {{< site-region region="gov" >}}
-<div class="alert alert-warning">La fonctionnalité de gestion des incidents n'est pas disponible pour le site gouvernemental de Datadog.</div>
+<div class="alert alert-warning">La fonctionnalité de gestion des incidents n'est pas disponible le site Datadog que vous avez sélectionné ({{< region-param key="dd_site_name" >}}).</div>
 {{< /site-region >}}
 
 ## Présentation
@@ -105,7 +106,7 @@ Ce guide décrit l'utilisation du [presse-papiers Datadog][2] pour déclarer un 
 
 La page d'un incident comprend quatre sections principales : _Overview_, _Timeline_, _Remediation_ et _Communication_. Mettez à jour ces sections à mesure que l'incident évolue pour tenir l'équipe informée.
 
-#### Overview
+#### Présentation
 
 **Scénario :** Après une première enquête, vous découvrez que le problème est causé par un host qui arrive à court de mémoire. Vous avez également été informé qu'une petite partie des clients est impactée, avec un chargement des pages ralenti. Le premier signalement client est arrivé il y a 15 minutes. Il s'agit d'un incident de sévérité 3.
 
@@ -173,7 +174,7 @@ La _Timeline_ affiche les modifications des champs et des informations de l'inci
 
     {{< img src="getting_started/incident_management/add_from_slack.png" alt="Ajouter depuis Slack" responsive="true" style="width:40%;">}}
 
-    Vous pouvez ajouter n'importe quel commentaire publié sur le canal Slack de l'incident à la timeline afin de consolider facilement les communications importantes relatives aux phases d'enquête et de remédiation.
+    Vous pouvez ajouter n'importe quel commentaire publié sur le canal Slack de l'incident à la timeline afin de consolider les communications importantes relatives aux phases d'enquête et de remédiation.
 
 #### Remediation
 
@@ -273,12 +274,12 @@ Pour personnaliser la Gestion des incident, accédez à la [page de paramètres 
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/integrations/slack/
-[2]: /fr/monitors/incident_management/datadog_clipboard
-[3]: /fr/notebooks/#overview
-[4]: /fr/monitors/incident_management/#from-a-graph
-[5]: /fr/monitors/incident_management/#from-a-monitor
-[6]: /fr/api/latest/incidents/#create-an-incident
-[7]: /fr/monitors/incident_management/#status-levels
-[8]: /fr/monitors/incident_management/notification_rules
+[1]: /integrations/slack/
+[2]: /monitors/incident_management/datadog_clipboard
+[3]: /notebooks/#overview
+[4]: /monitors/incident_management/#from-a-graph
+[5]: /monitors/incident_management/#from-a-monitor
+[6]: /api/latest/incidents/#create-an-incident
+[7]: /monitors/incident_management/#status-levels
+[8]: /monitors/incident_management/notification_rules
 [9]: https://app.datadoghq.com/incidents/settings
