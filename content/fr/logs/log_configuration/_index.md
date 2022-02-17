@@ -1,22 +1,22 @@
 ---
-title: Log Configuration
-kind: Documentation
-description: "Traiter, enrichir, contrôler et gérer vos logs depuis la page Logs\_Configuration"
 aliases:
-  - /fr/logs/processing
+- /fr/logs/processing
+description: Traiter, enrichir, contrôler et gérer vos logs depuis la page Logs Configuration
 further_reading:
-  - link: https://www.datadoghq.com/blog/logging-without-limits/
-    tag: Blog
-    text: En savoir plus sur Logging without Limits*
-  - link: /logs/guide/
-    tag: Guide
-    text: Guides supplémentaires sur la journalisation avec Datadog
+- link: https://www.datadoghq.com/blog/logging-without-limits/
+  tag: Blog
+  text: En savoir plus sur Logging without Limits*
+- link: /logs/guide/
+  tag: Guide
+  text: Guides supplémentaires sur la journalisation avec Datadog
+kind: Documentation
+title: Log Configuration
 ---
 ## Présentation
 
 La solution Logging without Limits* de Datadog dissocie l'ingestion des logs de leur indexation. Elle vous permet de choisir les logs que vous souhaitez indexer et conserver, ou archiver, et de gérer les paramètres et contrôles de façon globale depuis la [section de configuration des logs][1].
 
-{{< img src="logs/log_configuration_overview.gif" alt="La section de configuration des logs dans l'application Datadog">}}
+{{< img src="logs/log_configuration_overview.mp4" alt="La section de configuration des logs dans l'application Datadog" video=true >}}
 
 ## Options de configuration
 
@@ -40,12 +40,12 @@ Une fois votre configuration terminée, commencez à examiner et à étudier vos
 *Logging without Limits est une marque déposée de Datadog, Inc.
 
 [1]: https://app.datadoghq.com/logs/pipelines
-[2]: /fr/logs/log_configuration/pipelines
-[3]: /fr/logs/log_configuration/processors
-[4]: /fr/logs/log_configuration/attributes_naming_convention/
-[5]: /fr/logs/log_configuration/logs_to_metrics/
-[6]: /fr/logs/log_configuration/indexes
-[7]: /fr/logs/log_configuration/archives/
-[8]: /fr/logs/log_configuration/rehydrating
-[9]: /fr/logs/guide/logs-rbac/
-[10]: /fr/logs/explorer/
+[2]: /logs/log_configuration/pipelines
+[3]: /logs/log_configuration/processors
+[4]: /logs/log_configuration/attributes_naming_convention/
+[5]: /logs/log_configuration/logs_to_metrics/
+[6]: /logs/log_configuration/indexes
+[7]: /logs/log_configuration/archives/
+[8]: /logs/log_configuration/rehydrating
+[9]: /logs/guide/logs-rbac/
+[10]: /logs/explorer/
