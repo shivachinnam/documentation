@@ -1,18 +1,17 @@
 ---
-title: Suivi des déploiements
-kind: documentation
-description: Utiliser Datadog pour suivre vos déploiements à l'aide de tags de version
 aliases:
-  - /fr/tracing/version_tracking
+- /fr/tracing/version_tracking
+description: Utiliser Datadog pour suivre vos déploiements à l'aide de tags de version
 further_reading:
-  - link: getting_started/tagging/unified_service_tagging/
-    tag: Documentation
-    text: En savoir plus sur le tagging de service unifié et les tags réservés
-  - link: tracing/app_analytics
-    tag: Documentation
-    text: Utiliser la version en tant que dimension dans vos requêtes App Analytics
----
-## Tag « version »
+- link: getting_started/tagging/unified_service_tagging/
+  tag: Documentation
+  text: En savoir plus sur le tagging de service unifié et les tags réservés
+- link: tracing/app_analytics
+  tag: Documentation
+  text: Utiliser la version en tant que dimension dans vos requêtes App Analytics
+kind: documentation
+title: Suivi des déploiements
+---## Tag « version »
 
 Le tag `version` est réservé au tagging de service unifié. Il est appliqué aux métriques d'infrastructure (checks de host, de conteneur, de processus et NPM), métriques de trace, traces, profils et logs.
 
@@ -93,7 +92,7 @@ Ce tableau vous permet d'afficher les traces recueillies en temps réel ou les t
 
 **Remarque :** la comparaison d'erreurs est basée sur les types d'erreur _observés_ . Si un type d'erreur est rare, il est possible qu'il soit indiqué comme absent uniquement du fait qu'il n'a pas _encore_ été observé.
 
-{{< img src="tracing/deployment_tracking/ErrorComparison.gif" alt="Comparaison des erreurs"  style="width:100%;">}}
+{{< img src="tracing/deployment_tracking/ErrorComparison.mp4" alt="Comparaison des erreurs" video=true style="width:100%;">}}
 
 ### Comparaison des endpoints
 
@@ -160,7 +159,7 @@ Toutes ces informations peuvent être exportées vers des dashboards et des moni
 
 ### Analyse et recherche de traces
 
-{{< img src="tracing/deployment_tracking/AnalyticsErrorsByVersion.gif" alt="Version dans App Analytics"  style="width:100%;">}}
+{{< img src="tracing/deployment_tracking/AnalyticsErrorsByVersion.mp4" alt="Version dans App Analytics" video=true style="width:100%;">}}
 
 Lorsqu'il est disponible, le tag `version` peut être utilisé pour la recherche et l'analyse de traces, que ce soit pour filtrer le mode Live Search et les traces indexées, ou pour filtrer ou regrouper des requêtes d'analyse.
 
@@ -177,4 +176,4 @@ Vous avez la possibilité de rechercher les profils correspondant à une version
 {{< partial name="whats-next/whats-next.html" >}}
 
 
-[1]: /fr/getting_started/tagging/unified_service_tagging/
+[1]: /getting_started/tagging/unified_service_tagging/
