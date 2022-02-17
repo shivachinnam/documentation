@@ -2,10 +2,11 @@
 title: Gestion de la configuration du runtime de l'Agent
 kind: documentation
 further_reading:
-  - link: /agent/troubleshooting/debug_mode/
-    tag: Dépannage de l'Agent
-    text: Mode debugging de l'Agent
+- link: /agent/troubleshooting/debug_mode/
+  tag: Dépannage de l'Agent
+  text: Mode debugging de l'Agent
 ---
+
 Si vous utilisez l'Agent 6.19+/7.19+, vous avez la possibilité de modifier certains paramètres de façon dynamique, sans qu'un redémarrage de l'Agent ne soit nécessaire pour appliquer ces modifications.
 
 **Remarque** : les modifications apportées de façon dynamique ne sont que temporaires. Elles seront perdues au prochain redémarrage de l'Agent.
@@ -44,4 +45,4 @@ La configuration complète du runtime peut également être affichée en utilisa
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/agent/basic_agent_usage/windows/#agent-v6
+[1]: /agent/basic_agent_usage/windows/#agent-v6
