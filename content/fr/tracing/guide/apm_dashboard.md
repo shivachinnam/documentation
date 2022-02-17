@@ -2,22 +2,23 @@
 title: Créer un dashboard pour suivre et corréler les métriques APM
 kind: guide
 further_reading:
-  - link: /tracing/guide/alert_anomalies_p99_database/
-    tag: "3\_minutes"
-    text: Être alerté en cas de latence au 99e centile anormale pour un service de base de données
-  - link: /tracing/guide/week_over_week_p50_comparison/
-    tag: "2\_minutes"
-    text: Comparer la latence d'un service avec celle de la semaine précédente
-  - link: /tracing/guide/slowest_request_daily/
-    tag: "3\_minutes"
-    text: Débuguer la trace la plus lente sur l'endpoint le plus lent d'un service web
-  - link: /tracing/guide/add_span_md_and_graph_it/
-    tag: "7\_minutes"
-    text: Ajouter des tags de span et filtrer les données de performance de votre application
-  - link: /tracing/guide/
-    tag: ''
-    text: Tous les guides
+- link: /tracing/guide/alert_anomalies_p99_database/
+  tag: 3 minutes
+  text: Être alerté en cas de latence au 99e centile anormale pour un service de base de données
+- link: /tracing/guide/week_over_week_p50_comparison/
+  tag: 2 minutes
+  text: Comparer la latence d'un service avec celle de la semaine précédente
+- link: /tracing/guide/slowest_request_daily/
+  tag: 3 minutes
+  text: Débuguer la trace la plus lente sur l'endpoint le plus lent d'un service web
+- link: /tracing/guide/add_span_md_and_graph_it/
+  tag: 7 minutes
+  text: Ajouter des tags de span et filtrer ou regrouper les données de performance de votre application
+- link: /tracing/guide/
+  tag: ""
+  text: Tous les guides
 ---
+
 _Temps de lecture : 4 minutes_
 
 {{< img src="tracing/guide/apm_dashboard/dashboard_7.mp4" alt="dashboard 7" video="true"  style="width:90%;">}}
@@ -118,7 +119,7 @@ Dans ce guide, vous découvrirez comment procéder pour ajouter des métriques d
 
     {{< img src="tracing/guide/apm_dashboard/dashboard_10.mp4" alt="dashboard 10" video="true"  style="width:90%;">}}
 
-    Tirez parti de ces fonctionnalités pour mettre en œuvre les trois piliers de la visibilité de Datadog et profiter d'une visibilité optimale sur toutes vos métriques. Un dashboard simple peut être facilement transformé en outil tout-en-un puissant qui vous permettra de surveiller efficacement votre organisation :
+    Tirez parti de ces fonctionnalités pour mettre en œuvre les trois piliers de la visibilité de Datadog et profiter d'une visibilité optimale sur toutes vos métriques. Un dashboard simple peut être transformé en outil tout-en-un puissant qui vous permettra de surveiller efficacement votre organisation :
 
     {{< img src="tracing/guide/apm_dashboard/dashboard_7.mp4" alt="dashboard 7" video="true"  style="width:90%;">}}
 
@@ -127,7 +128,7 @@ Dans ce guide, vous découvrirez comment procéder pour ajouter des métriques d
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://app.datadoghq.com/apm/services
-[2]: /fr/dashboards/widgets/timeseries/
-[3]: /fr/tracing/guide/metrics_namespace/
+[2]: /dashboards/widgets/timeseries/
+[3]: /tracing/guide/metrics_namespace/
 [4]: https://app.datadoghq.com/apm/analytics
-[5]: /fr/events/
+[5]: /events/
