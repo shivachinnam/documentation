@@ -1,20 +1,20 @@
 ---
-title: "Live\_Tail"
-kind: documentation
-description: Effectuer des recherches et des analyses sur l'ensemble de vos logs
 aliases:
-  - /fr/logs/explore/livetail
-  - /fr/logs/live_tail
+- /fr/logs/explore/livetail
+- /fr/logs/live_tail
+description: Effectuer des recherches et des analyses sur l'ensemble de vos logs
 further_reading:
-  - link: /logs/log_configuration/processors
-    tag: Documentation
-    text: Apprendre à traiter vos logs
-  - link: logs/explorer/side_panel
-    tag: Documentation
-    text: Volet latéral des logs
-  - link: logs/explorer/#list-of-logs
-    tag: Documentation
-    text: Liste des logs
+- link: /logs/log_configuration/processors
+  tag: Documentation
+  text: Apprendre à traiter vos logs
+- link: logs/explorer/side_panel
+  tag: Documentation
+  text: Volet latéral des logs
+- link: logs/explorer/#list-of-logs
+  tag: Documentation
+  text: Liste des logs
+kind: documentation
+title: Live Tail
 ---
 ## Présentation
 
@@ -26,7 +26,7 @@ La solution Live Tail s'avère par exemple particulièrement utile pour vérifi
 
 Dans le [Log Explorer][3], sélectionnez l'option Live Tail dans l'intervalle pour interroger les logs qui transitent par Datadog.
 
-{{< img src="logs/explorer/live_tail/livetail.gif" alt="Live Tail des logs" style="width:100%;" >}}
+{{< img src="logs/explorer/live_tail/livetail.mp4" alt="Live Tail des logs" video=true style="width:100%;" >}}
 
 Contrairement aux requêtes sur les logs indexés dans le [Log Explorer][3], il n'est *pas* nécessaire de [déclarer une facette][4] avant de pouvoir créer une requête dans la vue Live Tail.
 
@@ -36,7 +36,7 @@ Contrairement aux requêtes sur les logs indexés dans le [Log Explorer][3], il
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/logs/indexes#exclusion-filters
-[2]: /fr/logs/log_configuration/pipelines
-[3]: /fr/logs/explorer
-[4]: /fr/logs/explorer/facets/
+[1]: /logs/indexes#exclusion-filters
+[2]: /logs/log_configuration/pipelines
+[3]: /logs/explorer
+[4]: /logs/explorer/facets/
