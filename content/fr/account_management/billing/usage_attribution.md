@@ -1,9 +1,9 @@
 ---
-title: Attribution de l'utilisation
-kind: documentation
 aliases:
-  - /fr/account_management/billing/advanced_usage_reporting/
-  - /fr/account_management/billing/custom_usage_reporitng/
+- /fr/account_management/billing/advanced_usage_reporting/
+- /fr/account_management/billing/custom_usage_reporitng/
+kind: documentation
+title: Attribution de l'utilisation
 ---
 ## Présentation
 
@@ -59,7 +59,7 @@ Dès que la création de rapports est lancée, ces derniers sont mis à jour quo
 - Si vous avez activé les comptes multi-org, l'utilisation est résumée pour toutes les organisations Datadog du compte parent.
 - Utilisez le sélecteur d'intervalle pour accéder aux rapports des mois précédents.
 - Les rapports mensuels ne sont générés qu'à la fin du mois. Chaque rapport mensuel est disponible le deuxième jour du mois suivant. 
-- Utilisez l'option « Export Current View » pour télécharger des rapports. Les rapports `.tsv` incluent les valeurs et pourcentages d'utilisation, afin de simplifier l'attribution des ressources et la rétrofacturation.
+- Utilisez l'option Export Current View pour télécharger des rapports. Les rapports `.tsv` incluent les valeurs et pourcentages d'utilisation, afin de simplifier l'attribution des ressources et la rétrofacturation.
 
 Les données mensuelles peuvent également être récupérées à l'aide de l'API publique de l'outil. Consultez la [documentation sur l'endpoint d'API][1] pour en savoir plus.
 
@@ -93,6 +93,6 @@ Le tableau ci-dessous présente un exemple de rapport quotidien pour deux tags d
 
 Lorsque vous utilisez plusieurs tags, les rapports Daily Usage Attribution et Monthly Usage Attribution contiennent des données pour toutes les combinaisons possibles de ces tags. Ils constituent ainsi d'excellents ensembles de données de base pour vos tâches d'analyse plus approfondie. Par exemple, vous pouvez utiliser des opérations de regroupement ou de pivotement pour générer des vues afin d'étudier plus précisément un certain sous-ensemble de tags, ou encore d'effectuer des agrégations temporelles personnalisées.
 
-[1]: https://docs.datadoghq.com/fr/api/v1/usage-metering/#get-the-list-of-available-monthly-custom-reports
-[2]: https://docs.datadoghq.com/fr/api/v1/usage-metering/#get-the-list-of-available-daily-custom-reports
-[3]: https://docs.datadoghq.com/fr/getting_started/tagging/#defining-tags
+[1]: https://docs.datadoghq.com/api/v1/usage-metering/#get-the-list-of-available-monthly-custom-reports
+[2]: https://docs.datadoghq.com/api/v1/usage-metering/#get-the-list-of-available-daily-custom-reports
+[3]: https://docs.datadoghq.com/getting_started/tagging/#defining-tags
