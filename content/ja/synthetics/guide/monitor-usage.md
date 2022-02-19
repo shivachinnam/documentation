@@ -2,23 +2,25 @@
 title: Synthetics の使用量を監視する
 kind: ガイド
 further_reading:
-  - link: /synthetics/api_tests
-    tag: ドキュメント
-    text: API テストを作成する
-  - link: /synthetics/multistep
-    tag: ドキュメント
-    text: マルチステップ API テストを作成する
-  - link: /synthetics/browser_tests
-    tag: ドキュメント
-    text: ブラウザテストを作成する
-  - link: https://www.datadoghq.com/blog/test-creation-best-practices/
-    tag: ブログ
-    text: エンドツーエンドテスト作成のベストプラクティス
+    - link: /synthetics/api_tests
+      tag: ドキュメント
+      text: API テストを作成する
+    - link: /synthetics/multistep
+      tag: ドキュメント
+      text: マルチステップ API テストを作成する
+    - link: /synthetics/browser_tests
+      tag: ドキュメント
+      text: ブラウザテストを作成する
+    - link: "https://www.datadoghq.com/blog/test-creation-best-practices/"
+      tag: ブログ
+      text: エンドツーエンドテスト作成のベストプラクティス
+
 ---
+
 Synthetic テストには[推定使用量メトリクス][1]が付属しており、使用量を追跡できます。このメトリクスにより、特に次のことが可能になります。
 
 * 時間の経過とともに使用量がどのように変化するかを理解します。
-* Synthetics の使用量に最も寄与していて、カバレッジが最大のチーム、アプリケーション、またはサービスを視覚化します。
+* Synthetics の使用量に最も寄与しているチーム、アプリケーション、またはサービスを視覚化します。
 * 請求に影響を与える可能性のある予期しない使用量の急増について警告します。
 
 Synthetics の使用量を視覚化または警告するには、次のクエリを使用します。
@@ -35,9 +37,9 @@ Synthetics の使用量を視覚化または警告するには、次のクエリ
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/account_management/billing/usage_metrics/#types-of-usage
-[2]: /ja/synthetics/api_tests
-[3]: /ja/synthetics/multistep
-[4]: /ja/synthetics/browser_tests
-[5]: /ja/monitors/create/types/anomaly/
-[6]: /ja/monitors/create/types/forecasts
+[1]: /account_management/billing/usage_metrics/#types-of-usage
+[2]: /synthetics/api_tests
+[3]: /synthetics/multistep
+[4]: /synthetics/browser_tests
+[5]: /monitors/create/types/anomaly/
+[6]: /monitors/create/types/forecasts
