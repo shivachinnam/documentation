@@ -32,7 +32,7 @@ it to Datadog and other destinations. Vector capabilities include:
 
 **Notes**:
 
-- Only logs and metrics aggregation is supported.
+- Only logs, metrics and traces aggregation is supported. APM stats aggregation for traces are not yet supported.
 - Vector can directly collect logs and metrics from alternative sources. When doing so, third party logs may not include proper tagging. A convenient way to [add tags][8], source or service values is to use the [Vector Remap Language][9].
 
 ## Configuration
@@ -62,6 +62,19 @@ vector:
 Where `VECTOR_HOST` is the hostname of the system running Vector and `VECTOR_PORT` is the TCP port on which
 the Vector `datadog_agent` source is listening.
 
+### Trace Agent configuration
+To send traces to Vector, update the Agent configuration file, `datadog.yaml`.
+
+```yaml
+apm_config:
+  enabled: true
+  # Adjust protocol to https if TLS/SSL is enabled on the Vector side
+  apm_dd_url: "http://<VECTOR_HOST>:<VECTOR_PORT>"
+```
+
+Where `VECTOR_HOST` is the hostname of the system running Vector and `VECTOR_PORT` is the TCP port on which
+the Vector `datadog_agent` source is listening.
+
 ### Docker configuration
 
 If you are using Docker, add the following to your Agent configuration file.
@@ -71,6 +84,8 @@ If you are using Docker, add the following to your Agent configuration file.
 -e DD_VECTOR_METRICS_ENABLED=true
 -e DD_VECTOR_LOGS_URL=http://<VECTOR_HOST>:<VECTOR_PORT>
 -e DD_VECTOR_LOGS_ENABLED=true
+-e DD_APM_CONFIG_ENABLED=true
+-e DD_APM_CONFIG_APM_DD_URL=http://<VECTOR_HOST>:<VECTOR_PORT>
 ```
 
 ### Vector configuration
@@ -81,7 +96,8 @@ Vector must be configured with at least one [datadog_metrics sink][12].
 See the official [Vector documentation][13] for all available configuration parameters and transforms that can be
 applied to logs while they are processed by Vector.
 
-Here is a configuration example that adds a tag to every log and metric using the Vector Remap Language:
+Here is a sample configuration example that adds a tag to every log and every metric along with traces filtering using
+the Vector Remap Language:
 
 ```yaml
 sources:
@@ -107,6 +123,12 @@ transforms:
       - datadog_agents.metrics
     source: |
       .tags.sender = "vector"
+  filter_traces:
+    type: filer
+    condition: .env != "dev"
+        inputs:
+      - datadog_agents.traces
+    
 
 sinks:
   log_to_datadog:
@@ -120,6 +142,11 @@ sinks:
     type: datadog_logs
     inputs:
        - tag_metrics
+    default_api_key: "${DATADOG_API_KEY_ENV_VAR}"
+  traces_to_datadog:
+    type: datadog_traces
+    inputs:
+       - filter_traces
     default_api_key: "${DATADOG_API_KEY_ENV_VAR}"
 ```
 
