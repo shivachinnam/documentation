@@ -75,6 +75,9 @@ apm_config:
 Where `VECTOR_HOST` is the hostname of the system running Vector and `VECTOR_PORT` is the TCP port on which
 the Vector `datadog_agent` source is listening.
 
+**Notes**: Vector support traces from Trace Agent version 6.32/7.32 or below, newer trace format support will be added
+later. Thus Trace Agent 6.33/7.33+ are not yet supported in this configuration.
+
 ### Docker configuration
 
 If you are using Docker, add the following to your Agent configuration file.
