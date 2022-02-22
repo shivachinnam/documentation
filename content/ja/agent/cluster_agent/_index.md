@@ -1,27 +1,27 @@
 ---
-title: Kubernetes 対応の Cluster Agent
-kind: documentation
 aliases:
-  - /ja/agent/kubernetes/host_setup
+- /ja/agent/kubernetes/host_setup
 further_reading:
-  - link: 'https://www.datadoghq.com/blog/datadog-cluster-agent/'
-    tag: ブログ
-    text: Datadog Cluster Agent のご紹介
-  - link: 'https://www.datadoghq.com/blog/autoscale-kubernetes-datadog/'
-    tag: ブログ
-    text: Datadog メトリクスを使用して Kubernetes のワークロードをオートスケーリングする
-  - link: /agent/cluster_agent/clusterchecks/
-    tag: ドキュメント
-    text: Autodiscovery によるクラスターチェックの実行
-  - link: /agent/kubernetes/daemonset_setup/
-    tag: ドキュメント
-    text: Kubernetes DaemonSet のセットアップ
-  - link: /agent/kubernetes/integrations/
-    tag: ドキュメント
-    text: カスタムインテグレーション
-  - link: 'https://github.com/DataDog/datadog-agent/blob/master/docs/cluster-agent/GETTING_STARTED.md#troubleshooting'
-    tag: Github
-    text: Datadog Cluster Agent のトラブルシューティング
+- link: https://www.datadoghq.com/blog/datadog-cluster-agent/
+  tag: ブログ
+  text: Datadog Cluster Agent のご紹介
+- link: https://www.datadoghq.com/blog/autoscale-kubernetes-datadog/
+  tag: ブログ
+  text: Datadog メトリクスを使用して Kubernetes のワークロードをオートスケーリングする
+- link: /agent/cluster_agent/clusterchecks/
+  tag: ドキュメント
+  text: Autodiscovery によるクラスターチェックの実行
+- link: /agent/kubernetes/daemonset_setup/
+  tag: ドキュメント
+  text: Kubernetes DaemonSet のセットアップ
+- link: /agent/kubernetes/integrations/
+  tag: ドキュメント
+  text: カスタムインテグレーション
+- link: https://github.com/DataDog/datadog-agent/blob/master/docs/cluster-agent/GETTING_STARTED.md#troubleshooting
+  tag: Github
+  text: Datadog Cluster Agent のトラブルシューティング
+kind: documentation
+title: Kubernetes 対応の Cluster Agent
 ---
 ## 概要
 
@@ -43,15 +43,19 @@ Docker をお使いの場合、Datadog Cluster Agent は Docker Hub と GCR で�
 
 **注**: Datadog Cluster Agent のすべての機能を利用するには、Kubernetes v1.10+ を使用してください。
 
-{{< whatsnext desc="このセクションには、以下のトピックが記載されています。">}}
-    {{< nextlink href="/agent/cluster_agent/setup" >}}<u>セットアップ</u>: Kubernetes クラスターで Datadog Cluster Agent をセットアップします。{{< /nextlink >}}
-    {{< nextlink href="/agent/cluster_agent/commands" >}}<u>コマンド</u>: Cluster Agent で利用可能なコマンドとオプションの一覧。{{< /nextlink >}}
-    {{< nextlink href="/agent/cluster_agent/event_collection" >}}<u>イベントの収集</u>: Cluster Agent を使用して Kubernetes クラスターからすべてのイベントを収集します。{{< /nextlink >}}
-    {{< nextlink href="/agent/cluster_agent/external_metrics" >}}<u>外部メトリクス</u>: Cluster Agent カスタムメトリクスサーバーを利用してすべての Datadog メトリクスによってアプリケーションを自動スケールします。{{< /nextlink >}}
-    {{< nextlink href="/agent/cluster_agent/clusterchecks" >}}<u>クラスターチェック</u>: クラスターチェック機能により、オートディスカバリーの実施や、Kubernetes など負荷分散型クラスターサービスでのチェックの実施が可能になります。{{< /nextlink >}}
-    {{< nextlink href="/agent/cluster_agent/endpointschecks" >}}<u>エンドポイントチェック</u>: エンドポイントがクラスターチェックを拡張してクラスターサービス背後のあらゆるエンドポイントを監視します。{{< /nextlink >}}
-    {{< nextlink href="/agent/troubleshooting/autodiscovery" >}}<u>トラブルシューティング</u>: よくあるオートディスカバリー問題を解決できます。{{< /nextlink >}}
-    {{< nextlink href="/agent/cluster_agent/troubleshooting" >}}<u>トラブルシューティング</u>: Datadog Cluster Agent のトラブルシューティング情報を検索できます。{{< /nextlink >}}
+{{< whatsnext desc="このセクションには、次のトピックが含まれています。">}}
+    {{< nextlink href="/agent/cluster_agent/setup" >}}<u>セットアップ</u>: Datadog Cluster Agent を Kubernetes Cluster にセットアップします。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/event_collection" >}}<u>イベント収集</u>: Cluster Agent を使用して、Kubernetes Cluster からすべてのイベントを収集します。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/external_metrics" >}}<u>外部メトリクス</u>: Cluster Agent のカスタムメトリクスサーバーを利用して、すべての Datadog メトリクスを利用してアプリケーションを自動拡張します。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/clusterchecks" >}}<u>クラスターチェック</u>: クラスターチェック機能は、Kubernetes のような負荷分散されたクラスターサービスを自動検出し、チェックを行う機能です。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/endpointschecks" >}}<u>エンドポイントチェック</u>: エンドポイントチェックはクラスターチェックを拡張し、クラスターサービスの背後にある任意のエンドポイントを監視します。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/admission_controller" >}}<u>Admission Controller</u>: Admission Controller でアプリケーションポッドのコンフィギュレーションを簡略化します。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/commands" >}}<u>コマンド & オプション</u>: Cluster Agent で利用可能なすべてのコマンドおよびオプションのリストです。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/metadata_provider" >}}<u>メタデータプロバイダー</u>: クラスターのメタデータプロバイダー機能を有効にします。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/build" >}}<u>ビルド</u>: Datadog Cluster Agent をビルドします。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/clusterchecksrunner" >}}<u>クラスターチェックランナー</u>: クラスターチェックの実行に特化したツールであるクラスターチェックランナーを設定します。{{< /nextlink >}}
+    {{< nextlink href="/agent/troubleshooting/autodiscovery" >}}<u>オートディスカバリーのトラブルシューティング</u>: オートディスカバリーに関する一般的な問題を解決します。{{< /nextlink >}}
+    {{< nextlink href="/agent/cluster_agent/troubleshooting" >}}<u>Cluster Agent のトラブルシューティング</u>: Datadog Cluster Agent のトラブルシューティング情報をご覧いただけます。{{< /nextlink >}}
 {{< /whatsnext >}}
 
 ## その他の参考資料
