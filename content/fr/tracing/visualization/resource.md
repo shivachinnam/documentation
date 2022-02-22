@@ -2,19 +2,20 @@
 title: Page Ressource
 kind: documentation
 further_reading:
-  - link: /tracing/setup/
-    tag: Documentation
-    text: Configurer le tracing d'APM avec votre application
-  - link: /tracing/visualization/services_list/
-    tag: Documentation
-    text: Découvrir la liste des services transmettant des données à Datadog
-  - link: /tracing/visualization/service/
-    tag: Documentation
-    text: En savoir plus sur les services dans Datadog
-  - link: /tracing/visualization/trace/
-    tag: Documentation
-    text: Comprendre comment lire une trace Datadog
+- link: "/tracing/setup/"
+  tag: "Documentation"
+  text: "Configurer le tracing d'APM avec votre application"
+- link: "/tracing/visualization/services_list/"
+  tag: "Documentation"
+  text: "Découvrir la liste des services transmettant des données à Datadog"
+- link: "/tracing/visualization/service/"
+  tag: "Documentation"
+  text: "En savoir plus sur les services dans Datadog"
+- link: "/tracing/visualization/trace/"
+  tag: "Documentation"
+  text: "Comprendre comment lire une trace Datadog"
 ---
+
 {{< img src="tracing/visualization/resource/ressource.png" alt="Ressource"  >}}
 
 Une ressource est une action particulière pour un [service][1] donné (généralement, un endpoint ou une requête). Découvrez davantage d'informations sur les ressources sur la page [Débuter avec l'APM][2]. Pour chaque ressource, l'APM génère automatiquement une page de dashboard avec les éléments suivants :
@@ -90,10 +91,10 @@ Consultez la liste des [traces][6] associées à cette ressource dans la fenêtr
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/tracing/visualization/#services
-[2]: /fr/tracing/visualization/
-[3]: /fr/tracing/visualization/#trace
-[4]: /fr/dashboards/timeboard/
-[5]: /fr/tracing/visualization/#spans
-[6]: /fr/tracing/visualization/trace/
-[7]: /fr/tracing/search/
+[1]: /tracing/visualization/#services
+[2]: /tracing/visualization/
+[3]: /tracing/visualization/#trace
+[4]: /dashboards/timeboard/
+[5]: /tracing/visualization/#spans
+[6]: /tracing/visualization/trace/
+[7]: /tracing/search/
