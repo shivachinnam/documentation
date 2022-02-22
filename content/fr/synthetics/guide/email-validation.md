@@ -3,13 +3,14 @@ title: Vérification d'e-mails avec des tests Browser
 kind: documentation
 description: Vérifier un e-mail et son contenu avec des étapes de test Browser
 further_reading:
-  - link: /synthetics/browser_tests/actions
-    tag: Documentation
-    text: En savoir plus sur les étapes des tests Browser
-  - link: /synthetics/browser_tests/advanced_options/
-    tag: Documentation
-    text: Configurer des options avancées pour les étapes
+- link: /synthetics/browser_tests/actions
+  tag: Documentation
+  text: En savoir plus sur les étapes des tests Browser
+- link: /synthetics/browser_tests/advanced_options/
+  tag: Documentation
+  text: Configurer des options avancées pour les étapes
 ---
+
 ## Présentation
 
 Le parcours utilisateur des applications Web standard contient généralement des étapes de déclenchement et d'envoi d'e-mails. Par exemple, il est souvent nécessaire de vérifier une adresse e-mail après la création d'un compte, d'envoyer des e-mails de réinitialisation de mot de passe ou encore de confirmer des commandes ou des envois de formulaires de contact.
@@ -34,7 +35,7 @@ Dans l'exemple ci-dessus, une variable d'e-mail `EMAIL` est créée. Elle génè
 
 ## Enregistrer des étapes
 
-Dans le coin supérieur gauche de l'IU, cliquez sur le bouton **Start Recording** et enregistrez les étapes entraînant le déclenchement de l'e-mail, à l'aide de la variable d'e-mail tout juste créée. Utilisez l'icône en forme de main pour saisir des variables dans les champs de texte du formulaire.
+Dans le coin supérieur gauche de l'Interface, cliquez sur le bouton **Start Recording** et enregistrez les étapes entraînant le déclenchement de l'e-mail, à l'aide de la variable d'e-mail tout juste créée. Utilisez l'icône en forme de main pour saisir des variables dans les champs de texte du formulaire.
 
 {{< img src="synthetics/guide/email-validation/record-steps.mp4" alt="Enregistrer des étapes" video="true"  width="100%">}}
 
@@ -58,7 +59,7 @@ Pour ce faire, créez une étape **Navigation**, choisissez l'option `Go to emai
 
 {{< img src="synthetics/guide/email-validation/navigation-step.mp4" alt="Ajouter une étape Navigation" video="true"  width="100%">}}
 
-Dans l'exemple ci-dessus, le test Browser analyse l'e-mail « Welcome to Shopist » afin d'accéder à un lien de vérification, dans le but de confirmer que le mécanisme d'inscription des utilisateurs fonctionne comme prévu. Cet e-mail est sélectionné et le lien « Verify your email by clicking here » est choisi. Dès que l'étape est enregistrée, l'iframe est redirigé vers la page associée.
+Dans l'exemple ci-dessus, le test Browser analyse l'e-mail « Welcome to Shopist » afin de cliquer sur un lien de vérification, dans le but de confirmer que le mécanisme d'inscription des utilisateurs fonctionne comme prévu. Cet e-mail est sélectionné et le lien « Verify your email by clicking here » est choisi. Dès que l'étape est enregistrée, l'iframe est redirigé vers la page associée.
 
 Vous pouvez désormais créer une dernière assertion pour tester le contenu `div`, afin de vous assurer qu'il déclenche un processus de vérification de compte fonctionnel (la page contient `Your account is now verified.`).
 
@@ -67,4 +68,4 @@ Vous pouvez désormais créer une dernière assertion pour tester le contenu `di
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/synthetics/browser_tests
+[1]: /synthetics/browser_tests
