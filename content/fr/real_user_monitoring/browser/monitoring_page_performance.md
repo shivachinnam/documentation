@@ -2,7 +2,7 @@
 title: Surveillance des performances de pages
 kind: documentation
 further_reading:
-  - link: https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/
+  - link: "https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/"
     tag: Blog
     text: Real User Monitoring
   - link: /real_user_monitoring/explorer/
@@ -14,10 +14,11 @@ further_reading:
   - link: /real_user_monitoring/dashboards/
     tag: Documentation
     text: Dashboards RUM
-  - link: https://www.datadoghq.com/blog/core-web-vitals-monitoring-datadog-rum-synthetics/
+  - link: "https://www.datadoghq.com/blog/core-web-vitals-monitoring-datadog-rum-synthetics/"
     tag: Blog
     text: Surveiller les signaux Web essentiels avec la surveillance Synthetic et la solution RUM de Datadog
 ---
+
 {{< img src="real_user_monitoring/browser/waterfall.png" alt="Graphique en cascade des chargements de page Real User Monitoring" style="width:75%;" >}}
 
 ## Métriques de performance pour les vues
@@ -38,7 +39,7 @@ Les [signaux Web essentiels de Google][4] désignent trois métriques visant à 
 
 | Métrique                   | Caractéristique            | Description                                                                                           | Valeur cible |
 |--------------------------|------------------|-------------------------------------------------------------------------------------------------------|--------------|
-| [Largest Contentful Paint][5] | Performances de chargement | Temps nécessaire lors du chargement de la page pour afficher le plus grand objet DOM dans la fenêtre d'affichage.         | < 2,5 s       |
+| [Largest Contentful Paint][5] | Performances de chargement | Moment où l'objet DOM le plus volumineux est affiché dans la fenêtre d'affichage (à savoir, visible à l'écran) lors du chargement de la page.         | < 2,5 s       |
 | [First Input Delay][6]        | Interactivité    | Délai entre le moment où l'utilisateur interagit pour la première fois avec la page et le moment où le navigateur répond à cette interaction.             | < 100 ms      |
 | [Cumulative Layout Shift][7]  | Stabilité visuelle | Nombre de mouvements de page inattendus causés par le chargement dynamique de contenu (par exemple, des publicités tierces). Lorsqu'aucun décalage ne se produit, cette métrique a pour valeur 0. | < 0,1        |
 
@@ -52,7 +53,7 @@ Les [signaux Web essentiels de Google][4] désignent trois métriques visant à 
 | Attribut                       | Type        | Description                                                                                                                                                                                                           |
 |---------------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `view.time_spent`               | nombre (ns) | Temps passé sur la vue actuelle.                                                                                                                                                                                       |
-| `view.largest_contentful_paint` | nombre (ns) | Temps nécessaire lors du chargement de la page pour afficher le plus grand objet DOM dans la fenêtre d'affichage.                                                                                                |
+| `view.largest_contentful_paint` | nombre (ns) | Moment où l'objet DOM le plus volumineux est affiché dans la fenêtre d'affichage (à savoir, visible à l'écran) lors du chargement de la page.                                                                                                |
 | `view.first_input_delay`        | nombre (ns) | Délai entre le moment où l'utilisateur interagit pour la première fois avec la page et le moment où le navigateur répond à cette interaction.                                                                                                                             |
 | `view.cumulative_layout_shift`  | nombre      | Nombre de mouvements de page inattendus causés par le chargement dynamique de contenu (par exemple, des publicités tierces). Lorsqu'aucun décalage ne se produit, cette métrique a pour valeur 0.                                                                               |
 | `view.loading_time`             | nombre (ns) | Temps écoulé avant que la page ne soit prête et que toutes les requêtes réseau ou mutations DOM soient terminées. [En savoir plus][9].                                                                             |
@@ -116,19 +117,19 @@ Une fois la durée envoyée, elle est accessible via `@view.custom_timings.<nom_
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/real_user_monitoring/dashboards/performance_overview_dashboard
-[2]: /fr/real_user_monitoring/browser/data_collected/#default-attributes
-[3]: /fr/real_user_monitoring/explorer/
+[1]: /real_user_monitoring/dashboards/performance_overview_dashboard
+[2]: /real_user_monitoring/browser/data_collected/#default-attributes
+[3]: /real_user_monitoring/explorer/
 [4]: https://web.dev/vitals/
 [5]: https://web.dev/lcp/
 [6]: https://web.dev/fid/
 [7]: https://web.dev/cls/
-[8]: /fr/synthetics/browser_tests/
-[9]: /fr/real_user_monitoring/browser/monitoring_page_performance/#how-is-loading-time-calculated
+[8]: /synthetics/browser_tests/
+[9]: /real_user_monitoring/browser/monitoring_page_performance/#how-is-loading-time-calculated
 [10]: https://www.w3.org/TR/paint-timing/#sec-terminology
 [11]: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domInteractive
 [12]: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 [13]: https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
 [14]: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
 [15]: https://developer.mozilla.org/en-US/docs/Web/API/History
-[16]: /fr/real_user_monitoring/explorer/?tab=measures#setup-facets-and-measures
+[16]: /real_user_monitoring/explorer/?tab=measures#setup-facets-and-measures
