@@ -5,7 +5,7 @@ further_reading:
   - link: /real_user_monitoring/guide/send-rum-custom-actions/
     tag: Guide
     text: Envoyer des actions RUM personnalisées à partir du code
-  - link: https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/
+  - link: "https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/"
     tag: Blog
     text: Real User Monitoring
   - link: /real_user_monitoring/explorer/
@@ -18,6 +18,8 @@ further_reading:
     tag: Documentation
     text: Dashboards RUM
 ---
+
+
 Le SDK Browser Real User Monitoring (RUM) détecte automatiquement les interactions des utilisateurs lors de leur parcours.
 
 La collecte automatique des actions utilisateur vous permet de mieux comprendre le comportement de vos utilisateurs, sans avoir à instrumenter manuellement chaque clic dans votre application. Grâce à cette fonctionnalité, vous disposez de toutes les informations dont vous avez besoin pour :
@@ -93,7 +95,7 @@ Depuis la [version 2.16.0][3], grâce au paramètre d'initialisation `actionNam
 
 ## Actions personnalisées
 
-Les actions personnalisées correspondent à des actions utilisateur déclarées et envoyées manuellement, via l'API `addAction`. Elles servent à envoyer des informations sur un événement qui s'est produit lors d'un parcours utilisateur. Dans l'exemple suivant, le SDK RUM recueille les données du panier d'un utilisateur lorsqu'il appuie sur le bouton de paiement. Cette action récupère le nombre d'articles dans le panier, la liste des articles et le montant total du panier.
+Les actions personnalisées correspondent à des actions utilisateur déclarées et envoyées manuellement, via l'API `addAction`. Elles servent à envoyer des informations sur un événement qui s'est produit lors d'un parcours utilisateur. Dans l'exemple suivant, le SDK RUM recueille les données du panier d'un utilisateur lorsqu'il clique sur le bouton de paiement. Cette action récupère le nombre d'articles dans le panier, la liste des articles et le montant total du panier.
 
 {{< tabs >}}
 {{% tab "NPM" %}}
@@ -159,6 +161,6 @@ window.DD_RUM &&
 {{< partial name="whats-next/whats-next.html" >}}
 
 
-[1]: /fr/real_user_monitoring/browser/modifying_data_and_context/
-[2]: /fr/real_user_monitoring/browser/data_collected/#default-attributes
+[1]: /real_user_monitoring/browser/modifying_data_and_context/
+[2]: /real_user_monitoring/browser/data_collected/#default-attributes
 [3]: https://github.com/DataDog/browser-sdk/blob/main/CHANGELOG.md#v2160
