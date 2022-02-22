@@ -1,19 +1,20 @@
 ---
-title: APM Synthetic
-kind: documentation
-description: APM et tracing distribué avec la surveillance Synthetic
 aliases:
-  - /fr/synthetics/apm
+- /fr/synthetics/apm
+description: APM et tracing distribué avec la surveillance Synthetic
 further_reading:
-  - link: https://www.datadoghq.com/blog/introducing-synthetic-monitoring/
-    tag: Blog
-    text: Présentation de la surveillance Synthetic Datadog
-  - link: /tracing/
-    tag: Documentation
-    text: APM et tracing distribué
-  - link: /logs/guide/ease-troubleshooting-with-cross-product-correlation/
-    tag: Guide
-    text: Bénéficiez de diagnostics simplifiés grâce à la mise en corrélation entre produits.
+- link: https://www.datadoghq.com/blog/introducing-synthetic-monitoring/
+  tag: Blog
+  text: Présentation de la surveillance Synthetic Datadog
+- link: /tracing/
+  tag: Documentation
+  text: APM et tracing distribué
+- link: /logs/guide/ease-troubleshooting-with-cross-product-correlation/
+  tag: Guide
+  text: Bénéficiez de diagnostics simplifiés grâce à la mise en corrélation entre
+    produits.
+kind: documentation
+title: APM Synthetic
 ---
 {{< img src="synthetics/apm/synthetics-apm.mp4" alt="APM et surveillance Synthetic" video="true"  >}}
 
@@ -88,22 +89,22 @@ Ces traces sont conservées [aussi longtemps comme vos traces APM standard][19].
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/synthetics/api_tests/
-[2]: /fr/synthetics/browser_tests/
-[3]: /fr/tracing/
+[1]: /synthetics/api_tests/
+[2]: /synthetics/browser_tests/
+[3]: /tracing/
 [4]: https://app.datadoghq.com/synthetics/settings/default
-[5]: /fr/tracing/setup_overview/setup/python/
+[5]: /tracing/setup_overview/setup/python/
 [6]: https://github.com/DataDog/dd-trace-py/releases/tag/v0.22.0
-[7]: /fr/tracing/setup_overview/setup/go/
+[7]: /tracing/setup_overview/setup/go/
 [8]: https://github.com/DataDog/dd-trace-go/releases/tag/v1.10.0
-[9]: /fr/tracing/setup_overview/setup/java/
+[9]: /tracing/setup_overview/setup/java/
 [10]: https://github.com/DataDog/dd-trace-java/releases/tag/v0.24.1
-[11]: /fr/tracing/setup_overview/setup/ruby/
+[11]: /tracing/setup_overview/setup/ruby/
 [12]: https://github.com/DataDog/dd-trace-rb/releases/tag/v0.20.0
-[13]: /fr/tracing/setup_overview/setup/nodejs/
+[13]: /tracing/setup_overview/setup/nodejs/
 [14]: https://github.com/DataDog/dd-trace-js/releases/tag/v0.10.0
-[15]: /fr/tracing/setup_overview/setup/php/
+[15]: /tracing/setup_overview/setup/php/
 [16]: https://github.com/DataDog/dd-trace-php/releases/tag/0.33.0
-[17]: /fr/tracing/setup_overview/setup/dotnet-core/
+[17]: /tracing/setup_overview/setup/dotnet-core/
 [18]: https://github.com/DataDog/dd-trace-dotnet/releases/tag/v1.18.2
-[19]: /fr/tracing/trace_retention_and_ingestion/
+[19]: /tracing/trace_retention/
