@@ -1,15 +1,15 @@
 ---
 beta: true
 dependencies:
-  - https://github.com/DataDog/dd-sdk-android/blob/master/docs/trace_collection.md
+- "https://github.com/DataDog/dd-sdk-android/blob/master/docs/trace_collection.md"
 description: Recueillez des traces à partir de vos applications Android.
 further_reading:
-  - link: https://github.com/DataDog/dd-sdk-android
-    tag: Github
-    text: Code source dd-sdk-android
-  - link: tracing/visualization/
-    tag: Documentation
-    text: Explorer vos services, ressources et traces
+- link: "https://github.com/DataDog/dd-sdk-android"
+  tag: Github
+  text: Code source dd-sdk-android
+- link: tracing/visualization/
+  tag: Documentation
+  text: Explorer vos services, ressources et traces
 kind: documentation
 title: Collecte de traces Android
 ---
@@ -76,7 +76,7 @@ class SampleApplication : Application() {
     GlobalTracer.registerIfAbsent(tracer)
     ```
 
-4. Définissez le seuil de vidage partiel (facultatif). Vous pouvez optimiser la charge de travail du SDK si vous créez de nombreuses spans dans votre application, ou au contraire en créez très peu. La bibliothèque écrit les spans terminées sur le disque uniquement lorsque leur nombre dépasse le seuil défini. Si vous définissez le seuil sur `1`, chaque span est écrite dès qu'elle est terminée.
+4. Définissez le seuil de vidage partiel (facultatif). Vous pouvez optimiser le workload du SDK si vous créez de nombreuses spans dans votre application, ou au contraire en créez très peu. La bibliothèque écrit les spans terminées sur le disque uniquement lorsque leur nombre dépasse le seuil défini. Si vous définissez le seuil sur `1`, chaque span est écrite dès qu'elle est terminée.
 
     ```kotlin
     val tracer = AndroidTracer.Builder()
@@ -276,9 +276,9 @@ Les données stockées sont automatiquement supprimées si elles sont trop ancie
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: https://docs.datadoghq.com/fr/tracing/visualization/#trace
+[1]: https://docs.datadoghq.com/tracing/visualization/#trace
 [2]: https://github.com/DataDog/dd-sdk-android
-[3]: https://docs.datadoghq.com/fr/tracing/visualization/#spans
-[4]: https://docs.datadoghq.com/fr/account_management/api-app-keys/#client-tokens
-[5]: https://docs.datadoghq.com/fr/account_management/api-app-keys/#api-keys
+[3]: https://docs.datadoghq.com/tracing/visualization/#spans
+[4]: https://docs.datadoghq.com/account_management/api-app-keys/#client-tokens
+[5]: https://docs.datadoghq.com/account_management/api-app-keys/#api-keys
 [6]: https://square.github.io/okhttp/interceptors/
