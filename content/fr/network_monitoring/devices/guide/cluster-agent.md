@@ -1,19 +1,19 @@
 ---
-title: Network Device Monitoring avec l'Agent de cluster
-kind: guide
 aliases:
-  - /fr/network_performance_monitoring/devices/guide/cluster-agent/
+- /fr/network_performance_monitoring/devices/guide/cluster-agent/
 further_reading:
-  - link: /agent/cluster_agent
-    tag: Documentation
-    text: Agent de cluster pour Kubernetes
-  - link: /agent/cluster_agent/clusterchecks
-    tag: Documentation
-    text: Checks de cluster
+- link: /agent/cluster_agent
+  tag: Documentation
+  text: Agent de cluster pour Kubernetes
+- link: /agent/cluster_agent/clusterchecks
+  tag: Documentation
+  text: Checks de cluster
+kind: guide
+title: Network Device Monitoring avec l'Agent de cluster
 ---
 Pour les environnements Kubernetes, l'[Agent de cluster Datadog][1] peut être configuré de façon à utiliser la logique Autodiscovery de la solution Network Device Monitoring (NDM) afin de générer des [checks de cluster][2].
 
-Lorsqu'elle est combinée avec l'Agent de cluster Datadog, la fonction Autodiscovery de l'Agent se révèle particulièrement évolutive. Elle permet de surveiller un grand nombre de services.
+Lorsqu'elle est combinée avec l'Agent de cluster Datadog, la fonction Autodiscovery de l'Agent se révèle particulièrement évolutive. Elle permet de surveiller un grand nombre d'appareils.
 
 ## Configuration
 
@@ -232,6 +232,6 @@ clusterAgent:
 {{< partial name="whats-next/whats-next.html" >}}
 
 
-[1]: /fr/agent/cluster_agent
-[2]: /fr/agent/cluster_agent/clusterchecks
+[1]: /agent/cluster_agent
+[2]: /agent/cluster_agent/clusterchecks
 [3]: https://app.datadoghq.com/organization-settings/api-keys
