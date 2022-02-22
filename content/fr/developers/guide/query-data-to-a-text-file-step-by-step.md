@@ -1,8 +1,8 @@
 ---
-title: Guide pour interroger vos données et les enregistrer dans un fichier texte
-kind: guide
 aliases:
-  - /fr/developers/faq/query-data-to-a-text-file-step-by-step
+- /fr/developers/faq/query-data-to-a-text-file-step-by-step
+kind: guide
+title: Guide pour interroger vos données et les enregistrer dans un fichier texte
 ---
 Cet article explique comment configurer un environnement afin de tirer le meilleur parti de l'API Datadog. Il détaille également la marche à suivre pour récupérer des événements, des métriques et des monitors depuis l'[API publique de Datadog][1] et les enregistrer dans un fichier local.
 
@@ -36,12 +36,12 @@ Si tout fonctionne, vos données apparaissent dans le terminal et le fichier `ou
 
 Pour voir d'autres exemples, consultez la [documentation relative à l'API][1].
 
-[1]: /fr/api/
+[1]: /api/
 [2]: http://docs.python-guide.org/en/latest/starting/install/win
 [3]: /resources/python/api_query_data.py
 [4]: https://app.datadoghq.com/organization-settings/api-keys
 [5]: https://app.datadoghq.com/metric/summary
 [6]: https://app.datadoghq.com/infrastructure
-[7]: /fr/api/#rate-limiting
+[7]: /api/#rate-limiting
 [8]: https://virtualenv.pypa.io/en/stable
 [9]: https://pypi.org/project/datadog
