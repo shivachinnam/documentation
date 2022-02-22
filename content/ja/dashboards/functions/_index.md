@@ -1,24 +1,24 @@
 ---
-title: 関数
-kind: documentation
 aliases:
-  - /ja/examples/
-  - /ja/examples/aws-metrics/
-  - /ja/examples/month_before/
-  - /ja/examples/graphing-functions/
-  - /ja/examples/day_before/
-  - /ja/examples/json-editing/
-  - /ja/examples/nginx-metrics/
-  - /ja/examples/dashboards/
-  - /ja/examples/hour_before/
-  - /ja/examples/os-metrics/
-  - /ja/examples/week_before/
-  - /ja/examples/cassandra-metrics/
-  - /ja/graphing/miscellaneous/functions
-  - /ja/graphing/miscellaneous/
-  - /ja/getting_started/from_the_query_to_the_graph
-  - /ja/graphing/miscellaneous/from_the_query_to_the_graph
-  - /ja/graphing/functions/
+- /ja/examples/
+- /ja/examples/aws-metrics/
+- /ja/examples/month_before/
+- /ja/examples/graphing-functions/
+- /ja/examples/day_before/
+- /ja/examples/json-editing/
+- /ja/examples/nginx-metrics/
+- /ja/examples/dashboards/
+- /ja/examples/hour_before/
+- /ja/examples/os-metrics/
+- /ja/examples/week_before/
+- /ja/examples/cassandra-metrics/
+- /ja/graphing/miscellaneous/functions
+- /ja/graphing/miscellaneous/
+- /ja/getting_started/from_the_query_to_the_graph
+- /ja/graphing/miscellaneous/from_the_query_to_the_graph
+- /ja/graphing/functions/
+kind: documentation
+title: 関数
 ---
 ## 概要
 
@@ -47,8 +47,9 @@ aliases:
     {{< nextlink href="/dashboards/functions/rollup" >}}ロールアップ: 使用される元ポイントの数を制御します。{{< /nextlink >}}
     {{< nextlink href="/dashboards/functions/smoothing" >}}スムーシング: メトリクスの変動を抑制します。{{< /nextlink >}}
     {{< nextlink href="/dashboards/functions/timeshift" >}}タイムシフト: メトリクスのデータポイントをタイムラインに沿って移動させます。{{< /nextlink >}}
+    {{< nextlink href="/dashboards/functions/beta" >}}ベータ版: メトリクスのローリングアベレージを計算します。{{< /nextlink >}}
 {{< /whatsnext >}}
 
 
-[1]: /ja/metrics/#time-aggregation
-[2]: /ja/metrics/#space-aggregation
+[1]: /metrics/#time-aggregation
+[2]: /metrics/#space-aggregation
