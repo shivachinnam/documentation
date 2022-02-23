@@ -2,22 +2,23 @@
 title: Comparer la latence d'un service avec celle de la semaine précédente
 kind: guide
 further_reading:
-  - link: /tracing/guide/alert_anomalies_p99_database/
-    tag: "3\_minutes"
-    text: Être alerté en cas de latence au 99e centile anormale pour un service de base de données
-  - link: /tracing/guide/apm_dashboard/
-    tag: "4\_minutes"
-    text: Créer un dashboard pour suivre et corréler les métriques APM
-  - link: /tracing/guide/slowest_request_daily/
-    tag: "3\_minutes"
-    text: Débuguer la trace la plus lente sur l'endpoint le plus lent d'un service web
-  - link: /tracing/guide/add_span_md_and_graph_it/
-    tag: "7\_minutes"
-    text: Ajouter des tags de span et filtrer les données de performance de votre application
-  - link: /tracing/guide/
-    tag: ''
-    text: Tous les guides
+- link: /tracing/guide/alert_anomalies_p99_database/
+  tag: 3 minutes
+  text: Être alerté en cas de latence au 99e centile anormale pour un service de base de données
+- link: /tracing/guide/apm_dashboard/
+  tag: 4 minutes
+  text: Créer un dashboard pour suivre et corréler les métriques APM
+- link: /tracing/guide/slowest_request_daily/
+  tag: 3 minutes
+  text: Débuguer la trace la plus lente sur l'endpoint le plus lent d'un service web
+- link: /tracing/guide/add_span_md_and_graph_it/
+  tag: 7 minutes
+  text: Ajouter des tags de span et filtrer ou regrouper les données de performance de votre application
+- link: /tracing/guide/
+  tag: ""
+  text: Tous les guides
 ---
+
 _Temps de lecture : 2 minutes_
 
 {{< img src="tracing/guide/week_over_week_p50_comparison/wow_p50_comp_3.mp4" alt="vidéo de comparaison" video="true" style="width:90%;">}}
@@ -29,7 +30,7 @@ Datadog peut vous montrer l'évolution de la latence de votre application dans l
     Cette page affiche la liste de tous les [services][2] instrumentés disponibles dans l'APM Datadog. Vous pouvez rechercher vos services par mots clés, les filtrer par tag `env` et définir la chronologie.
 2. **Recherchez et ouvrez un service pertinent et actif**.
 
-    Cet exemple s'intéresse au service web-store, car il s'agit d'un service stable et que nous souhaitons vérifier l'absence de problèmes durant le mois passé.
+    Cet exemple repose sur le service web-store, car il s'agit d'un service stable. Il permet de vérifier l'absence de problèmes durant le mois passé.
 
     {{< img src="tracing/guide/week_over_week_p50_comparison/wow_p50_comp_2.png" alt="comparaison 2" style="width:90%;">}}
 
@@ -52,5 +53,5 @@ Datadog peut vous montrer l'évolution de la latence de votre application dans l
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://app.datadoghq.com/apm/services
-[2]: /fr/tracing/visualization/#services
-[3]: /fr/tracing/visualization/#resources
+[2]: /tracing/visualization/#services
+[3]: /tracing/visualization/#resources
