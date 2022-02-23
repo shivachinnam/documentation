@@ -1,9 +1,9 @@
 ---
-title: Autodiscovery avec l'Agent v5
+aliases:
+- /fr/agent/faq/agent-5-autodiscovery
 kind: guide
 private: true
-aliases:
-  - /fr/agent/faq/agent-5-autodiscovery
+title: Autodiscovery avec l'Agent v5
 ---
 <div class="alert alert-info">
 Autodiscovery était autrefois appelé Service Discovery. Il est toujours appelé Service Discovery dans l'ensemble du code de l'Agent et dans certaines options de configuration.
@@ -174,14 +174,14 @@ Lorsque le stockage de clé/valeur est activé en tant que source de modèle, l'
 ```text
 /datadog/
   check_configs/
-    docker_image_1/                 # identificateur de conteneur, p. ex. httpd
-      - check_names: [<NOM_CHECK>] # p. ex. apache
+    docker_image_1/                 # identificateur de conteneur, par exemple httpd
+      - check_names: [<NOM_CHECK>] # par exemple, apache
       - init_configs: [<CONFIG_INIT>]
       - instances: [<CONFIG_INSTANCE>]
     ...
 ```
 
-Chaque modèle contient trois éléments : nom du check, `init_config`, et `instances`. L'option `docker_images` de la section précédente, qui fournissait les identificateurs de conteneur à Autodiscovery, n'est pas obligatoire ici. Pour les stockages clé/valeur, les identificateurs de conteneur apparaissent comme clés de premier niveau dans `check_config`. (Notez également que le modèle sous forme de fichier à la section précédente ne nécessitait pas de nom de check, contrairement à cet exemple. L'Agent déduisait le nom du check à partir du nom du fichier.)
+Chaque modèle contient trois éléments : nom du check, `init_config`, et `instances`. L'option `docker_images` de la section précédente, qui fournissait les identificateurs de conteneur à Autodiscovery, n'est pas obligatoire ici. Pour les stockages key/value, les identificateurs de conteneur apparaissent comme clés de premier niveau dans `check_config`. Notez également que le modèle sous forme de fichier à la section précédente ne nécessitait pas de nom de check, contrairement à cet exemple. L'Agent déduisait le nom du check à partir du nom du fichier.
 
 #### Check Apache
 
@@ -389,8 +389,8 @@ checks:
 [1]: https://www.datadoghq.com/docker-adoption
 [2]: https://github.com/DataDog/integrations-core/blob/master/go_expvar/datadog_checks/go_expvar/data/conf.yaml.example
 [3]: https://gcr.io/datadoghq/docker-dd-agent
-[4]: /fr/agent/kubernetes/
-[5]: /fr/integrations/amazon_ecs/#installation
+[4]: /agent/kubernetes/
+[5]: /integrations/amazon_ecs/#installation
 [6]: https://github.com/DataDog/docker-dd-agent#environment-variables
 [7]: https://github.com/DataDog/jmxfetch
 [8]: https://github.com/DataDog/integrations-core/blob/master/apache/datadog_checks/apache/data/auto_conf.yaml
@@ -407,5 +407,5 @@ checks:
 [19]: https://github.com/DataDog/integrations-core/blob/master/riak/datadog_checks/riak/data/auto_conf.yaml
 [20]: https://github.com/DataDog/docker-dd-agent#configuration-files
 [21]: https://github.com/DataDog/integrations-core/blob/master/apache/datadog_checks/apache/data/conf.yaml.example
-[22]: /fr/agent/guide/agent-commands/#start-stop-restart-the-agent
+[22]: /agent/guide/agent-commands/#start-stop-restart-the-agent
 [23]: https://github.com/DataDog/integrations-core/blob/master/http_check/datadog_checks/http_check/data/conf.yaml.example
