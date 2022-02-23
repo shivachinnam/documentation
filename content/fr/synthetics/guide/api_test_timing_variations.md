@@ -1,14 +1,15 @@
 ---
-title: Fonctionnement des durées de test API et correction des écarts
-kind: documentation
-description: Fonctionnement des durées de test API et correction des écarts
 aliases:
-  - /fr/synthetics/api_test_timing_variations
+- /fr/synthetics/api_test_timing_variations
+description: Fonctionnement des durées de test API et correction des écarts
 further_reading:
-  - link: https://docs.datadoghq.com/synthetics/metrics/#api-tests
-    tag: Documentation
-    text: Métriques des tests API Synthetic
+- link: https://docs.datadoghq.com/synthetics/metrics/#api-tests
+  tag: Documentation
+  text: Métriques des tests API Synthetic
+kind: documentation
+title: Fonctionnement des durées de test API et correction des écarts
 ---
+
 ## Présentation
 
 Grâce aux [métriques de durée][1] recueillies par les tests API Synthetic, vous pouvez identifier les goulots d'étranglement qui ralentissent les échanges entre votre serveur et le client.
@@ -122,12 +123,12 @@ Lorsque les écarts sont causés par la charge serveur, utilisez l'[Agent Datado
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/synthetics/metrics/#api-tests
-[2]: /fr/synthetics/api_tests/http_tests?tab=requestoptions#define-request
-[3]: /fr/synthetics/private_locations/configuration#dns-configuration
-[4]: /fr/synthetics/api_tests/dns_tests#define-request
-[5]: /fr/synthetics/private_locations/?tab=docker#overview
-[6]: /fr/network_monitoring/performance/#overview
-[7]: /fr/synthetics/api_tests/icmp_tests/#overview
-[8]: /fr/getting_started/agent/#overview
-[9]: /fr/integrations/
+[1]: /synthetics/metrics/#api-tests
+[2]: /synthetics/api_tests/http_tests?tab=requestoptions#define-request
+[3]: /synthetics/private_locations/configuration#dns-configuration
+[4]: /synthetics/api_tests/dns_tests#define-request
+[5]: /synthetics/private_locations/?tab=docker#overview
+[6]: /network_monitoring/performance/#overview
+[7]: /synthetics/api_tests/icmp_tests/#overview
+[8]: /getting_started/agent/#overview
+[9]: /integrations/
