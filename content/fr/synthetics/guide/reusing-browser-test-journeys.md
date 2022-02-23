@@ -2,16 +2,18 @@
 title: Réutiliser des parcours de test Browser pour toute votre collection de tests
 kind: guide
 further_reading:
-  - link: synthetics/browser_tests
-    tag: Documentation
-    text: Configurer un test Browser
-  - link: /synthetics/browser_tests/actions
-    tag: Documentation
-    text: Créer des étapes de test Browser
-  - link: https://www.datadoghq.com/blog/test-creation-best-practices/
-    tag: Blog
-    text: Pratiques recommandées pour la création de tests de bout en bout
+    - link: synthetics/browser_tests
+      tag: Documentation
+      text: Configurer un test Browser
+    - link: /synthetics/browser_tests/actions
+      tag: Documentation
+      text: Créer des étapes de test Browser
+    - link: "https://www.datadoghq.com/blog/test-creation-best-practices/"
+      tag: Blog
+      text: Pratiques recommandées pour la création de tests de bout en bout
+
 ---
+
 ## Présentation
 
 Il peut s'avérer utile de réutiliser un parcours dans plusieurs autres tests. Par exemple :
@@ -56,10 +58,10 @@ Pour créer un test de connexion et l'utiliser en tant que sous-test dans le res
 
   {{< img src="synthetics/guide/reusing-browser-test-journeys/dashboard_test_recording.mp4" alt="Enregistrement du test parent" video="true"  width="100%">}}
 
- L'exemple ci-dessus vérifie que les utilisateurs, une fois connectés à un compte de test Datadog, peuvent créer un timeboard, et que ce timeboard est associé à l'utilisateur qui l'a créé.
+ Dans l'exemple ci-dessus, le sous-test de connexion vérifie qu'un utilisateur, une fois connecté à un compte test Datadog, peut créer un timeboard. Ce timeboard est alors associé à l'utilisateur.
 
 ## Pour aller plus loin
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/synthetics/browser_tests/advanced_options#subtests
+[1]: /synthetics/browser_tests/advanced_options#subtests
