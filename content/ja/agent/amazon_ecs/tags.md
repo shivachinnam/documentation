@@ -2,16 +2,17 @@
 title: Amazon ECS タグ抽出
 kind: ドキュメント
 further_reading:
-  - link: /getting_started/tagging/
-    tag: Documentation
-    text: タグの概要
-  - link: /getting_started/tagging/using_tags/
-    tag: Documentation
-    text: Datadog でタグを使用する
-  - link: /agent/guide/autodiscovery-management/
-    tag: Documentation
-    text: データ収集をコンテナのサブセットのみに制限
+- link: /getting_started/tagging/
+  tag: Documentation
+  text: タグの概要
+- link: /getting_started/tagging/using_tags/
+  tag: Documentation
+  text: Datadog でタグを使用する
+- link: /agent/guide/autodiscovery-management/
+  tag: Documentation
+  text: データ収集をコンテナのサブセットのみに制限
 ---
+
 ## 概要
 
 Datadog Agent は、タグを作成し、ラベルまたは環境変数に基づいてコンテナが発行するすべてのメトリクス、トレース、ログに割り当てることができます。
@@ -37,7 +38,7 @@ Datadog では、コンテナ化環境のベストプラクティスとして、
 
 ### 注
 
-- IAM ロールが、基底の EC2 インスタンスではなく、[Amazon ECS コンテナインスタンス][2]に関連付けられていることを確認します。
+- IAM ロールが、Datadog Agent コンテナのタスクロールではなく、[Amazon ECS コンテナインスタンス][2]に関連付けされていることを確認します。
 - ECS リソースタグは EC2 インスタンスからは収集できますが、AWS Fargate からは収集できません。
 - この機能には、Datadog Agent v6.17+ または v7.17+ が必要です。
 - Agent は、`tasks`、`services`、`container instances` ECS リソースからの ECS タグ収集をサポートします。
@@ -46,7 +47,7 @@ Datadog では、コンテナ化環境のベストプラクティスとして、
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/getting_started/tagging/unified_service_tagging/?tab=ecs#containerized-environment
+[1]: /getting_started/tagging/unified_service_tagging/?tab=ecs#containerized-environment
 [2]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_instances.html
 [3]: https://docs.datadoghq.com/resources/json/datadog-agent-ecs.json
 [4]: https://docs.datadoghq.com/resources/json/datadog-agent-ecs1.json
