@@ -1,39 +1,42 @@
 ---
-assets:
-  configuration:
-    spec: assets/configuration/spec.yaml
-  dashboards: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - os & system
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/filebeat/README.md
-display_name: Filebeat
-draft: false
-git_integration_title: filebeat
-guid: 3bb6a789-d1e3-465c-9bff-ea2a43ae2f59
-integration_id: filebeat
-integration_title: Filebeat
-integration_version: 1.2.0
-is_public: true
-kind: integration
-maintainer: jean@tripping.com
-manifest_version: 1.0.0
-metric_prefix: filebeat.
-metric_to_check: filebeat.registry.unprocessed_bytes
-name: filebeat
-public_title: Intégration Datadog/Filebeat
-short_description: Shipper léger conçu pour les logs
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "configuration":
+    "spec": "assets/configuration/spec.yaml"
+  "dashboards": {}
+  "metrics_metadata": "metadata.csv"
+  "monitors": {}
+  "service_checks": "assets/service_checks.json"
+"categories":
+- "os & system"
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/filebeat/README.md"
+"display_name": "Filebeat"
+"draft": false
+"git_integration_title": "filebeat"
+"guid": "3bb6a789-d1e3-465c-9bff-ea2a43ae2f59"
+"integration_id": "filebeat"
+"integration_title": "Filebeat"
+"integration_version": "1.2.0"
+"is_public": true
+"kind": "integration"
+"maintainer": "jean@tripping.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "filebeat."
+"metric_to_check": "filebeat.registry.unprocessed_bytes"
+"name": "filebeat"
+"public_title": "Intégration Datadog/Filebeat"
+"short_description": "Shipper léger conçu pour les logs"
+"support": "contrib"
+"supported_os":
+- "linux"
+- "mac_os"
+- "windows"
 ---
+
+
+
 ## Présentation
 
 Recueillez des métriques du service Filebeat en temps réel pour :
@@ -65,7 +68,7 @@ Pour l'Agent v7.21+/6.21+, suivez les instructions ci-dessous afin d'installer l
 
 ## Validation
 
-[Lancez la sous-commande `status` de l'Agent][7] et cherchez `filebeat` dans la section Checks.
+Lancez la [sous-commande status de l'Agent][7] et cherchez `filebeat` dans la section Checks.
 
 ## Données collectées
 
@@ -87,12 +90,13 @@ Besoin d'aide ? Contactez [l'assistance Datadog][10].
 
 
 [1]: https://app.datadoghq.com/account/settings#agent
-[2]: https://docs.datadoghq.com/fr/agent/guide/use-community-integrations/
-[3]: https://docs.datadoghq.com/fr/getting_started/integrations/
-[4]: https://docs.datadoghq.com/fr/agent/guide/agent-configuration-files/#agent-configuration-directory
+[2]: https://docs.datadoghq.com/agent/guide/use-community-integrations/
+[3]: https://docs.datadoghq.com/getting_started/integrations/
+[4]: https://docs.datadoghq.com/agent/guide/agent-configuration-files/#agent-configuration-directory
 [5]: https://github.com/DataDog/integrations-extras/blob/master/filebeat/datadog_checks/filebeat/data/conf.yaml.example
-[6]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
-[7]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#service-status
+[6]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[7]: https://docs.datadoghq.com/agent/guide/agent-commands/#service-status
 [8]: https://github.com/DataDog/integrations-extras/blob/master/filebeat/metadata.csv
 [9]: https://github.com/DataDog/integrations-extras/blob/master/filebeat/assets/service_checks.json
-[10]: https://docs.datadoghq.com/fr/help/
+[10]: https://docs.datadoghq.com/help/
+
