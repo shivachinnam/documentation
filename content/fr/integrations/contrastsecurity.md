@@ -1,38 +1,41 @@
 ---
-assets:
-  dashboards:
-    Contrast Security Integration Overview: assets/dashboards/contrast_security_protect.json
-  metrics_metadata: metadata.csv
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - log collection
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/contrastsecurity/README.md
-display_name: contrastsecurity
-draft: false
-git_integration_title: contrastsecurity
-guid: 8483bcdc-3d45-48ee-8a73-75511a67ad5f
-integration_id: contrastsecurity
-integration_title: Contrast Security
-integration_version: ''
-is_public: true
-kind: integration
-maintainer: kristiana.mitchell@contrastsecurity.com
-manifest_version: 1.0.0
-metric_prefix: contrastsecurity.
-metric_to_check: ''
-name: contrastsecurity
-public_title: "Intégration Datadog/Contrast\_Security"
-short_description: "Visualisez sur Datadog les attaques et les vulnérabilités identifiées par Contrast\_Security"
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards":
+    "Contrast Security Integration Overview": assets/dashboards/contrast_security_protect.json
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- log collection
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/contrastsecurity/README.md"
+"display_name": "contrastsecurity"
+"draft": false
+"git_integration_title": "contrastsecurity"
+"guid": "8483bcdc-3d45-48ee-8a73-75511a67ad5f"
+"integration_id": "contrastsecurity"
+"integration_title": "Contrast Security"
+"integration_version": ""
+"is_public": true
+"kind": "integration"
+"maintainer": "kristiana.mitchell@contrastsecurity.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "contrastsecurity."
+"metric_to_check": ""
+"name": "contrastsecurity"
+"public_title": "Intégration Datadog/Contrast Security"
+"short_description": "Visualisez sur Datadog les attaques et les vulnérabilités identifiées par Contrast Security"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## Présentation
 
 L'intégration Datadog/Contrast Security vous permet de transmettre vos logs Contrast à Datadog.
@@ -65,7 +68,7 @@ Pour en savoir plus sur les logs, consultez la [documentation de Contrast Secur
 
 Pour en savoir plus, consultez les ressources suivantes :
 - [Documentation Datadog sur les logs][4]
-- [Documentation Datadog sur l'API permettant de créer des dashboards][5]
+- [API Dashboards Datadog][5]
 
 ## Données collectées
 
@@ -82,8 +85,9 @@ L'intégration Contrast n'envoie aucun événement.
 L'intégration Contrast n'inclut aucun check de service.
 
 
-[1]: https://docs.datadoghq.com/fr/agent/guide/agent-configuration-files/
+[1]: https://docs.datadoghq.com/agent/guide/agent-configuration-files/
 [2]: https://docs.contrastsecurity.com/
-[3]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#restart-the-agent
-[4]: https://docs.datadoghq.com/fr/logs/log_collection/#getting-started-with-the-agent
-[5]: https://docs.datadoghq.com/fr/api/#create-a-dashboard
+[3]: https://docs.datadoghq.com/agent/guide/agent-commands/#restart-the-agent
+[4]: https://docs.datadoghq.com/logs/log_collection/
+[5]: https://docs.datadoghq.com/api/#create-a-dashboard
+
