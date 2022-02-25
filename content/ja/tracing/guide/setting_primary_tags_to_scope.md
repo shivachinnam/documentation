@@ -1,21 +1,21 @@
 ---
-title: プライマリタグをスコープに設定
-kind: documentation
 aliases:
-  - /ja/tracing/advanced/setting_primary_tags_to_scope/
+- /ja/tracing/advanced/setting_primary_tags_to_scope/
 further_reading:
-  - link: /tracing/connect_logs_and_traces/
-    tags: トレースの加工
-    text: ログとトレースの接続
-  - link: /tracing/manual_instrumentation/
-    tags: トレースの加工
-    text: 手動でアプリケーションのインスツルメンテーションを行いトレースを作成します。
-  - link: /tracing/opentracing/
-    tags: トレースの加工
-    text: アプリケーション全体に Opentracing を実装します。
-  - link: /tracing/visualization/
-    tag: APM の UI を利用する
-    text: サービス、リソース、トレースの詳細
+- link: /tracing/connect_logs_and_traces/
+  tags: トレースの加工
+  text: ログとトレースの接続
+- link: /tracing/manual_instrumentation/
+  tags: トレースの加工
+  text: 手動でアプリケーションのインスツルメンテーションを行いトレースを作成します。
+- link: /tracing/opentracing/
+  tags: トレースの加工
+  text: アプリケーション全体に Opentracing を実装します。
+- link: /tracing/visualization/
+  tag: APM の UI を利用する
+  text: サービス、リソース、トレースの詳細
+kind: documentation
+title: プライマリタグをスコープに設定
 ---
 ## 定義
 
@@ -40,7 +40,7 @@ Datadog は、トレーサーに `env` を設定することをお勧めしま�
 #### Agent 環境
 
 `env` タグは、Agent コンフィギュレーションで設定できます。
-**トレーサーと Agent に異なる `env` タグを設定しないでください。これを行うと、[トレースメトリクス][6]でタグが重複する可能性があります。**
+**トレーサーと Agent に異なる `env` タグを設定しないでください。これを行うと、[トレースメトリクス][5]でタグが重複する可能性があります。**
 
 オプション
 
@@ -69,7 +69,7 @@ Datadog は、トレーサーに `env` を設定することをお勧めしま�
 
 ## Datadog に 2 番目のプライマリタグを追加する
 
-`env:<環境>` 以外のホストタグをトレースに追加した場合は、環境タグとともにプライマリタグとして設定できます。[APM 設定][5]ページに移動して、プライマリタグを定義、変更、または削除します。
+`env:<ENVIRONMENT>` 以外のホストタグをトレースに追加した場合は、環境タグとともにプライマリタグとして設定できます。[APM 設定][6]ページに移動して、プライマリタグを定義、変更、または削除します。
 
 注:
 
@@ -91,9 +91,9 @@ Datadog は、トレーサーに `env` を設定することをお勧めしま�
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/tracing/visualization/#trace
-[2]: /ja/getting_started/tagging/
-[3]: /ja/getting_started/tagging/unified_service_tagging
-[4]: /ja/getting_started/tagging/assigning_tags/#traces
-[5]: https://app.datadoghq.com/apm/settings
-[6]: /ja/tracing/guide/metrics_namespace/
+[1]: /tracing/visualization/#trace
+[2]: /getting_started/tagging/
+[3]: /getting_started/tagging/unified_service_tagging
+[4]: /getting_started/tagging/assigning_tags/#traces
+[5]: /tracing/guide/metrics_namespace/
+[6]: https://app.datadoghq.com/apm/settings
