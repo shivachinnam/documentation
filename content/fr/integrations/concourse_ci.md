@@ -1,37 +1,40 @@
 ---
-assets:
-  dashboards: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - Collaboration
-creates_events: false
-ddtype: crawler
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/concourse_ci/README.md
-display_name: "Concourse\_CI"
-draft: false
-git_integration_title: concourse_ci
-guid: 054cc9fb-01c4-4f05-98b5-fae828746787
-integration_id: concourse-ci
-integration_title: Concourse-CI
-integration_version: ''
-is_public: true
-kind: integration
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: concourse.ci.
-metric_to_check: concourse.ci.goroutines
-name: concourse_ci
-public_title: "Intégration Datadog/Concourse\_CI"
-short_description: "Recueillez des métriques transmises par Concourse\_CI."
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- Collaboration
+"creates_events": false
+"ddtype": "crawler"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/concourse_ci/README.md"
+"display_name": "Concourse CI"
+"draft": false
+"git_integration_title": "concourse_ci"
+"guid": "054cc9fb-01c4-4f05-98b5-fae828746787"
+"integration_id": "concourse-ci"
+"integration_title": "Concourse-CI"
+"integration_version": ""
+"is_public": true
+"kind": "integration"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "concourse.ci."
+"metric_to_check": "concourse.ci.goroutines"
+"name": "concourse_ci"
+"public_title": "Intégration Datadog/Concourse CI"
+"short_description": "Recueillez des métriques transmises par Concourse CI."
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## Présentation
 
 Configurez l'émetteur de métriques Datadog dans Concourse CI pour :
@@ -51,7 +54,7 @@ Paramétrez les options suivantes de sorte que l'ATC puisse utiliser l'émetteur
 
 ### Options de l'émetteur de métriques
 
-Consultez la [documentation][4] de Concourse CI (en anglais) pour en savoir plus.
+Consultez la section de la documentation Concourse CI relative à la [configuration des métriques][4] (en anglais) pour en savoir plus.
 
 ```text
 Metric Emitter (Datadog):
@@ -80,7 +83,8 @@ Besoin d'aide ? Contactez [l'assistance Datadog][6].
 
 [1]: https://concourse-ci.org/concepts.html
 [2]: https://app.datadoghq.com/account/settings#agent
-[3]: https://docs.datadoghq.com/fr/developers/metrics/custom_metrics/
+[3]: https://docs.datadoghq.com/developers/metrics/custom_metrics/
 [4]: https://concourse-ci.org/metrics.html#configuring-metrics
 [5]: https://github.com/DataDog/integrations-extras/blob/master/concourse_ci/metadata.csv
-[6]: https://docs.datadoghq.com/fr/help/
+[6]: https://docs.datadoghq.com/help/
+
