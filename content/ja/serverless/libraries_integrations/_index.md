@@ -1,18 +1,18 @@
 ---
-title: ライブラリとインテグレーション
-kind: documentation
-further_reading:
-  - link: /serverless/serverless_integrations/plugin/
-    tag: Datadog サーバーレスプラグイン
-    text: ドキュメント
-  - link: /serverless/serverless_integrations/macro/
-    tag: ドキュメント
-    text: Datadog のサーバーレスマクロ
-  - link: /serverless/serverless_integrations/cli/
-    tag: ドキュメント
-    text: Datadog サーバーレス CLI
 aliases:
-  - /ja/serverless/serverless_integrations
+- /ja/serverless/serverless_integrations
+further_reading:
+- link: /serverless/serverless_integrations/plugin/
+  tag: Datadog サーバーレスプラグイン
+  text: ドキュメント
+- link: /serverless/serverless_integrations/macro/
+  tag: ドキュメント
+  text: Datadog のサーバーレスマクロ
+- link: /serverless/serverless_integrations/cli/
+  tag: ドキュメント
+  text: Datadog サーバーレス CLI
+kind: documentation
+title: サーバーレスライブラリとインテグレーション
 ---
 {{< whatsnext desc="サーバーレスライブラリとインテグレーション:" >}}
     {{< nextlink href="/serverless/libraries_integrations/extension/" >}}Datadog Lambda 拡張機能{{< /nextlink >}}
@@ -53,7 +53,7 @@ aliases:
 
 3. 完了したら、[サーバレスビュー][2]に移動し、Lambda 関数で新しい `filesystemid` タグを使用します。
 
-{{< img src="integrations/amazon_lambda/efs_for_lambda.gif" alt="Amazon EFS for Lambda" >}}
+{{< img src="integrations/amazon_lambda/efs_for_lambda.mp4" alt="Amazon EFS for Lambda" video=true >}}
 
 ## Lambda@Edge
 
@@ -64,10 +64,10 @@ aliases:
 {{< partial name="whats-next/whats-next.html" >}}
 
 
-[1]: /ja/integrations/amazon_step_functions/
+[1]: /integrations/amazon_step_functions/
 [2]: https://app.datadoghq.com/functions
-[3]: /ja/integrations/amazon_web_services/#installation
-[4]: /ja/serverless/serverless_integrations/macro/
-[5]: /ja/integrations/amazon_efs/#amazon-efs-for-lambda
-[6]: /ja/serverless/serverless_integrations/plugin/
-[7]: /ja/integrations/amazon_efs/
+[3]: /integrations/amazon_web_services/#installation
+[4]: /serverless/serverless_integrations/macro/
+[5]: /integrations/amazon_efs/#amazon-efs-for-lambda
+[6]: /serverless/serverless_integrations/plugin/
+[7]: /integrations/amazon_efs/
