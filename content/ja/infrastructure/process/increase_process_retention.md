@@ -1,18 +1,18 @@
 ---
-title: プロセスの保持を増やす
-kind: documentation
 aliases:
-  - /ja/infrastructure/process/generate_process_metrics/
-  - /ja/processes/processing/process_to_metrics/
-  - /ja/infrastructure/generate_process_metrics/
+- /ja/infrastructure/process/generate_process_metrics/
+- /ja/processes/processing/process_to_metrics/
+- /ja/infrastructure/generate_process_metrics/
 description: プロセスからメトリクスを生成します。
 further_reading:
-  - link: metrics/distributions/
-    tag: Documentation
-    text: ディストリビューションメトリクス
-  - link: monitors/monitor_types/metric/?tab=threshold
-    tag: Documentation
-    text: メトリクスモニターの作成
+- link: metrics/distributions/
+  tag: Documentation
+  text: ディストリビューションメトリクス
+- link: monitors/monitor_types/metric/?tab=threshold
+  tag: Documentation
+  text: メトリクスモニターの作成
+kind: documentation
+title: プロセスの保持を増やす
 ---
 ## 概要
 
@@ -73,5 +73,5 @@ further_reading:
 
 [1]: https://app.datadoghq.com/process?view=metrics
 [2]: https://app.datadoghq.com/process
-[3]: /ja/metrics/custom_metrics/
-[4]: /ja/dashboards/correlations/
+[3]: /metrics/custom_metrics/
+[4]: /dashboards/correlations/
