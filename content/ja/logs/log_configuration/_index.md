@@ -1,22 +1,22 @@
 ---
-title: ログコンフィギュレーション
-kind: ドキュメント
-description: ログコンフィギュレーションページからログを処理、強化、制御、管理します
 aliases:
-  - /ja/logs/processing
+- /ja/logs/processing
+description: ログコンフィギュレーションページからログを処理、強化、制御、管理します
 further_reading:
-  - link: https://www.datadoghq.com/blog/logging-without-limits/
-    tag: ブログ
-    text: Logging without Limits* の詳細
-  - link: /logs/guide/
-    tag: ガイド
-    text: Datadog を使用したロギングに関する追加ガイド
+- link: https://www.datadoghq.com/blog/logging-without-limits/
+  tag: ブログ
+  text: Logging without Limits* の詳細
+- link: /logs/guide/
+  tag: ガイド
+  text: Datadog を使用したロギングに関する追加ガイド
+kind: ドキュメント
+title: ログコンフィギュレーション
 ---
 ## 概要
 
 Datadog Logging without Limits* は、ログの取り込みとインデックス作成を切り離します。[ログコンフィギュレーションセクション][1]から、インデックスを作成して保持するログ、またはアーカイブするログを選択し、トップレベルで設定とコントロールを管理します。
 
-{{< img src="logs/log_configuration_overview.gif" alt="Datadog アプリのログコンフィギュレーションセクション">}}
+{{< img src="logs/log_configuration_overview.mp4" alt="Datadog アプリのログコンフィギュレーションセクション" video=true >}}
 
 ## コンフィギュレーションオプション
 
@@ -40,12 +40,12 @@ Datadog Logging without Limits* は、ログの取り込みとインデックス
 *Logging without Limits は Datadog, Inc. の商標です。
 
 [1]: https://app.datadoghq.com/logs/pipelines
-[2]: /ja/logs/log_configuration/pipelines
-[3]: /ja/logs/log_configuration/processors
-[4]: /ja/logs/log_configuration/attributes_naming_convention/
-[5]: /ja/logs/log_configuration/logs_to_metrics/
-[6]: /ja/logs/log_configuration/indexes
-[7]: /ja/logs/log_configuration/archives/
-[8]: /ja/logs/log_configuration/rehydrating
-[9]: /ja/logs/guide/logs-rbac/
-[10]: /ja/logs/explorer/
+[2]: /logs/log_configuration/pipelines
+[3]: /logs/log_configuration/processors
+[4]: /logs/log_configuration/attributes_naming_convention/
+[5]: /logs/log_configuration/logs_to_metrics/
+[6]: /logs/log_configuration/indexes
+[7]: /logs/log_configuration/archives/
+[8]: /logs/log_configuration/rehydrating
+[9]: /logs/guide/logs-rbac/
+[10]: /logs/explorer/
