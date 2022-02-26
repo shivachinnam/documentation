@@ -2,11 +2,12 @@
 title: レート制限
 type: api
 ---
+
 {{< h2 >}}レート制限{{< /h2 >}}
 
 すべての API エンドポイントでは、レートが制限されています。特定の期間内に所定のリクエスト数を超過すると、Datadog からエラーが返されます。
 
-レート制限がある場合は、応答コードに 429 が表示されます。Datadog は、`X-RateLimit-Limit` で指定された時間待ってから再度電話をかけるか、`X-RateLimit-Limit` / `X-RateLimit-Period` より少し長い頻度で電話をかけるように切り替えることをお勧めします。
+レート制限がある場合は、応答コードに 429 が表示されます。Datadog は、`X-RateLimit-Period` で指定された時間待ってから再度電話をかけるか、`X-RateLimit-Limit` / `X-RateLimit-Period` より少し長い頻度で電話をかけるように切り替えることをお勧めします。
 
 デフォルトのレート制限を増加させたい場合は、[Datadog のサポートチームにお問い合わせください][1]。
 
@@ -28,10 +29,10 @@ API レート制限ポリシーについて
 | `X-RateLimit-Remaining` | 現在の期間内で許可される残りのリクエスト数。  |
 | `X-RateLimit-Reset`     | 次のリセットまでの時間 (秒)。                        |
 
-[1]: /ja/help/
-[2]: /ja/api/v1/metrics/
-[3]: /ja/metrics/custom_metrics/
-[4]: /ja/api/v1/metrics/#query-timeseries-points
-[5]: /ja/api/v1/logs/#get-a-list-of-logs
-[6]: /ja/api/v1/snapshots/
-[7]: /ja/api/v1/logs-indexes/
+[1]: /help/
+[2]: /api/v1/metrics/
+[3]: /metrics/custom_metrics/
+[4]: /api/v1/metrics/#query-timeseries-points
+[5]: /api/v1/logs/#get-a-list-of-logs
+[6]: /api/v1/snapshots/
+[7]: /api/v1/logs-indexes/
