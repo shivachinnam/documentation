@@ -2,22 +2,23 @@
 title: データベースサービスの異常な p99 レイテンシーに関するアラート
 kind: ガイド
 further_reading:
-  - link: /tracing/guide/week_over_week_p50_comparison/
-    tag: 2 分
-    text: サービスのレイテンシーを前週と比較する
-  - link: /tracing/guide/slowest_request_daily/
-    tag: 3 分
-    text: ウェブサービスの最も遅いエンドポイントで最も遅いトレースをデバッグする
-  - link: /tracing/guide/apm_dashboard/
-    tag: 4 分
-    text: ダッシュボードを作成して、APM メトリクスを追跡、関連付ける
-  - link: /tracing/guide/add_span_md_and_graph_it/
-    tag: 7 分
-    text: スパンタグを追加し、アプリケーションのパフォーマンスを分類する
-  - link: /tracing/guide/
-    tag: ''
-    text: すべてのガイド
+- link: /tracing/guide/week_over_week_p50_comparison/
+  tag: 2 分
+  text: サービスのレイテンシーを前週と比較する
+- link: /tracing/guide/slowest_request_daily/
+  tag: 3 分
+  text: ウェブサービスの最も遅いエンドポイントで最も遅いトレースをデバッグする
+- link: /tracing/guide/apm_dashboard/
+  tag: 4 分
+  text: ダッシュボードを作成して、APM メトリクスを追跡、関連付ける
+- link: /tracing/guide/add_span_md_and_graph_it/
+  tag: 7 分
+  text: スパンタグを追加し、アプリケーションのパフォーマンスをフィルタリングし、グループ化する
+- link: /tracing/guide/
+  tag: ""
+  text: すべてのガイド
 ---
+
 _所要時間 3 分_
 
 {{< img src="tracing/guide/alert_anomalies_p99_database/alert_anomalies_full.mp4" video="true" alt="モニターの継続的なアラート設定"  style="width:90%;">}}
@@ -77,12 +78,12 @@ Datadog では、ユーザー自身で継続的にサービスの健全性を監
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/monitors/create/types/anomaly/
+[1]: /monitors/create/types/anomaly/
 [2]: https://app.datadoghq.com/monitors#/create
 [3]: https://app.datadoghq.com/monitors#create/apm
-[4]: /ja/tracing/visualization/#resources
-[5]: /ja/tracing/visualization/#services
-[6]: /ja/monitors/create/types/anomaly/#faq
-[7]: /ja/monitors/notify/?tab=is_alertis_warning
+[4]: /tracing/visualization/#resources
+[5]: /tracing/visualization/#services
+[6]: /monitors/create/types/anomaly/#faq
+[7]: /monitors/notify/?tab=is_alertis_warning
 [8]: https://app.datadoghq.com/apm/services
 [9]: https://app.datadoghq.com/service/map
