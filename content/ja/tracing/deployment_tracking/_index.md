@@ -1,18 +1,17 @@
 ---
-title: デプロイメントの追跡
-kind: ドキュメント
-description: Datadog を使用して、バージョンタグによりデプロイメントを追跡
 aliases:
-  - /ja/tracing/version_tracking
+- /ja/tracing/version_tracking
+description: Datadog を使用して、バージョンタグによりデプロイメントを追跡
 further_reading:
-  - link: getting_started/tagging/unified_service_tagging/
-    tag: Documentation
-    text: 統合サービスタグ付けと予約済みタグについて学ぶ
-  - link: tracing/app_analytics
-    tag: Documentation
-    text: App Analytics クエリでディメンションとしてバージョンを使用する
----
-## Version タグ
+- link: getting_started/tagging/unified_service_tagging/
+  tag: Documentation
+  text: 統合サービスタグ付けと予約済みタグについて学ぶ
+- link: tracing/app_analytics
+  tag: Documentation
+  text: App Analytics クエリでディメンションとしてバージョンを使用する
+kind: ドキュメント
+title: デプロイメントの追跡
+---## Version タグ
 
 `version` タグは、統合サービスタグ付け内に予約され、インフラストラクチャーメトリクス（ホスト、コンテナ、プロセス、NPM チェック）、トレースメトリクス、トレース、プロファイル、ログに適用されます。
 
@@ -93,7 +92,7 @@ further_reading:
 
 **注:** エラー比較は、_観察された_ エラータイプに基づいています。珍しいエラータイプは、_まだ_ 確認されていないという理由だけで、「出現しなくなった」と検出される可能性があります。
 
-{{< img src="tracing/deployment_tracking/ErrorComparison.gif" alt="エラー比較"  style="width:100%;">}}
+{{< img src="tracing/deployment_tracking/ErrorComparison.mp4" alt="エラー比較" video=true style="width:100%;">}}
 
 ### エンドポイント比較
 
@@ -160,7 +159,7 @@ Datadog 内で `version` タグを使用すると、カナリアデプロイの�
 
 ### トレース検索と分析
 
-{{< img src="tracing/deployment_tracking/AnalyticsErrorsByVersion.gif" alt="App Analytics のバージョン"  style="width:100%;">}}
+{{< img src="tracing/deployment_tracking/AnalyticsErrorsByVersion.mp4" alt="App Analytics のバージョン" video=true style="width:100%;">}}
 
 使用可能な場合、`version` はトレース検索と分析の両方のタグとして使用することで、ライブ検索モードとインデックス化されたトレースをフィルタリングするか、分析クエリをフィルタリングまたはグループ化することができます。
 
@@ -177,4 +176,4 @@ Datadog 内で `version` タグを使用すると、カナリアデプロイの�
 {{< partial name="whats-next/whats-next.html" >}}
 
 
-[1]: /ja/getting_started/tagging/unified_service_tagging/
+[1]: /getting_started/tagging/unified_service_tagging/
