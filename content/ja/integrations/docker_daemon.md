@@ -1,6 +1,6 @@
 ---
 aliases:
-  - /ja/integrations/docker
+- /ja/integrations/docker
 assets:
   dashboards: {}
   logs: {}
@@ -8,12 +8,12 @@ assets:
   monitors: {}
   service_checks: assets/service_checks.json
 categories:
-  - containers
-  - ログの収集
+- containers
+- ログの収集
 creates_events: true
 ddtype: check
 dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/docker_daemon/README.md
+- https://github.com/DataDog/integrations-core/blob/master/docker_daemon/README.md
 display_name: Docker
 draft: false
 git_integration_title: docker_daemon
@@ -29,18 +29,20 @@ metric_prefix: docker.
 metric_to_check: docker.containers.running
 name: docker_daemon
 process_signatures:
-  - dockerd
-  - docker-containerd
-  - docker run
-  - docker daemon
-  - docker-containerd-shim
+- dockerd
+- docker-containerd
+- docker run
+- docker daemon
+- docker-containerd-shim
 public_title: Datadog-Docker Daemon インテグレーション
 short_description: コンテナのパフォーマンスをその内部で実行中のサービスのパフォーマンスと関連付けます。
 support: コア
 supported_os:
-  - linux
-  - mac_os
+- linux
+- mac_os
 ---
+
+
 **注**: Docker Daemon チェックのメンテナンスは継続されていますが、**Agent v5** でのみ動作します。
 
 <div class="alert alert-warning">
@@ -94,7 +96,7 @@ supported_os:
 | DD_URL                                                                                            | Agent がデータを送信する Datadog インテークサーバー URL を設定します。これは、[Agent をプロキシとして使用する][9]際に役立ちます。                                                                                                              |
 | LOG_LEVEL                                                                                         | ログの詳細度を設定します (CRITICAL、ERROR、WARNING、INFO、DEBUG)。たとえば、`-e LOG_LEVEL=DEBUG` は、ログをデバッグモードに設定します。                                                                                                    |
 | TAGS                                                                                              | ホストタグをカンマ区切りの文字列として設定します。`-e TAGS="simple-tag, tag-key:tag-value"` のように、シンプルなタグとキー/値形式のタグの両方を使用できます。                                                                           |
-| EC2_TAGS                                                                                          | この機能を有効にすると、Agent はスタートアップ時に EC2 API を使用して設定されたカスタムタグを問い合わせたり、キャプチャしたりすることができます。有効にするには、`-e EC2_TAGS=yes` を使用します。この機能には、インスタンスに関連付けられた IAM ロールが必要です。        |
+| EC2_TAGS                                                                                          | この機能を有効にすると、Agent はスタートアップ時に EC2 API を使用して設定されたカスタムタグを問い合わせたり、キャプチャしたりすることができます。有効にするには、`-e EC2_TAGS=yes` を使用します。**注**: この機能には、インスタンスに関連付けられた IAM ロールが必要です。        |
 | NON_LOCAL_TRAFFIC                                                                                 | この機能を有効にすると、外部の IP から報告する StatsD が許可されます。有効にするには、`-e NON_LOCAL_TRAFFIC=yes` を使用します。これは、別のコンテナまたはシステムからメトリクスを報告するために使用されます。詳細については、[ネットワーク構成][10]を参照してください。 |
 | PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASSWORD                                                | プロキシ構成の詳細を設定します。**注**: 認証パスワードを渡すには `PROXY_PASSWORD` が必要です。名前の変更はできません。詳細については、[Agent プロキシに関するドキュメント][11]を参照してください。                                                                                                                                  |
 | SD_BACKEND, SD_CONFIG_BACKEND, SD_BACKEND_HOST, SD_BACKEND_PORT, SD_TEMPLATE_DIR, SD_CONSUL_TOKEN | オートディスカバリーを有効化および構成します。詳細については、[オートディスカバリーのガイド][7]を参照してください。                                                                                                                                   |
@@ -138,7 +140,7 @@ Docker イメージバージョンは、**X.Y.Z** というパターンです。
 
 #### カスタムコンテナと追加情報
 
-Datadog Agent を使用したカスタム Docker コンテナの構築、Alpine Linux ベースのイメージ、バージョン管理などについては、[GitHub の docker-dd-agent プロジェクト][2]を参照してください。
+Datadog Agent を使用したカスタム Docker コンテナの構築、Alpine Linux ベースのイメージ、バージョン管理などについては、[Github の docker-dd-agent プロジェクト][2]を参照してください。
 
 ### 検証
 
@@ -146,10 +148,10 @@ Datadog Agent を使用したカスタム Docker コンテナの構築、Alpine 
 
 ## Agent v6
 
-最新の Docker チェックの名前は `docker` です。これは、新しい内部アーキテクチャを利用するために Go で記述されています。バージョン 6.0 以降の Agent は、`docker_daemon` チェックをロードしなくなります。ただし、Agent v5 では引き続き使用でき、メンテナンスも継続されます。以下の非推奨の機能以外のすべての機能は、バージョン >6.0 に移植されます。
+最新の Docker チェックの名前は `docker` です。これは、新しい内部アーキテクチャを利用するために Go で記述されています。v6.0 以降の Agent は、`docker_daemon` チェックをロードしません。ただし、Agent v5 では引き続き使用でき、メンテナンスも継続されます。以下の非推奨の機能以外のすべての機能は、バージョン >6.0 に移植されます。
 
   * `url`、`api_version`、および `tags*` オプションは非推奨です。[標準の Docker 環境変数][15]を直接使用することをお勧めします。
-  * `ecs_tags`、`performance_tags`、および `container_tags` オプションは非推奨です。関連するタグはそれぞれデフォルトで収集されるようになりました。
+  * `ecs_tags`、`performance_tags`、および `container_tags` オプションは非推奨です。関連するタグはそれぞれデフォルトで収集されます。
   * `docker.container.count` メトリクスを有効にする `collect_container_count` オプションはサポートされません。`docker.containers.running` と `.stopped` を使用してください。
 
 一部のオプションは `docker_daemon.yaml` からメインの `datadog.yaml` に移動しました。
@@ -219,19 +221,19 @@ Docker インテグレーションは以下のイベントを生成します。
 [9]: https://github.com/DataDog/dd-agent/wiki/Proxy-Configuration#using-the-agent-as-a-proxy
 [10]: https://github.com/DataDog/dd-agent/wiki/Network-Traffic-and-Proxy-Configuration
 [11]: https://github.com/DataDog/dd-agent/wiki/Proxy-Configuration#using-a-web-proxy-as-proxy
-[12]: https://docs.datadoghq.com/ja/agent/autodiscovery
+[12]: https://docs.datadoghq.com/agent/autodiscovery
 [13]: https://alpinelinux.org
-[14]: https://docs.datadoghq.com/ja/agent/guide/agent-commands/#agent-status-and-information
+[14]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [15]: https://docs.docker.com/engine/reference/commandline/cli/#environment-variables
 [16]: https://hub.docker.com/r/datadog/docker-dd-agent
 [17]: https://hub.docker.com/r/datadog/agent
-[18]: https://docs.datadoghq.com/ja/agent/#cli
+[18]: https://docs.datadoghq.com/agent/#cli
 [19]: https://github.com/DataDog/integrations-core/blob/master/docker_daemon/metadata.csv
 [20]: https://github.com/DataDog/integrations-core/blob/master/docker_daemon/assets/service_checks.json
 [21]: https://github.com/DataDog/integrations-core/blob/master/docker_daemon/datadog_checks/docker_daemon/data/conf.yaml.example#L124
-[22]: https://docs.datadoghq.com/ja/help
-[23]: https://docs.datadoghq.com/ja/integrations/faq/compose-and-the-datadog-agent
-[24]: https://docs.datadoghq.com/ja/integrations/faq/dogstatsd-and-docker
+[22]: https://docs.datadoghq.com/help
+[23]: https://docs.datadoghq.com/integrations/faq/compose-and-the-datadog-agent
+[24]: https://docs.datadoghq.com/integrations/faq/dogstatsd-and-docker
 [25]: https://www.datadoghq.com/blog/the-docker-monitoring-problem
 [26]: https://www.datadoghq.com/blog/how-to-monitor-docker-resource-metrics
 [27]: https://www.datadoghq.com/blog/how-to-collect-docker-metrics
