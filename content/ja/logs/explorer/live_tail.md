@@ -1,20 +1,20 @@
 ---
-title: Live Tail
-kind: documentation
-description: すべてのログを検索し、ログ分析を実行します
 aliases:
-  - /ja/logs/explore/livetail
-  - /ja/logs/live_tail
+- /ja/logs/explore/livetail
+- /ja/logs/live_tail
+description: すべてのログを検索し、ログ分析を実行します
 further_reading:
-  - link: /logs/log_configuration/processors
-    tag: ドキュメント
-    text: ログの処理方法
-  - link: logs/explorer/side_panel
-    tag: ドキュメント
-    text: ログサイドパネル
-  - link: logs/explorer/#list-of-logs
-    tag: ドキュメント
-    text: ログのリストビュー
+- link: /logs/log_configuration/processors
+  tag: ドキュメント
+  text: ログの処理方法
+- link: logs/explorer/side_panel
+  tag: ドキュメント
+  text: ログサイドパネル
+- link: logs/explorer/#list-of-logs
+  tag: ドキュメント
+  text: ログのリストビュー
+kind: documentation
+title: Live Tail
 ---
 ## 概要
 
@@ -26,7 +26,7 @@ Live Tail では、インフラストラクチャー内のどこからでもリ�
 
 [ログエクスプローラー][3]でタイムレンジの Live Tail オプションを選択し、ログが Datadog に取り込まれる際にログのクエリを実行します。
 
-{{< img src="logs/explorer/live_tail/livetail.gif" alt="Live Tail のログ出力" style="width:100%;" >}}
+{{< img src="logs/explorer/live_tail/livetail.mp4" alt="Live Tail のログ出力" video=true style="width:100%;" >}}
 
 インデックスされたログのクエリは[ログエクスプローラー][3]で行われますが、Live Tail 内のクエリでは事前に[ファセットを宣言][4]する必要は*ありません*。
 
@@ -36,7 +36,7 @@ Live Tail では、インフラストラクチャー内のどこからでもリ�
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/logs/indexes#exclusion-filters
-[2]: /ja/logs/log_configuration/pipelines
-[3]: /ja/logs/explorer
-[4]: /ja/logs/explorer/facets/
+[1]: /logs/indexes#exclusion-filters
+[2]: /logs/log_configuration/pipelines
+[3]: /logs/explorer
+[4]: /logs/explorer/facets/
