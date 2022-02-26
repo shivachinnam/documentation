@@ -2,10 +2,11 @@
 title: Agent ランタイムコンフィギュレーション管理
 kind: ドキュメント
 further_reading:
-  - link: /agent/troubleshooting/debug_mode/
-    tag: Agent のトラブルシューティング
-    text: Agent デバッグモード
+- link: /agent/troubleshooting/debug_mode/
+  tag: Agent のトラブルシューティング
+  text: Agent デバッグモード
 ---
+
 Agent 6.19+/7.19+ を実行している場合は、コンフィギュレーションの変更を反映するために Agent を再起動する必要はなく、ランタイム時に一部の設定を動的に変更できます。
 
 **注**: 動的に行われた変更は保持されません。Agent を再起動するとすぐに失われます。
@@ -25,7 +26,7 @@ Agent 6.19+/7.19+ を実行している場合は、コンフィギュレーシ�
 | ソース     | `sudo datadog-agent config list-runtime`               |
 | Windows    | [Windows][1]に関する個別のドキュメントをご参照ください。       |
 
-ランタイム時に変更できる 1 つのパラメーターは、ログレベルです。これは、コンテナ化された環境でデバッグを行う場合に便利です。この場合、Agent を実行しているコンテナを破棄して再作成する必要がないため、Agent のコンフィギュレーションを簡単に変更できません。Kubernetes デプロイメントでデバッグするログレベルを動的に設定するには、次のコマンドを呼び出します。
+ランタイム時に変更できる 1 つのパラメーターは、ログレベルです。これは、コンテナ化された環境でデバッグを行う場合に便利です。この場合、Agent を実行しているコンテナを破棄して再作成する必要がないため、Agent のコンフィギュレーションを変更できません。Kubernetes デプロイメントでデバッグするログレベルを動的に設定するには、次のコマンドを呼び出します。
 
 ```text
 kubectl exec <ポッド名> agent config set log_level debug
@@ -44,4 +45,4 @@ sudo datadog-agent config get log_level
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/agent/basic_agent_usage/windows/#agent-v6
+[1]: /agent/basic_agent_usage/windows/#agent-v6
