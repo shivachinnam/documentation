@@ -1,14 +1,15 @@
 ---
-title: デプロイ追跡
+title: サーバーレスアプリケーションのためのデプロイメントトラッキング
 kind: documentation
 further_reading:
-  - link: /serverless/distributed_tracing
-    tag: Documentation
-    text: サーバーレス環境での分散型トレーシング
-  - link: /serverless/serverless_tagging
-    tag: Documentation
-    text: サーバーレスタグ付け
+    - link: /serverless/distributed_tracing
+      tag: Documentation
+      text: サーバーレス環境での分散型トレーシング
+    - link: /serverless/serverless_tagging
+      tag: Documentation
+      text: サーバーレスタグ付け
 ---
+
 {{< img src="serverless/deployment_tracking.jpeg" alt="サーバーレスのデプロイメント追跡"  style="width:100%;">}}
 
 デプロイメント追跡は、コードの新しいバージョンやコンフィギュレーションの変更によってエラー率の上昇、パフォーマンス低下、またお使いのクラウド環境が期待通りの稼働状態から外れていないかなどを把握するのに役立ちます。
@@ -36,5 +37,4 @@ cloudtrail:LookupEvents
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://app.datadoghq.com/functions
-[2]: /ja/integrations/amazon_web_services/#setup
-[3]: /ja/help/
+[2]: /integrations/amazon_web_services/#setup
