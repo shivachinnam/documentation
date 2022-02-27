@@ -1,14 +1,14 @@
 ---
-title: Agent のコマンド
-kind: ガイド
 aliases:
-  - /ja/agent/faq/agent-status-and-information
-  - /ja/agent/faq/start-stop-restart-the-datadog-agent
-  - /ja/agent/faq/agent-commands
+- /ja/agent/faq/agent-status-and-information
+- /ja/agent/faq/start-stop-restart-the-datadog-agent
+- /ja/agent/faq/agent-commands
 further_reading:
-  - link: /agent/troubleshooting/
-    tag: Documentation
-    text: Agent のトラブルシューティング
+- link: /agent/troubleshooting/
+  tag: Documentation
+  text: Agent のトラブルシューティング
+kind: ガイド
+title: Agent のコマンド
 ---
 <div class="alert alert-warning">
 <code>service</code> ラッパーコマンドを使用できない Linux ベースのシステムをご使用の場合は、<a href="/agent/faq/agent-v6-changes/?tab=linux#service-lifecycle-commands">代替リストを参照してください</a>。
@@ -33,9 +33,9 @@ Datadog Agent を起動するためのコマンドを以下に示します。
 | ソース     | `sudo service datadog-agent start`                                 |
 | Windows    | [Windows Agent ドキュメントを参照してください][3]。                          |
 
-[1]: /ja/agent/
-[2]: /ja/agent/docker/
-[3]: /ja/agent/basic_agent_usage/windows/
+[1]: /agent/
+[2]: /agent/docker/
+[3]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -48,7 +48,7 @@ Datadog Agent を起動するためのコマンドを以下に示します。
 | Windows  | [Windows Agent ドキュメントを参照してください][2]。 |
 
 [1]: https://github.com/DataDog/docker-dd-agent/blob/master/README.md
-[2]: /ja/agent/basic_agent_usage/windows/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -69,8 +69,8 @@ Datadog Agent を停止するためのコマンドを以下に示します。
 | ソース     | `sudo service datadog-agent stop`                                                |
 | Windows    | [Windows Agent ドキュメントを参照してください][2]。                                        |
 
-[1]: /ja/agent/
-[2]: /ja/agent/basic_agent_usage/windows/
+[1]: /agent/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -83,7 +83,7 @@ Datadog Agent を停止するためのコマンドを以下に示します。
 | Windows  | [Windows Agent ドキュメントを参照してください][2]。 |
 
 [1]: https://github.com/DataDog/docker-dd-agent/blob/master/README.md
-[2]: /ja/agent/basic_agent_usage/windows/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -103,9 +103,9 @@ Datadog Agent を再起動するためのコマンドを以下に示します。
 | ソース     | サポートされないプラットフォーム                                                           |
 | Windows    | [Windows Agent ドキュメントを参照してください][3]。                                        |
 
-[1]: /ja/agent/
-[2]: /ja/agent/docker/?tab=standard#setup
-[3]: /ja/agent/basic_agent_usage/windows/
+[1]: /agent/
+[2]: /agent/docker/?tab=standard#setup
+[3]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -118,7 +118,7 @@ Datadog Agent を再起動するためのコマンドを以下に示します。
 | Windows  | [Windows Agent ドキュメントを参照してください][2]。 |
 
 [1]: https://github.com/DataDog/docker-dd-agent/blob/master/README.md
-[2]: /ja/agent/basic_agent_usage/windows/
+[2]: /agent/basic_agent_usage/windows/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -141,7 +141,7 @@ Datadog Agent のステータスを表示するためのコマンドを以下に
 | ソース          | `sudo service datadog-agent status`                                           |
 
 
-[1]: /ja/agent/
+[1]: /agent/
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -154,7 +154,7 @@ Datadog Agent のステータスを表示するためのコマンドを以下に
 | ソース          | `sudo ~/.datadog-agent/bin/agent status`                                 |
 | Windows         | [Windows Agent ドキュメントを参照してください][1]。                                |
 
-[1]: /ja/agent/basic_agent_usage/windows/#status-and-information
+[1]: /agent/basic_agent_usage/windows/#status-and-information
 {{% /tab %}}
 {{% tab "Cluster Agent" %}}
 
@@ -196,8 +196,8 @@ Running Checks
     Average Execution Time : 0ms
 ```
 
-[1]: /ja/agent/basic_agent_usage/#gui
-[2]: /ja/agent/basic_agent_usage/windows/#status-and-information
+[1]: /agent/basic_agent_usage/#gui
+[2]: /agent/basic_agent_usage/windows/#status-and-information
 {{% /tab %}}
 {{% tab "Agent v5" %}}
 
@@ -221,7 +221,7 @@ Checks
    - Collected 15 metrics, 0 events & 1 service check
 ```
 
-[1]: /ja/agent/basic_agent_usage/windows/#status-and-information
+[1]: /agent/basic_agent_usage/windows/#status-and-information
 {{% /tab %}}
 {{% tab "Cluster Agent" %}}
 
@@ -266,15 +266,15 @@ Agent v6 のコマンドラインインターフェイスは、サブコマン�
 | `installservice`  | サービスコントロールマネージャー内で Agent をインストールします。Windows のみです。         |
 | `jmx`             | JMX トラブルシューティング。                                                        |
 | `launch-gui`      | Datadog Agent GUI を起動します。                                                |
-| `regimport`       | レジストリ設定を `datadog.yaml` にインポートします。Windows のみです。             |
+| `regimport`       | レジストリ設定を `datadog.yaml` にインポートします。Windows のみです。7.27.0 以降では非推奨です。             |
 | `remove-service`  | サービスコントロールマネージャーから Agent を削除します。Windows のみです。            |
 | `restart-service` | サービスコントロールマネージャー内で Agent を再起動します。Windows のみです。         |
 | `start-service`   | サービスコントロールマネージャー内で Agent を起動します。Windows のみです。           |
 | `stopservice`     | サービスコントロールマネージャー内で Agent を停止します。Windows のみです。            |
 | `version`         | バージョン情報を出力します。                                                         |
 
-[1]: /ja/agent/troubleshooting/config/
-[2]: /ja/agent/troubleshooting/send_a_flare/
+[1]: /agent/troubleshooting/config/
+[2]: /agent/troubleshooting/send_a_flare/
 {{% /tab %}}
 {{< /tabs >}}
 
