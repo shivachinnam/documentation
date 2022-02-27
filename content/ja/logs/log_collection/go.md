@@ -1,31 +1,31 @@
 ---
-title: Go ログ収集
-kind: documentation
 aliases:
-  - /ja/logs/languages/go
+- /ja/logs/languages/go
 further_reading:
-  - link: https://www.datadoghq.com/blog/go-logging/
-    tag: ブログ
-    text: Golang ログの収集、標準化、一元化方法
-  - link: /logs/log_configuration/processors
-    tag: Documentation
-    text: ログの処理方法
-  - link: /logs/log_configuration/parsing
-    tag: Documentation
-    text: パースの詳細
-  - link: /logs/explorer/
-    tag: Documentation
-    text: ログの調査方法
-  - link: /logs/explorer/#visualize
-    tag: Documentation
-    text: ログ分析の実行
-  - link: /logs/faq/log-collection-troubleshooting-guide/
-    tag: FAQ
-    text: ログ収集のトラブルシューティングガイド
+- link: https://www.datadoghq.com/blog/go-logging/
+  tag: ブログ
+  text: Golang ログの収集、標準化、一元化方法
+- link: /logs/log_configuration/processors
+  tag: Documentation
+  text: ログの処理方法
+- link: /logs/log_configuration/parsing
+  tag: Documentation
+  text: パースの詳細
+- link: /logs/explorer/
+  tag: Documentation
+  text: ログの調査方法
+- link: /logs/explorer/#visualize
+  tag: Documentation
+  text: ログ分析の実行
+- link: /logs/faq/log-collection-troubleshooting-guide/
+  tag: FAQ
+  text: ログ収集のトラブルシューティングガイド
+kind: documentation
+title: Go ログ収集
 ---
-Go ログを Datadog に送信する場合は、ファイルにログを記録し、Datadog Agent を使用してそのファイルを追跡することをお勧めします。それには、[logrus][1] というオープンソースのロギングライブラリを使用して、以下のようにセットアップを行います。
+Go ログを Datadog に送信する場合は、ファイルにログを記録し、Datadog Agent を使用してそのファイルを追跡します。それには、[logrus][1] というオープンソースのロギングライブラリを使用して、以下のようにセットアップすることが望まれます。
 
-[カスタムパース規則][2]の使用を避け、ログを JSON 形式で生成するようにロギングライブラリをセットアップすることを強くお勧めします。
+Datadog は、[カスタムパース規則][2]の使用を避け、ログを JSON 形式で生成するようにロギングライブラリをセットアップすることを強くお勧めします。
 
 ## ロガーの構成
 
@@ -48,7 +48,7 @@ func main() {
 }
 ```
 
-ログイベントに表示するメタデータを JSON オブジェクトで提供すると、ログに簡単にメタデータを追加できます。
+ログイベントに表示するメタデータを JSON オブジェクトで提供すると、ログにメタデータを追加できます。
 
 メタデータには、`hostname`、`username`、`customers`、`metric` などの情報があり、トラブルシューティングや Go アプリケーションの状態の把握に役立ちます。
 
@@ -110,5 +110,5 @@ Go でさらにログ収集を実行するためのヒント:
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://github.com/sirupsen/logrus
-[2]: /ja/logs/log_configuration/parsing
-[3]: /ja/tracing/connect_logs_and_traces/go/
+[2]: /logs/log_configuration/parsing
+[3]: /tracing/connect_logs_and_traces/go/
