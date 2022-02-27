@@ -1,41 +1,44 @@
 ---
-assets:
-  configuration:
-    spec: assets/configuration/spec.yaml
-  dashboards: {}
-  logs: {}
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - containers
-  - orchestration
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/gke/README.md
-display_name: Google Kubernetes Engine
-draft: false
-git_integration_title: gke
-guid: ba0ef5a7-4507-4c99-bfa6-ab8cdaed9b91
-integration_id: gke
-integration_title: Google Kubernetes Engine
-integration_version: ''
-is_public: true
-kind: integration
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: gke.
-metric_to_check: ''
-name: gke
-public_title: Google Kubernetes Engine
-short_description: GKE は、コンテナ化されたアプリケーションを実行およびオーケストレーションするためのプラットフォームです。
-support: コア
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "configuration":
+    "spec": assets/configuration/spec.yaml
+  "dashboards": {}
+  "logs": {}
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- containers
+- orchestration
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-core/blob/master/gke/README.md"
+"display_name": "Google Kubernetes Engine"
+"draft": false
+"git_integration_title": "gke"
+"guid": "ba0ef5a7-4507-4c99-bfa6-ab8cdaed9b91"
+"integration_id": "gke"
+"integration_title": "Google Kubernetes Engine"
+"integration_version": ""
+"is_public": true
+"kind": "integration"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "gke."
+"metric_to_check": ""
+"name": "gke"
+"public_title": "Google Kubernetes Engine"
+"short_description": "GKE は、コンテナ化されたアプリケーションを実行およびオーケストレーションするためのプラットフォームです。"
+"support": "コア"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## 概要
 
 Google Cloud Platform (GCP) のサービスである Google Kubernetes Engine (GKE) は、コンテナ化されたアプリケーションを実行およびオーケストレーションするためのホスト型プラットフォームです。Amazon の Elastic Container Service (ECS) と同様に、GKE はマシンのクラスターにデプロイされた Docker コンテナを管理します。ただし、ECS とは異なり、GKE は Kubernetes を使用します。
@@ -81,8 +84,8 @@ Agent は、[Helm チャート][2]を使用してデプロイすることも、[
 
 
 [1]: https://app.datadoghq.com/account/settings#agent/kubernetes
-[2]: https://docs.datadoghq.com/ja/agent/kubernetes/?tab=helm
-[3]: https://docs.datadoghq.com/ja/agent/kubernetes/?tab=daemonset
+[2]: https://docs.datadoghq.com/agent/kubernetes/?tab=helm
+[3]: https://docs.datadoghq.com/agent/kubernetes/?tab=daemonset
 {{% /tab %}}
 {{% tab "Autopilot" %}}
 
@@ -123,7 +126,7 @@ Agent は、[Helm チャート][2]を使用してデプロイすることも、[
       datadog/datadog
   ```
 
-  構成可能な値の完全なリストについては、[Datadog Helm のドキュメント][1]を参照してください。
+  構成可能な値の一覧は、[Datadog helm-charts リポジトリ][1]を参照してください。
 
 
 [1]: https://github.com/DataDog/helm-charts/tree/master/charts/datadog#values
@@ -139,6 +142,6 @@ Agent は、[Helm チャート][2]を使用してデプロイすることも、[
 [2]: https://console.cloud.google.com/apis/api/container.googleapis.com
 [3]: https://cloud.google.com/sdk/docs/
 [4]: https://cloud.google.com/sdk/docs/initializing
-[5]: /ja/integrations/google_cloud_platform/
+[5]: /integrations/google_cloud_platform/
 [6]: https://app.datadoghq.com/screen/integration/gce
 [7]: https://www.datadoghq.com/blog/gke-autopilot-monitoring/
