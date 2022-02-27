@@ -1,18 +1,18 @@
 ---
 aliases:
-  - /ja/integrations/apollo_engine
+- /ja/integrations/apollo_engine
 assets:
   dashboards: {}
   metrics_metadata: metadata.csv
   monitors: {}
   service_checks: assets/service_checks.json
 categories:
-  - モニター
-  - キャッシュ
+- モニター
+- キャッシュ
 creates_events: false
 ddtype: crawler
 dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/apollo/README.md
+- https://github.com/DataDog/integrations-extras/blob/master/apollo/README.md
 display_name: Apollo Engine
 draft: false
 git_integration_title: apollo
@@ -26,17 +26,19 @@ maintainer: sachin@apollographql.com
 manifest_version: 1.0.0
 metric_prefix: apollo.
 metric_to_check:
-  - apollo.operations.count
-  - apollo.engine.operations.count
+- apollo.operations.count
+- apollo.engine.operations.count
 name: apollo
 public_title: Datadog-Apollo インテグレーション
 short_description: GraphQL インフラストラクチャーのパフォーマンスを監視
 support: contrib
 supported_os:
-  - linux
-  - mac_os
-  - windows
+- linux
+- mac_os
+- windows
 ---
+
+
 ## 概要
 
 Apollo と Datadog のインテグレーションにより、Studio のパフォーマンスメトリクスを Datadog アカウントに転送できます。Datadog は高度な機能 API をサポートしているため、GraphQL メトリクスのグラフとアラートを作成することもできます。
@@ -85,7 +87,7 @@ Apollo Datadog インテグレーションは、Studio に Datadog API キーと
 
    ![IntegrationsToggle][6]
 
-6. Datadog メトリクスエクスプローラーに移動し、メトリクスが表示されることを確認します。メトリクスが表示されるまで、最大 5 分お待ちください。
+6. Datadog  メトリクスエクスプローラーにアクセスし、メトリクスを確認します。メトリクスは、表示されるまでに最大 5 分かかる場合があります。
 
 ### 使用方法
 
@@ -109,9 +111,6 @@ Apollo Datadog インテグレーションは、Studio に Datadog API キーと
 
 ご不明な点は、[Datadog のサポートチーム][9]までお問い合わせください。
 
-## その他の参考資料
-
-インフラストラクチャーの監視の詳細および Datadog の全インテグレーションについては、[ブログ記事][10]を参照してください。
 
 [1]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/apollo/images/metrics.png
 [2]: https://app.datadoghq.com/account/settings#integrations
@@ -121,5 +120,4 @@ Apollo Datadog インテグレーションは、Studio に Datadog API キーと
 [6]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/apollo/images/settings-toggle.png
 [7]: https://www.apollographql.com/docs/studio/datadog-integration/
 [8]: https://github.com/DataDog/integrations-extras/blob/master/apollo/metadata.csv
-[9]: https://docs.datadoghq.com/ja/help/
-[10]: https://www.datadoghq.com/blog
+[9]: https://docs.datadoghq.com/help/
