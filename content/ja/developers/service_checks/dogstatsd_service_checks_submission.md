@@ -1,18 +1,19 @@
 ---
-title: 'サービスチェックの送信: DogStatsD'
+title: "サービスチェックの送信: DogStatsD"
 kind: documentation
 description: データタイプ、タグ付けなど、DogStatsD の機能の概要
 further_reading:
-  - link: /developers/dogstatsd/
-    tag: ドキュメント
-    text: DogStatsD 入門
-  - link: /developers/community/libraries/
-    tag: ドキュメント
-    text: 公式/コミュニティ作成の API および DogStatsD クライアントライブラリ
-  - link: https://github.com/DataDog/datadog-agent/tree/master/pkg/dogstatsd
-    tag: GitHub
-    text: DogStatsD ソースコード
+- link: /developers/dogstatsd/
+  tag: ドキュメント
+  text: DogStatsD 入門
+- link: /developers/community/libraries/
+  tag: ドキュメント
+  text: 公式/コミュニティ作成の API および DogStatsD クライアントライブラリ
+- link: "https://github.com/DataDog/datadog-agent/tree/main/pkg/dogstatsd"
+  tag: GitHub
+  text: DogStatsD ソースコード
 ---
+
 StatsD がメトリクスのみを受け付けるのに対して、DogStatsD は、Datadog の主要な 3 種類のデータタイプ、すなわちメトリクス、イベント、サービスチェックをすべて受け付けます。ここでは、サービスチェックの一般的な使用例をコード例を用いて説明します。
 
 ## 関数
@@ -169,5 +170,5 @@ $statsd->service_check('Service.check.name', 0);
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/developers/dogstatsd/
-[2]: /ja/monitors/create/types/custom_check/
+[1]: /developers/dogstatsd/
+[2]: /monitors/create/types/custom_check/
