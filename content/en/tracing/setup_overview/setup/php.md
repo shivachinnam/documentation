@@ -94,25 +94,41 @@ For other environments, please refer to the [Integrations][5] documentation for 
 
 ### Install the extension
 
-Install the PHP extension using one of the [precompiled packages for supported distributions][5].
+Download the latest PHP installation script [`datadog-setup.php`][5] and run it as a PHP script.
 
-Once downloaded, install the package with one of the commands below.
-
-```shell
-# using RPM package (RHEL/Centos 6+, Fedora 20+)
-rpm -ivh datadog-php-tracer.rpm
-
-# using DEB package (Debian Jessie+ , Ubuntu 14.04+ on supported PHP versions)
-dpkg -i datadog-php-tracer.deb
-
-# using APK package (Alpine)
-apk add datadog-php-tracer.apk --allow-untrusted
+```
+sudo php datadog-setup.php
 ```
 
-The extension will be installed for the default PHP version. To install the extension for a specific PHP version, use the `DD_TRACE_PHP_BIN` environment variable to set the location of the target PHP binary before installing.
+The installer is interactive and searches for PHP binaries available in the `PATH` environment variable and in known locations.
 
-```shell
-export DD_TRACE_PHP_BIN=$(which php-fpm7)
+If the installer is used as part of a docker build or it has to be run in a non-interactive environment, the option `--php-bin` can be used.
+
+```
+sudo php datadog-setup.php --php-bin=php --php-bin=/custom/path/php-fpm
+```
+
+Available options
+
+```
+$ php datadog-setup.php php --help
+
+Usage:
+    Interactive
+        php get-dd-trace.php ...
+    Non-Interactive
+        php get-dd-trace.php --php-bin=php ...
+        php get-dd-trace.php --php-bin=php --php-bin=/usr/local/sbin/php-fpm ...
+
+Options:
+    -h, --help                  Print this help text and exit
+    --php-bin all|<path to php> Install the library to the specified binary or all
+                                php binaries in standard search paths.
+                                The option can be provided multiple times.
+    --install-dir <path>        Install to a specific directory. Default: '/opt/datadog'
+    --uninstall                 Uninstall the library from the specified binaries
+    --enable-appsec             Enable the BETA appsec module.
+    --enable-profiling          Enable the BETA profiling module
 ```
 
 Restart PHP (PHP-FPM or the Apache SAPI) and then visit a tracing-enabled endpoint of your application. View the [APM UI][6] to see the traces.
@@ -589,7 +605,7 @@ Once run, one trace is generated and sent to the Datadog backend every time a ne
 
 ## Upgrading
 
-To upgrade the PHP tracer, [download the latest release][5] and follow the same steps as [installing the extension](#install-the-extension).
+To upgrade the PHP tracer, follow the same steps as [installing the extension](#install-the-extension).
 
 Once the installation is completed restart PHP (PHP-FPM or the Apache SAPI).
 
@@ -599,9 +615,10 @@ Once the installation is completed restart PHP (PHP-FPM or the Apache SAPI).
 
 To remove the PHP tracer:
 
-1. For php-fpm, stop the php-fpm service, otherwise stop the Apache web server.
-2. Unlink files `98-ddtrace.ini` and `99-ddtrace-custom.ini` from your php configuration folder.
-3. For php-fpm, restart php-fpm service, otherwise restart the Apache web server.
+1. If you have not the installation script available in your machine, you can download the [latest available][5].
+2. Run `sudo php datadog-setup.php --uninstall`
+
+Once the operation is completed restart PHP (PHP-FPM or the Apache SAPI).
 
 **Note**: If you are using second level caching in OPcache by setting the parameter `opcache.file_cache`, remove the cache folder.
 
@@ -930,7 +947,7 @@ For Apache, run:
 [2]: https://app.datadoghq.com/apm/docs
 [3]: /tracing/visualization/
 [4]: https://github.com/DataDog/dd-trace-php/blob/master/CONTRIBUTING.md
-[5]: https://github.com/DataDog/dd-trace-php/releases/latest
+[5]: https://github.com/DataDog/dd-trace-php/releases/latest/download/datadog-setup.php
 [6]: https://app.datadoghq.com/apm/services
 [7]: /tracing/troubleshooting/tracer_startup_logs?tab=php#php-info
 [8]: /tracing/faq/php-tracer-manual-installation
