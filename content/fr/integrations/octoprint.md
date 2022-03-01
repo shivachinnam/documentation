@@ -1,42 +1,45 @@
 ---
-assets:
-  configuration:
-    spec: assets/configuration/spec.yaml
-  dashboards:
-    OctoPrint Overview: assets/dashboards/octoprint_overview.json
-  logs: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - web
-  - orchestration
-  - log collection
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/octoprint/README.md
-display_name: OctoPrint
-draft: false
-git_integration_title: octoprint
-guid: 77844a89-7202-4f8b-a0fb-642904eb9513
-integration_id: octoprint
-integration_title: Datadog/OctoPrint
-integration_version: 1.0.0
-is_public: true
-kind: integration
-maintainer: gwaldo@gmail.com
-manifest_version: 1.0.0
-metric_prefix: octoprint.
-metric_to_check: octoprint.printer_state
-name: octoprint
-public_title: Intégration Datadog/OctoPrint
-short_description: Surveiller OctoPrint, une interface Web dédiée à la gestion d'imprimantes 3D
-support: contrib
-supported_os:
-  - linux
+"assets":
+  "configuration":
+    "spec": assets/configuration/spec.yaml
+  "dashboards":
+    "OctoPrint Overview": assets/dashboards/octoprint_overview.json
+  "logs": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- web
+- orchestration
+- log collection
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/octoprint/README.md"
+"display_name": "OctoPrint"
+"draft": false
+"git_integration_title": "octoprint"
+"guid": "77844a89-7202-4f8b-a0fb-642904eb9513"
+"integration_id": "octoprint"
+"integration_title": "Datadog/OctoPrint"
+"integration_version": "1.0.0"
+"is_public": true
+"kind": "integration"
+"maintainer": "gwaldo@gmail.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "octoprint."
+"metric_to_check": "octoprint.printer_state"
+"name": "octoprint"
+"public_title": "Intégration Datadog/OctoPrint"
+"short_description": "Surveiller OctoPrint, une interface Web dédiée à la gestion d'imprimantes 3D"
+"support": "contrib"
+"supported_os":
+- linux
 ---
+
+
+
 ## Présentation
 
 Ce check surveille [OctoPrint][1] via l'Agent Datadog.
@@ -47,10 +50,13 @@ Suivez les instructions ci-dessous pour installer et configurer ce check lorsque
 
 ### Installation
 
-Pour installer le check OctoPrint sur votre host, procédez comme suit :
+Pour installer le check OctoPrint sur votre host, exécutez ce qui suit :
 
-1. Exécutez `sudo -u dd-agent -- datadog-agent integration install datadog-octoprint==<VERSION>`.
-    - La version actuelle est `1.0.0`. Vous pouvez vérifier la dernière version dans `./datadog_checks/octoprint/__about__.py`.
+```shell
+sudo -u dd-agent -- datadog-agent integration install datadog-octoprint==<VERSION>
+```
+
+**Remarque** : la `VERSION` est indiquée en haut de cette page.
 
 #### Installation depuis les sources (facultatif)
 
@@ -90,7 +96,7 @@ L'un ou l'ensemble de ces logs peuvent être changés ou supprimés en modifiant
 
 #### Processing de logs
 
-OctoPrint utilise son propre format de log (et non un format objet). Pour tirer le meilleur parti des logs, il est donc nécessaire de créer un pipeline de traitement de logs avec des règles de parsing. Exemple :
+OctoPrint utilise son propre format de log (et non un format objet). Pour utiliser ces logs, créez un pipeline de traitement de logs avec des règles de parsing. Exemple :
 
 1. Pipeline principal : « OctoPrint »
     1. Sous-pipeline 1 : « OctoPrint Print Job »
@@ -122,14 +128,15 @@ Besoin d'aide ? Contactez [l'assistance Datadog][12].
 
 
 [1]: https://octoprint.org/
-[2]: https://docs.datadoghq.com/fr/agent/kubernetes/integrations/
-[3]: https://docs.datadoghq.com/fr/developers/integrations/new_check_howto/#developer-toolkit
+[2]: https://docs.datadoghq.com/agent/kubernetes/integrations/
+[3]: https://docs.datadoghq.com/developers/integrations/new_check_howto/#developer-toolkit
 [4]: https://app.datadoghq.com/account/settings#agent
 [5]: https://github.com/DataDog/integrations-extras/blob/master/octoprint/datadog_checks/octoprint/data/conf.yaml.example
-[6]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
-[7]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#agent-status-and-information
+[6]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[7]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [8]: https://octoprint.org/download/
-[9]: https://docs.datadoghq.com/fr/logs/processing/
+[9]: https://docs.datadoghq.com/logs/processing/
 [10]: https://github.com/DataDog/integrations-extras/blob/master/octoprint/metadata.csv
 [11]: https://github.com/DataDog/integrations-extras/blob/master/octoprint/assets/service_checks.json
-[12]: https://docs.datadoghq.com/fr/help/
+[12]: https://docs.datadoghq.com/help/
+
