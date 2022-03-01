@@ -1,40 +1,43 @@
 ---
-assets:
-  configuration:
-    spec: assets/configuration/spec.yaml
-  dashboards: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - os & system
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/nvml/README.md
-display_name: nvml
-draft: false
-git_integration_title: nvml
-guid: 5e997a76-f6a3-48e8-875f-6fbb2559f9e9
-integration_id: nvml
-integration_title: Nvidia NVML
-integration_version: 1.0.1
-is_public: true
-kind: integration
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: nvml.
-metric_to_check: nvml.device_count
-name: nvml
-public_title: Nvidia NVML
-short_description: Prise en charge des métriques de GPU Nvidia dans Kubernetes
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "configuration":
+    "spec": assets/configuration/spec.yaml
+  "dashboards": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- os & system
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/nvml/README.md"
+"display_name": "nvml"
+"draft": false
+"git_integration_title": "nvml"
+"guid": "5e997a76-f6a3-48e8-875f-6fbb2559f9e9"
+"integration_id": "nvml"
+"integration_title": "Nvidia NVML"
+"integration_version": "1.0.1"
+"is_public": true
+"kind": "integration"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "nvml."
+"metric_to_check": "nvml.device_count"
+"name": "nvml"
+"public_title": "Nvidia NVML"
+"short_description": "Prise en charge des métriques de GPU Nvidia dans Kubernetes"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## Présentation
 
 Ce check permet de surveiller les métriques exposées par la bibliothèque [NVIDIA Management Library (NVML)][1] avec l'Agent Datadog, puis de les mettre en corrélation avec les [appareils Kubernetes exposés][2].
@@ -65,7 +68,7 @@ Si vous utilisez Docker, il existe un [exemple de Dockerfile][6] dans le référ
 
 Si vous utilisez Docker et Kubernetes, vous devez exposer les variables d'environnement `NVIDIA_VISIBLE_DEVICES` et `NVIDIA_DRIVER_CAPABILITIES`. Consultez le Dockerfile inclus pour obtenir un exemple.
 
-Si vous souhaitez pouvoir mettre en corrélation des appareils Nvidia Kubernetes réservés avec le pod Kubernetes utilisant l'appareil, montez le socket de domaine Unix `/var/lib/kubelet/pod-resources/kubelet.sock` sur la configuration de votre Agent. De plus amples informations sur ce socket sont disponibles sur le [site Web de Kubernetes][2]. Notez que la prise en charge de cet appareil est en bêta dans la version 1.15.
+Pour mettre en corrélation des appareils Nvidia Kubernetes réservés avec le pod Kubernetes utilisant l'appareil, montez le socket de domaine Unix `/var/lib/kubelet/pod-resources/kubelet.sock` sur la configuration de votre Agent. De plus amples informations sur ce socket sont disponibles sur le [site Web de Kubernetes][2] (en anglais). **Remarque** : la prise en charge de cet appareil est en bêta dans la version 1.15.
 
 ### Configuration
 
@@ -81,9 +84,9 @@ Si vous souhaitez pouvoir mettre en corrélation des appareils Nvidia Kubernetes
 
 ### Métriques
 {{< get-metrics-from-git "nvml" >}}
-  La documentation de référence relative aux métriques se trouve sur le [site Web de NVIDIA][11].
+ La documentation de référence relative aux métriques se trouve sur le [site Web de Nvidia][11] (en anglais).
 
-Lorsque cela est possible, les noms de métriques sont mis en correspondance avec [l'exportateur Data Center GPU Manager (DCGM)][14] de NVIDIA.
+Lorsque cela est possible, les noms de métriques sont mis en correspondance avec [l'exportateur Data Center GPU Manager (DCGM)][14] de Nvidia.
 
 ### Événements
 
@@ -102,13 +105,14 @@ Besoin d'aide ? Contactez [l'assistance Datadog][13].
 [1]: https://pypi.org/project/pynvml/
 [2]: https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/device-plugins/#monitoring-device-plugin-resources
 [3]: https://app.datadoghq.com/account/settings#agent
-[4]: https://docs.datadoghq.com/fr/agent/guide/use-community-integrations/
-[5]: https://docs.datadoghq.com/fr/getting_started/integrations/
+[4]: https://docs.datadoghq.com/agent/guide/use-community-integrations/
+[5]: https://docs.datadoghq.com/getting_started/integrations/
 [6]: https://github.com/DataDog/integrations-extras/blob/master/nvml/tests/Dockerfile
 [7]: https://github.com/DataDog/integrations-extras/blob/master/nvml/datadog_checks/nvml/data/conf.yaml.example
-[8]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
-[9]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#agent-status-and-information
+[8]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[9]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [10]: https://github.com/DataDog/integrations-core/blob/master/nvml/metadata.csv
 [11]: https://docs.nvidia.com/deploy/nvml-api/group__nvmlDeviceQueries.html
 [12]: https://github.com/DataDog/integrations-extras/blob/master/nvml/assets/service_checks.json
-[13]: https://docs.datadoghq.com/fr/help
+[13]: https://docs.datadoghq.com/help
+
