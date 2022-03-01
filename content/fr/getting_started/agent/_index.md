@@ -1,19 +1,19 @@
 ---
-title: Débuter avec l'Agent
-kind: documentation
 aliases:
-  - /fr/getting_started/agent
+- /fr/getting_started/agent
 further_reading:
-  - link: /agent/basic_agent_usage/
-    tag: Documentation
-    text: Utilisation de base de l'Agent
-  - link: /agent/faq/why-should-i-install-the-agent-on-my-cloud-instances/
-    tag: FAQ
-    text: "Pourquoi installer l'Agent Datadog sur mes instances dans le cloud\_?"
+- link: /agent/basic_agent_usage/
+  tag: Documentation
+  text: Utilisation de base de l'Agent
+- link: /agent/faq/why-should-i-install-the-agent-on-my-cloud-instances/
+  tag: FAQ
+  text: Pourquoi installer l'Agent Datadog sur mes instances dans le cloud ?
+kind: documentation
+title: Débuter avec l'Agent
 ---
 ## Présentation
 
-L'Agent est un logiciel léger installé sur vos hosts. Il transmet les métriques et les événements issus de votre host à Datadog via les [intégrations][1], [DogStatsD][2] ou l'[API][3]. L'Agent peut également être configuré pour transmettre des [live processes][4], des [logs][5] et des [traces][6].
+L'Agent est un logiciel léger installé sur vos hosts. Il transmet les métriques et les événements issus de votre host à Datadog à l'aide d'[intégrations][1], de [DogStatsD][2] ou de l'[API][3]. L'Agent peut également être configuré pour transmettre des [live processes][4], des [logs][5] et des [traces][6].
 
 ## Implémentation
 
@@ -40,7 +40,7 @@ Lancez la [commande status][13] de l'Agent pour vérifier que l'installation s'e
 
 ### Commandes
 
-Consultez la page relative aux [commandes de l'Agent][14] pour [démarrer][15], [arrêter][16] ou [redémarrer][17] votre Agent.
+Consultez les [commandes de l'Agent][14] pour [démarrer][15], [arrêter][16] ou [redémarrer][17] votre Agent.
 
 ## Données collectées
 
@@ -52,8 +52,8 @@ Les métriques ci-dessous sont disponibles pour la version 6 de l'Agent. Si vou
 
 | Métrique                           | Description                                                                                                          |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **datadog.agent.python.version** | Affiche une valeur de `1` si l'Agent transmet actuellement des données à Datadog. Le tag `python_version` est ajouté à la métrique. |
-| **datadog.agent.running**        | Affiche une valeur de `1` si l'Agent transmet actuellement des données à Datadog.                                                 |
+| **datadog.agent.python.version** | Affiche la valeur `1` si l'Agent transmet des données à Datadog. Le tag `python_version` est ajouté à la métrique. |
+| **datadog.agent.running**        | Affiche la valeur `1` si l'Agent transmet des données à Datadog.                                                 |
 | **datadog.agent.started**        | Nombre ayant pour valeur `1` envoyé lorsque l'Agent se lance (disponible pour les versions 6.12 et ultérieures).                                        |
 
 #### Checks
@@ -66,7 +66,7 @@ En fonction de votre plateforme, l'Agent présente plusieurs checks de base acti
 | Disk        | [Disque][20]    | Toutes                |
 | Docker      | [Docker][21]  | Docker             |
 | File Handle | [Système][19]  | Toutes sauf Mac     |
-| IO          | [System][19]  | Toutes                |
+| IO          | [Système][19]  | Toutes                |
 | Load        | [Système][19]  | Toutes sauf Windows |
 | Memory      | [Système][19]  | Toutes                |
 | Network     | [Réseau][22] | Toutes                |
@@ -82,8 +82,8 @@ L'Agent envoie des événements à Datadog lorsqu'un Agent est démarré ou red�
 
 ### Checks de service
 
-**datadog.agent.up** : 
-Renvoie `CRITICAL` si l'Agent ne parvient pas à se connecter à Datadog. Si ce n'est pas le cas, renvoie `OK`.
+**datadog.agent.up**:
+Renvoie `OK` si l'Agent parvient à se connecter à Datadog.
 
 **datadog.agent.check_status** : 
 Renvoie `CRITICAL` si un check de l'Agent ne parvient pas à envoyer des métriques à Datadog. Si ce n'est pas le cas, renvoie `OK`.
@@ -92,7 +92,7 @@ Renvoie `CRITICAL` si un check de l'Agent ne parvient pas à envoyer des métriq
 
 Pour dépanner plus facilement l'Agent :
 
-- Consultez la page [Dépannage de l'Agent][25].
+- Consultez la section [Dépannage de l'Agent][25].
 - Consultez la page [Fichiers de log de l'Agent][26].
 - Contactez l'[assistance Datadog][27].
 
@@ -109,30 +109,30 @@ Pour dépanner plus facilement l'Agent :
 {{< nextlink href="/getting_started/application" tag="Documentation" >}}En savoir plus sur l'interface Datadog{{< /nextlink >}}
 {{< /whatsnext >}}
 
-[1]: /fr/integrations/
-[2]: /fr/metrics/dogstatsd_metrics_submission/
-[3]: /fr/api/
-[4]: /fr/infrastructure/process/
-[5]: /fr/logs/
-[6]: /fr/tracing/
+[1]: /integrations/
+[2]: /metrics/dogstatsd_metrics_submission/
+[3]: /api/
+[4]: /infrastructure/process/
+[5]: /logs/
+[6]: /tracing/
 [7]: https://www.datadoghq.com
-[8]: https://github.com/DataDog/datadog-agent/tree/master/Dockerfiles/agent
-[9]: /fr/agent/guide/agent-configuration-files/#agent-main-configuration-file
-[10]: https://app.datadoghq.com/account/settings#api
+[8]: https://github.com/DataDog/datadog-agent/tree/main/Dockerfiles/agent
+[9]: /agent/guide/agent-configuration-files/#agent-main-configuration-file
+[10]: https://app.datadoghq.com/organization-settings/api-keys
 [11]: https://github.com/DataDog/datadog-agent/blob/master/pkg/config/config_template.yaml
-[12]: https://github.com/DataDog/datadog-agent/tree/master/Dockerfiles/agent#environment-variables
-[13]: /fr/agent/guide/agent-commands/#agent-status-and-information
-[14]: /fr/agent/guide/agent-commands/
-[15]: /fr/agent/guide/agent-commands/#start-the-agent
-[16]: /fr/agent/guide/agent-commands/#stop-the-agent
-[17]: /fr/agent/guide/agent-commands/#restart-the-agent
-[18]: /fr/integrations/agent_metrics/
-[19]: /fr/integrations/system/#metrics
-[20]: /fr/integrations/disk/#metrics
-[21]: /fr/agent/docker/data_collected/#metrics
-[22]: /fr/integrations/network/#metrics
-[23]: /fr/integrations/ntp/#metrics
-[24]: /fr/getting_started/integrations/
-[25]: /fr/agent/troubleshooting/
-[26]: /fr/agent/guide/agent-log-files/
-[27]: /fr/help/
+[12]: https://github.com/DataDog/datadog-agent/tree/main/Dockerfiles/agent#environment-variables
+[13]: /agent/guide/agent-commands/#agent-status-and-information
+[14]: /agent/guide/agent-commands/
+[15]: /agent/guide/agent-commands/#start-the-agent
+[16]: /agent/guide/agent-commands/#stop-the-agent
+[17]: /agent/guide/agent-commands/#restart-the-agent
+[18]: /integrations/agent_metrics/
+[19]: /integrations/system/#metrics
+[20]: /integrations/disk/#metrics
+[21]: /agent/docker/data_collected/#metrics
+[22]: /integrations/network/#metrics
+[23]: /integrations/ntp/#metrics
+[24]: /getting_started/integrations/
+[25]: /agent/troubleshooting/
+[26]: /agent/guide/agent-log-files/
+[27]: /help/
