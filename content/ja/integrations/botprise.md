@@ -1,38 +1,39 @@
 ---
-assets:
-  dashboards: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - 監視
-creates_events: false
-ddtype: crawler
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/botprise/README.md
-display_name: botprise
-draft: false
-git_integration_title: botprise
-guid: bbc51521-f87c-44c1-ba57-9c4e5dc23214
-integration_id: botprise
-integration_title: Botprise
-integration_version: ''
-is_public: true
-kind: インテグレーション
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: botprise.
-metric_to_check: ''
-name: botprise
-public_title: Datadog-Botprise インテグレーション
-short_description: 生成されたイベントを監視する Botprise インテグレーション
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- 監視
+"creates_events": false
+"ddtype": "crawler"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/botprise/README.md"
+"display_name": "botprise"
+"draft": false
+"git_integration_title": "botprise"
+"guid": "bbc51521-f87c-44c1-ba57-9c4e5dc23214"
+"integration_id": "botprise"
+"integration_title": "Botprise"
+"integration_version": ""
+"is_public": true
+"kind": "インテグレーション"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "botprise."
+"metric_to_check": ""
+"name": "botprise"
+"public_title": "Datadog-Botprise インテグレーション"
+"short_description": "生成されたイベントを監視する Botprise インテグレーション"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
 ## 概要
 
 Botprise の Datadog インテグレーションを使用すると、Webhook を使用して生成された [Botprise][1] イベントを Datadog に送信できます。これにより、アプリケーションの監視および Botprise が正常に機能していることを確認できます。
@@ -41,7 +42,7 @@ Botprise の Datadog インテグレーションを使用すると、Webhook を
 
 ## セットアップ
 
-Botprise-Datadog インテグレーションを使用するには、Botprise ユーザーである必要があります。Botprise の詳細については、[https://www.botprise.com/][10] にアクセスしてください。
+Botprise-Datadog インテグレーションを使用するには、Botprise ユーザーである必要があります。Botprise の詳細については、[https://www.botprise.com/][1] をご覧ください。
 
 ### インストール
 
@@ -79,7 +80,8 @@ Datadog API を使用するには、[API キーとアプリケーションキー
 [1]: https://www.botprise.com/
 [2]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/botprise/images/datadog-botprise-events.png
 [3]: https://app.datadoghq.com/infrastructure/map
-[4]: https://docs.datadoghq.com/ja/metrics/
+[4]: https://docs.datadoghq.com/metrics/
 [5]: https://developer.servicenow.com/dev.do#!/home
-[6]: https://docs.datadoghq.com/ja/account_management/api-app-keys/
-[7]: https://docs.datadoghq.com/ja/help/
+[6]: https://docs.datadoghq.com/account_management/api-app-keys/
+[7]: https://docs.datadoghq.com/help/
+
