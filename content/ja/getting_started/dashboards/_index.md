@@ -2,25 +2,26 @@
 title: ダッシュボードの概要
 kind: ドキュメント
 further_reading:
-  - link: https://www.datadoghq.com/blog/dashboard-sharing/
-    tag: ブログ
-    text: ダッシュボードを組織外の人と安全に共有する
-  - link: https://www.datadoghq.com/blog/template-variable-associated-values/
-    tag: ブログ
-    text: 関連するテンプレート変数を使用してダッシュボードを調整
-  - link: https://learn.datadoghq.com/enrol/index.php?id=8
-    tag: 学習
-    text: '自分のペースで学べるオンライン学習: ダッシュボードのより効果的な活用'
-  - link: /dashboards/
-    tag: Documentation
-    text: ダッシュボードの基本
-  - link: /notebooks/
-    tag: Documentation
-    text: ノートブックでデータに背景情報を追加
-  - link: /monitors/
-    tag: Documentation
-    text: モニター、SLO、通知、ダウンタイム、インシデント
+- link: "https://www.datadoghq.com/blog/dashboard-sharing/"
+  tag: ブログ
+  text: ダッシュボードを組織外の人と安全に共有する
+- link: "https://www.datadoghq.com/blog/template-variable-associated-values/"
+  tag: ブログ
+  text: 関連するテンプレート変数を使用してダッシュボードを調整
+- link: "https://learn.datadoghq.com/enrol/index.php?id=8"
+  tag: 学習
+  text: "自分のペースで学べるオンライン学習: ダッシュボードのより効果的な活用"
+- link: /dashboards/
+  tag: Documentation
+  text: ダッシュボードの基本
+- link: /notebooks/
+  tag: Documentation
+  text: ノートブックでデータに背景情報を追加
+- link: /monitors/
+  tag: Documentation
+  text: モニター、SLO、通知、ダウンタイム、インシデント
 ---
+
 ## 概要
 
 ダッシュボードの使用を始める際は、まず定期的に確認したい事項について考えることが重要です。顧客がよく直面する問題や、問題解決のために知るべき項目は何でしょうか。
@@ -38,9 +39,9 @@ further_reading:
 
 作成するダッシュボードの目的を決定します。ダッシュボードは、チームの全員が適切な作業に集中するために使用するものです。_チームダッシュボード_ を使うと、優先度の高い作業や、今取りかかるべき作業、そして順調に言っている作業などを確認することができます。みんなが、最もよく詳細を確認する必要がある情報が明確になるチームダッシュボードを作成しましょう（複数可）。SLO および SLI の詳細を含むダッシュボードは、良いチームダッシュボードと言えます。
 
-ダッシュボードがリアルタイムデータに接続していると、上司やマネージャーと明確で根拠に満ちた会話を進めることができます。良質な _管理職ダッシュボード_ からは、作業の重要度やサービス実行のコスト、目標に対する進捗、SLO の達成率、効果測定などが明確にわかります。管理職ダッシュボードは、以上の項目に対する答えを高度な基準で表示し、相互の関連性をもって回答にたどり着くことができると最も効率的です。
+ダッシュボードがリアルタイムデータに接続していると、上司やマネージャーと明確で根拠に満ちた会話を進めることができます。良質な _管理職ダッシュボード_ からは、作業の重要度やサービス実行のコスト、目標に対する進捗、SLO の達成率、効果測定などが明確にわかります。管理職ダッシュボードは、以上の項目に対する答えを高度な基準で表示し、その答えを比較・分析するために相互接続されたときに最も効果的です。
 
-ダッシュボードはまた、頻繁に発生する問題の追跡および修正にも役立ちます。_トラブルシューティングダッシュボード_ は、まずわかっている情報をメモし、そこから徐々にさまざまな発見を追加して情報を構築していく場所として機能します。たとえば、問題を表示する別のダッシュボードやビューからのグラフやウィジェットから、細かく問題を調査し解決方法を模索します。
+ダッシュボードはまた、頻繁に発生する問題の追跡および修正にも役立ちます。_トラブルシューティングダッシュボード_ は、まずわかっている情報をメモし、そこから徐々にさまざまな発見を追加して情報を構築していく場所として機能します。たとえば、問題を表示する別のダッシュボードやビューからのグラフやウィジェットから、細かく問題を分析し解決方法を模索します。
 
 ## すぐに使えるダッシュボード
 
@@ -55,7 +56,7 @@ Datadog では、さまざまな機能やインテグレーションにすぐに
 ダッシュボードの最も一般的な開始方法は、既に使用されている類似ダッシュボードを見つけ、ご自分のニーズに合わせて調整する方法です。求めている情報が表示されているダッシュボードを見つけたら、次の方法で再利用しましょう。
 
 1. ダッシュボードを開き、設定メニュー（右側のギアアイコン）で **Clone dashboard** を選択してクローンを作成します。元のダッシュボードにリンクしていないコピーが作成されるため、変更を加えてもソースウィジェットには影響しません。
-    {{< img src="getting_started/dashboards/cloning_dashboard.gif" alt="ダッシュボードのクローンを作成"  >}}
+    {{< img src="getting_started/dashboards/cloning_dashboard.mp4" alt="ダッシュボードのクローンを作成" video=true >}}
 2. クローンを開いて **Edit widgets** をクリックし、編集します。
 3. ウィジェットの設定メニューで **Delete** を選択し、必要のないウィジェットを削除します。
 4. ニーズに合わせて表示場所などを調整します。ウィジェットは、個別にまたはまとめてドラッグ&ドロップして、ダッシュボードの希望する位置に移動できます。
@@ -94,15 +95,15 @@ Y 軸の範囲、色、凡例を調整またはマーカーやイベントオー
 
 以上のグラフのセットアップ例などを含む詳細は、[ウィジェット][5]でご確認ください。
 
-## 整理、リンク、詳細調査
+## 整理・連携・分析
 
 ダッシュボードを利用して実行する作業や会話の流れに合わせてグラフを移動しましょう。ウィジェットは、ドラッグ&ドロップで配置できます。スクリーンボードでは、フリーテキストウィジェットを使用して見出しの下のセクションを整理します。タイムボードでは、複数のウィジェットを含むグループウィジェットを追加し、ダッシュボードを表示しているときに折りたたむことができます。
 
 ダッシュボードから任意のターゲット URL へのリンクを作成するには、以下の 2 つの方法があります。
 
  - リンクをはじめ、マークダウン書式設定のテキストを含められるノート&リンクウィジェットを追加します。ウィジェットエディタには、マークダウン書式設定のヒントが含まれています。
- - ウィジェットの設定（ギア）メニューからカスタムリンクを作成します。カスタムリンクは変数およびテンプレート変数を補間するため、ユーザーが選択時に選択したコンテンツに応じてリンクが変わり、データを詳しく確認したり、修正措置を講じたりするために適切な場所へと移動させることができます。
-     {{< img src="getting_started/dashboards/opening_custom_link.gif" alt="カスタムリンクを開く"  >}}
+ - ウィジェットの設定 (ギア) メニューからカスタムリンクを作成します。カスタムリンクは変数およびテンプレート変数を補間するため、ユーザーが選択時に選択したコンテンツに応じてリンクが変わり、データを分析したり、修正措置を講じたりするために適切な場所へと移動させることができます。
+     {{< img src="getting_started/dashboards/opening_custom_link.mp4" alt="カスタムリンクを開く" video=true >}}
 
 ## 次のステップ
 
@@ -123,16 +124,16 @@ Y 軸の範囲、色、凡例を調整またはマーカーやイベントオー
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://app.datadoghq.com/
-[2]: /ja/metrics/introduction/
-[3]: /ja/metrics/explorer/
-[4]: /ja/integrations/amazon_s3/#data-collected
-[5]: /ja/dashboards/widgets/
-[6]: /ja/dashboards/querying/
-[7]: /ja/dashboards/functions/
-[8]: /ja/metrics/distributions/
-[9]: /ja/dashboards/template_variables/
-[10]: /ja/dashboards/
-[11]: /ja/dashboards/widgets/timeseries/
+[2]: /metrics/introduction/
+[3]: /metrics/explorer/
+[4]: /integrations/amazon_s3/#data-collected
+[5]: /dashboards/widgets/
+[6]: /dashboards/querying/
+[7]: /dashboards/functions/
+[8]: /metrics/distributions/
+[9]: /dashboards/template_variables/
+[10]: /dashboards/
+[11]: /dashboards/widgets/timeseries/
 [12]: https://learn.datadoghq.com/enrol/index.php?id=8
-[13]: /ja/integrations/slack/
-[14]: /ja/api/v1/dashboards/
+[13]: /integrations/slack/
+[14]: /api/v1/dashboards/
