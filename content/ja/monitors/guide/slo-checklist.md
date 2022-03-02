@@ -2,13 +2,14 @@
 title: SLO チェックリスト
 kind: ガイド
 further_reading:
-  - link: https://www.datadoghq.com/blog/slo-monitoring-tracking/
-    tag: ブログ
-    text: Datadog で SLO のステータスとエラーバジェットを追跡する
-  - link: https://learn.datadoghq.com/course/view.php?id=34
-    tag: ラーニングセンター
-    text: サービスレベル目標 (SLO) について
+    - link: "https://www.datadoghq.com/blog/slo-monitoring-tracking/"
+      tag: ブログ
+      text: Datadog で SLO のステータスとエラーバジェットを追跡する
+    - link: "https://learn.datadoghq.com/course/view.php?id=34"
+      tag: ラーニングセンター
+      text: サービスレベル目標 (SLO) について
 ---
+
 <div class="alert alert-info">
 このページの PDF 版は<a href="https://www.datadoghq.com/pdf/SLOChecklist_200619.pdf">こちら</a>よりご覧いただけます。
 </div>
@@ -99,8 +100,8 @@ _例: リクエストの 99% は、30 日間で 250 ms 未満で完了する必�
 
 [1]: https://app.datadoghq.com/slo
 [2]: https://app.datadoghq.com/monitors#create/metric
-[3]: /ja/metrics
-[4]: /ja/integrations
-[5]: /ja/tracing/generate_metrics/
-[6]: /ja/logs/logs_to_metrics/
-[7]: /ja/monitors/service_level_objectives/#searching-and-viewing-slos
+[3]: /metrics
+[4]: /integrations
+[5]: /tracing/generate_metrics/
+[6]: /logs/logs_to_metrics/
+[7]: /monitors/service_level_objectives/#searching-and-viewing-slos
