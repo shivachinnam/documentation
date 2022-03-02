@@ -349,13 +349,13 @@ Lorsque vous inspectez une dépendance dans la [vue d'ensemble du réseau][11], 
 
 ## Surveillance en temps réel
 
-Lorsque vous utilisez activement la fonctionnalité Live Processes, les métriques sont recueillies toutes les deux secondes. Cette particularité est très importante pour les métriques volatiles, telles que l'utilisation du processeur. En arrière-plan, pour le contexte historique, les métriques sont recueillies toutes les 10 secondes.
+Lorsque vous utilisez activement les live processes, les métriques sont recueillies toutes les deux secondes. Cette particularité est très importante pour les métriques volatiles, telles que l'utilisation du processeur. En arrière-plan, pour le contexte historique, les métriques sont recueillies toutes les 10 secondes.
 
 ## Informations supplémentaires
 
 - La collecte de fichiers ouverts et du répertoire de travail actuel est limitée en fonction du niveau du privilège de l'utilisateur qui exécute `dd-process-agent`. Si `dd-process-agent` n'est pas en mesure d'accéder à ces champs, ils sont recueillis automatiquement.
 - La collecte de données en temps réel (toutes les 2 s) est désactivée après 30 minutes. Pour reprendre la collecte en temps réel, actualisez la page.
-- En cas de déploiement sur des conteneurs, le fichier `/etc/passwd` monté dans `docker-dd-agent` est nécessaire pour recueillir les noms d'utilisateur de chaque processus. Il s'agit d'un fichier public, et l'Agent de processus n'utilise aucun autre champ que celui du nom d'utilisateur. Toutes les fonctionnalités, à l'exception du champ de métadonnées `user`, fonctionnent sans accéder à ce fichier. **Remarque** : la fonctionnalité Live Processes utilise uniquement le fichier `passwd` du host et ne récupère pas le nom d'utilisateur pour les utilisateurs créés dans des conteneurs.
+- En cas de déploiement sur des conteneurs, le fichier `/etc/passwd` monté dans `docker-dd-agent` est nécessaire pour recueillir les noms d'utilisateur de chaque processus. Il s'agit d'un fichier public, et l'Agent de processus n'utilise aucun autre champ que celui du nom d'utilisateur. Toutes les fonctionnalités, à l'exception du champ de métadonnées `user`, fonctionnent sans accéder à ce fichier. **Remarque** : les live processes utilisent uniquement le fichier `passwd` du host et ne récupèrent pas le nom d'utilisateur pour les utilisateurs créés dans des conteneurs.
 
 ## Pour aller plus loin
 
