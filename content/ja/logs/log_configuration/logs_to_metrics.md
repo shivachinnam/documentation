@@ -1,17 +1,17 @@
 ---
-title: 取り込んだログからメトリクスを生成する
-kind: documentation
 aliases:
-  - /ja/logs/processing/logs_to_metrics/
-  - /ja/logs/logs_to_metrics/
+- /ja/logs/processing/logs_to_metrics/
+- /ja/logs/logs_to_metrics/
 description: 取り込んだログからメトリクスを生成します。
 further_reading:
-  - link: logs/log_configuration/processors
-    tag: ドキュメント
-    text: ログの処理方法
-  - link: logs/logging_without_limits
-    tag: ドキュメント
-    text: Datadog でインデックス化するログの量を制御する
+- link: logs/log_configuration/processors
+  tag: ドキュメント
+  text: ログの処理方法
+- link: logs/logging_without_limits
+  tag: ドキュメント
+  text: Datadog でインデックス化するログの量を制御する
+kind: documentation
+title: 取り込んだログからメトリクスを生成する
 ---
 ## 概要
 
@@ -27,7 +27,7 @@ Datadog の [Logging without Limits][1]\* を使用すると、インデック�
 
 Export メニューで "Generate new metric" を選択し、Analytics の検索からメトリクスを作成することも可能です。
 
-{{< img src="logs/processing/logs_to_metrics/metrics_from_analytics.png" alt="ログからメトリクスを生成"  style="width:80%;">}}
+{{< img src="logs/processing/logs_to_metrics/metrics_from_analytics.jpg" alt="ログからメトリクスを生成"  style="width:80%;">}}
 
 ### 新しいログベースのメトリクスを追加
 
@@ -78,15 +78,15 @@ Export メニューで "Generate new metric" を選択し、Analytics の検索�
 <br>
 \*Logging without Limits は Datadog, Inc. の商標です。
 
-[1]: /ja/logs/
-[2]: /ja/logs/indexes/#exclusion-filters
-[3]: /ja/metrics/distributions/#overview
+[1]: /logs/
+[2]: /logs/indexes/#exclusion-filters
+[3]: /metrics/distributions/#overview
 [4]: https://app.datadoghq.com/logs/pipelines
 [5]: https://app.datadoghq.com/logs/pipelines/generate-metrics
-[6]: /ja/logs/search_syntax/
-[7]: /ja/logs/explorer/facets/#quantitative-facets-measures
-[8]: /ja/getting_started/tagging/
-[9]: /ja/metrics/custom_metrics/
-[10]: /ja/security/logs/#hipaa-enabled-customers
-[11]: /ja/account_management/billing/custom_metrics/?tab=countrategauge
-[12]: /ja/metrics/#naming-metrics
+[6]: /logs/search_syntax/
+[7]: /logs/explorer/facets/#quantitative-facets-measures
+[8]: /getting_started/tagging/
+[9]: /metrics/custom_metrics/
+[10]: /security/logs/#hipaa-enabled-customers
+[11]: /account_management/billing/custom_metrics/?tab=countrategauge
+[12]: /metrics/#naming-metrics
