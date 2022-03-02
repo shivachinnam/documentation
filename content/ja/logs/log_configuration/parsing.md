@@ -1,23 +1,23 @@
 ---
-title: パース
-kind: documentation
-description: Grok プロセッサーを使用してログをパースする
 aliases:
-  - /ja/logs/parsing/
-  - /ja/logs/processing/parsing
+- /ja/logs/parsing/
+- /ja/logs/processing/parsing
+description: Grok プロセッサーを使用してログをパースする
 further_reading:
-  - link: /logs/log_configuration/processors
-    tag: ドキュメント
-    text: ログの処理方法
-  - link: /logs/faq/how-to-investigate-a-log-parsing-issue/
-    tag: よくあるご質問
-    text: ログのパースに関する問題を調査する方法
-  - link: /logs/guide/log-parsing-best-practice/
-    tag: よくあるご質問
-    text: ログのパース - ベストプラクティス
-  - link: /logs/logging_without_limits/
-    tag: ドキュメント
-    text: Datadog でインデックス化するログの量を制御する
+- link: /logs/log_configuration/processors
+  tag: ドキュメント
+  text: ログの処理方法
+- link: /logs/faq/how-to-investigate-a-log-parsing-issue/
+  tag: よくあるご質問
+  text: ログのパースに関する問題を調査する方法
+- link: /logs/guide/log-parsing-best-practice/
+  tag: よくあるご質問
+  text: ログのパース - ベストプラクティス
+- link: /logs/logging_without_limits/
+  tag: ドキュメント
+  text: Datadog でインデックス化するログの量を制御する
+kind: documentation
+title: パース
 ---
 ## 概要
 
@@ -123,7 +123,7 @@ MyParsingRule %{word:user} connected on %{date("MM/dd/yyyy"):connect_date}
 `mac`
 : MAC アドレスに一致します。
 
-`mac`
+`ipv4`
 : IPV4 に一致します。
 
 `ipv6`
@@ -169,7 +169,7 @@ MyParsingRule %{word:user} connected on %{date("MM/dd/yyyy"):connect_date}
 : User-Agent をパースして、Agent によって表されるデバイス、OS、ブラウザを含む JSON オブジェクトを返します。[ユーザーエージェントプロセッサーを参照してください][1]。
 
 `querystring`
-: 一致する URL クエリ文字列内のすべての key-value ペアを抽出します (例: `?productId=superproduct&amp;promotionCode=superpromo`)。
+: 一致する URL クエリ文字列内のすべての key-value ペアを抽出します (例: `?productId=superproduct&promotionCode=superpromo`)。
 
 `decodeuricomponent`
 : URI コンポーネントをデコードします。たとえば、'%2Fservice%2Ftest' は '/service/test' に変換されます。
@@ -198,8 +198,8 @@ MyParsingRule %{word:user} connected on %{date("MM/dd/yyyy"):connect_date}
 `url`
 : URL をパースし、トークン化されたすべてのメンバー (ドメイン、クエリパラメーター、ポートなど) を 1 つの JSON オブジェクトとして返します。[URL のパース方法を参照してください][2]。
 
-[1]: /ja/logs/log_configuration/processors/#user-agent-parser
-[2]: /ja/logs/log_configuration/processors/#url-parser
+[1]: /logs/log_configuration/processors/#user-agent-parser
+[2]: /logs/log_configuration/processors/#url-parser
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -639,4 +639,4 @@ myParsingRule %{data:user:csv("first_name,name,st_nb,st_name,city")}
 
 [1]: https://github.com/google/re2/wiki/Syntax
 [2]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[3]: /ja/logs/log_configuration/processors/#log-date-remapper
+[3]: /logs/log_configuration/processors/#log-date-remapper
