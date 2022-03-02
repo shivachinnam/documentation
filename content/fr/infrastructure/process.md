@@ -291,7 +291,7 @@ La requête en haut de la fenêtre vous permet de contrôler les différentes op
 
 ## Monitors de processus
 
-Utilisez le [monitor de Live Processes][6] pour générer des alertes en fonction du nombre de valeurs d'un groupe de processus sur l'ensemble des hosts ou des tags. Vous pouvez configurer les alertes des processus depuis la [page Monitors][7]. Pour en savoir plus, consultez la section [Monitor de Live Processes][6].
+Utilisez le [monitor de live processes][6] pour générer des alertes en fonction du nombre de valeurs d'un groupe de processus sur l'ensemble des hosts ou des tags. Vous pouvez configurer les alertes des processus depuis la [page Monitors][7]. Pour en savoir plus, consultez la section [Monitor de Live Processes][6].
 
 {{< img src="infrastructure/process/process_monitor.png" alt="Monitor de processus" style="width:80%;">}}
 
@@ -324,7 +324,7 @@ Les hosts qui exécutent l'intégration, mais sur lesquels l'intégration n'est 
 
 {{< img src="infrastructure/process/integration_views.png" alt="Vues d'intégration" >}}
 
-Une fois qu'un logiciel tiers a été détecté, les Live Processes vous permettent d'analyser les performances de ce logiciel.
+Une fois qu'un logiciel tiers a été détecté, les live processes vous permettent d'analyser les performances de ce logiciel.
 1. Pour commencer, cliquez sur *Views* en haut à droite de la page afin d'ouvrir la liste des options prédéfinies, y compris Nginx, Redis et Kafka.
 2. Sélectionnez une vue pour afficher uniquement les processus qui exécutent ce logiciel.
 3. Lorsque vous inspectez un processus lourd, passez à l'onglet *Integration Metrics* pour analyser l'état du logiciel sur le host sous-jacent. Si vous avez déjà activé l'intégration Datadog pertinente, vous pouvez visualiser toutes les métriques de performance recueillies via l'intégration afin de déterminer si le problème est lié au host ou au logiciel. Par exemple, si vous constatez que les pics d'utilisation du CPU par le processus correspondent aux pics de latence des requêtes MySQL, cela peut indiquer qu'une opération intensive, comme l'analyse d'une table complète, retarde l'exécution d'autres requêtes MySQL reposant sur les mêmes ressources sous-jacentes.
