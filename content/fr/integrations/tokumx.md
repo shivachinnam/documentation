@@ -1,45 +1,48 @@
 ---
-assets:
-  configuration:
-    spec: assets/configuration/spec.yaml
-  dashboards:
-    tokumx: assets/dashboards/tokumx_dashboard.json
-  logs: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views:
-    tokumx_processes: assets/saved_views/tokumx_processes.json
-  service_checks: assets/service_checks.json
-categories:
-  - data store
-  - autodiscovery
-creates_events: true
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/tokumx/README.md
-display_name: TokuMX
-draft: false
-git_integration_title: tokumx
-guid: 7785939b-bfb6-4d3e-acc2-94c1f5fb33e7
-integration_id: tokumx
-integration_title: TokuMX
-integration_version: 2.3.3
-is_public: true
-kind: integration
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: tokumx.
-metric_to_check: tokumx.uptime
-name: tokumx
-process_signatures: []
-public_title: Intégration Datadog/TokuMX
-short_description: Surveillez des métriques sur le nombre d'opérations effectuées, le délai de réplication, la taille d'une table de cache, et plus encore.
-support: core
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "configuration":
+    "spec": "assets/configuration/spec.yaml"
+  "dashboards":
+    "tokumx": "assets/dashboards/tokumx_dashboard.json"
+  "logs": {}
+  "metrics_metadata": "metadata.csv"
+  "monitors": {}
+  "saved_views":
+    "tokumx_processes": "assets/saved_views/tokumx_processes.json"
+  "service_checks": "assets/service_checks.json"
+"categories":
+- "data store"
+- "autodiscovery"
+"creates_events": true
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-core/blob/master/tokumx/README.md"
+"display_name": "TokuMX"
+"draft": false
+"git_integration_title": "tokumx"
+"guid": "7785939b-bfb6-4d3e-acc2-94c1f5fb33e7"
+"integration_id": "tokumx"
+"integration_title": "TokuMX"
+"integration_version": "3.1.1"
+"is_public": true
+"kind": "integration"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "tokumx."
+"metric_to_check": "tokumx.uptime"
+"name": "tokumx"
+"process_signatures": []
+"public_title": "Intégration Datadog/TokuMX"
+"short_description": "Surveillez des métriques sur le nombre d'opérations effectuées, le délai de réplication, la taille d'une table de cache, et plus encore."
+"support": "core"
+"supported_os":
+- "linux"
+- "mac_os"
+- "windows"
 ---
+
+
+
 ## Présentation
 
 Ce check recueille des métriques TokuMX comme :
@@ -52,7 +55,7 @@ Ce check recueille des métriques TokuMX comme :
 
 ### Installation
 
-Le check TokuMX est inclus avec le paquet de l'[Agent Datadog][1] pour les versions <=6.x de l'Agent : vous n'avez donc rien d'autre à installer sur vos serveurs TokuMX.
+Le check TokuMX est inclus avec le package de l'[Agent Datadog][1]. Vous n'avez donc rien d'autre à installer sur votre serveur.
 
 ### Configuration
 
@@ -91,7 +94,7 @@ Le check TokuMX est inclus avec le paquet de l'[Agent Datadog][1] pour les versi
    echo -e "\033[0;31mdatadog user - Missing\033[0m"
    ```
 
-Pour en savoir plus sur la création et la gestion des utilisateurs dans MongoDB, consultez [la documentation MongoDB][2].
+Pour en savoir plus sur la création et la gestion des utilisateurs dans MongoDB, consultez [documentation MongoDB sur la sécurité][2] (en anglais).
 
 {{< tabs >}}
 {{% tab "Host" %}}
@@ -112,9 +115,9 @@ Pour configurer ce check lorsque l'Agent est exécuté sur un host :
 
 2. [Redémarrez l'Agent][3] pour commencer à envoyer des métriques TokuMX à Datadog.
 
-[1]: https://docs.datadoghq.com/fr/agent/guide/agent-configuration-files/#agent-configuration-directory
+[1]: https://docs.datadoghq.com/agent/guide/agent-configuration-files/#agent-configuration-directory
 [2]: https://github.com/DataDog/integrations-core/blob/master/tokumx/datadog_checks/tokumx/data/conf.yaml.example
-[3]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[3]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
 {{% /tab %}}
 {{% tab "Environnement conteneurisé" %}}
 
@@ -128,7 +131,7 @@ Consultez la [documentation relative aux modèles d'intégration Autodiscovery][
 | `<CONFIG_INIT>`      | vide ou `{}`                                              |
 | `<CONFIG_INSTANCE>`  | `{"server": "mongodb://<UTILISATEUR>:<MOTDEPASSE>@%%host%%:27017"}` |
 
-[1]: https://docs.datadoghq.com/fr/agent/kubernetes/integrations/
+[1]: https://docs.datadoghq.com/agent/kubernetes/integrations/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -162,7 +165,7 @@ Besoin d'aide ? Contactez [l'assistance Datadog][4].
 
 
 [1]: https://app.datadoghq.com/account/settings#agent
-[2]: https://www.mongodb.org/display/DOCS/Security+and+Authentication
-[3]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#agent-status-and-information
-[4]: https://docs.datadoghq.com/fr/help/
+[2]: https://docs.mongodb.com/manual/security/
+[3]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
+[4]: https://docs.datadoghq.com/help/
 [5]: https://www.datadoghq.com/blog/monitor-key-tokumx-metrics-mongodb-applications
