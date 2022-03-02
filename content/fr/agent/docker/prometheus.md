@@ -2,22 +2,23 @@
 title: Collecte de métriques Prometheus et OpenMetrics Docker
 kind: documentation
 further_reading:
-  - link: /agent/docker/log/
-    tag: Documentation
-    text: Recueillir les logs de votre application
-  - link: /agent/docker/apm/
-    tag: Documentation
-    text: Recueillir les traces de votre application
-  - link: /agent/docker/integrations/
-    tag: Documentation
-    text: Recueillir automatiquement les métriques et les logs de vos applications
-  - link: /agent/guide/autodiscovery-management/
-    tag: Documentation
-    text: Limiter la collecte de données à un seul sous-ensemble de conteneurs
-  - link: /agent/docker/tag/
-    tag: Documentation
-    text: Attribuer des tags à toutes les données émises par un conteneur
+- link: /agent/docker/log/
+  tag: Documentation
+  text: Recueillir les logs de votre application
+- link: /agent/docker/apm/
+  tag: Documentation
+  text: Recueillir les traces de votre application
+- link: /agent/docker/integrations/
+  tag: Documentation
+  text: Recueillir automatiquement les métriques et les logs de vos applications
+- link: /agent/guide/autodiscovery-management/
+  tag: Documentation
+  text: Limiter la collecte de données à un seul sous-ensemble de conteneurs
+- link: /agent/docker/tag/
+  tag: Documentation
+  text: Attribuer des tags à toutes les données émises par un conteneur
 ---
+
 Recueillez vos métriques Prometheus et OpenMetrics exposées à partir de votre application exécutée dans vos conteneurs à l'aide de l'Agent Datadog et de l'intégration [Datadog/OpenMetrics][1] ou [Datadog/Prometheus][2].
 
 ## Présentation
@@ -36,7 +37,8 @@ Lancez l'Agent Docker à côté de vos autres conteneurs en remplaçant `<CLÉ_A
 {{% tab "Standard" %}}
 
 ```shell
-docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
+docker run -d --cgroupns host \
+              -v /var/run/docker.sock:/var/run/docker.sock:ro \
               -v /proc/:/host/proc/:ro \
               -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
               -e DD_API_KEY="<CLÉ_API_DATADOG>" \
@@ -138,7 +140,8 @@ Pour commencer à recueillir des métriques exposées par un déploiement Promet
     {{% tab "Configuration standard" %}}
 
 ```shell
-docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
+docker run -d --cgroupns host \
+              -v /var/run/docker.sock:/var/run/docker.sock:ro \
               -v /proc/:/host/proc/:ro \
               -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
               -e DD_API_KEY="<CLÉ_API_DATADOG>" \
@@ -181,11 +184,11 @@ Les intégrations officielles utilisent des répertoires dédiés. Le check gén
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/integrations/openmetrics/
-[2]: /fr/integrations/prometheus/
+[1]: /integrations/openmetrics/
+[2]: /integrations/prometheus/
 [3]: https://github.com/DataDog/integrations-core/tree/master/openmetrics
 [4]: https://github.com/DataDog/integrations-core/tree/master/prometheus
-[5]: /fr/developers/custom_checks/prometheus/
+[5]: /developers/custom_checks/prometheus/
 [6]: https://github.com/DataDog/integrations-core/blob/master/openmetrics/datadog_checks/openmetrics/data/conf.yaml.example
 [7]: https://app.datadoghq.com/metric/summary
 [8]: https://github.com/DataDog/integrations-core/tree/master/kube_proxy
