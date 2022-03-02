@@ -1,24 +1,24 @@
 ---
-title: ログサイドパネル
-kind: documentation
-description: すべてのログを検索し、ログ分析を実行します
 aliases:
-  - /ja/logs/explorer/sidepanel
+- /ja/logs/explorer/sidepanel
+description: すべてのログを検索し、ログ分析を実行します
 further_reading:
-  - link: /logs/log_configuration/processors
-    tag: Documentation
-    text: ログの処理方法
-  - link: /tracing/connect_logs_and_traces
-    tag: Documentation
-    text: ログとトレースの接続
-  - link: /logs/guide/correlate-logs-with-metrics
-    tag: Documentation
-    text: ログをインフラストラクチャーメトリクスに接続する
+- link: /logs/log_configuration/processors
+  tag: Documentation
+  text: ログの処理方法
+- link: /tracing/connect_logs_and_traces
+  tag: Documentation
+  text: ログとトレースの接続
+- link: /logs/guide/correlate-logs-with-metrics
+  tag: Documentation
+  text: ログをインフラストラクチャーメトリクスに接続する
+kind: documentation
+title: ログサイドパネル
 ---
 ## 概要
 Datadog は次の一般的なサイドパネルレイアウトに従い、個々のログを表示します。
 
-{{< img src="logs/explorer/side_panel/overview.png" alt="ログエクスプローラーのサイドパネル"  style="width:60%;">}}
+{{< img src="logs/explorer/side_panel/overview.png" alt="ログエクスプローラーのサイドパネル" style="width:60%;">}}
 
 - パネルの上部には、一般的な**コンテキスト**情報が表示されます
 - パネルの下部には、ログの実際の**コンテンツ**が表示されます
@@ -40,11 +40,11 @@ Datadog は次の一般的なサイドパネルレイアウトに従い、個々
 
 **Metrics** タブをクリックして、ログの周囲の 30 分の時間枠で基底のインフラストラクチャーメトリクスにアクセスします。
 
-上部の予約済み属性セクション、関連する[ホストダッシュボード][5]、または[ネットワークページ][6]で**ホスト**を操作します。**Container** セクションを操作して、基底のパラメーターでスコープされた[コンテナページ][7]にジャンプします。
+上部の予約済み属性セクション、関連する[ホストダッシュボード][5]、または[ネットワークページ][6]で**ホスト**を操作します。**Container** セクションを操作して、基底のパラメーターでスコープされた[コンテナページ][7]に移動します。
 
-{{< img src="logs/explorer/side_panel/infra.gif" alt="インフラへのハブ" style="width:100%;">}}
+{{< img src="logs/explorer/side_panel/infra.mp4" alt="インフラへのハブ" video=true style="width:100%;">}}
 
-ログがサーバーレスソースからのものである場合、ホストセクションは、対応する[サーバーレスページ][8]にリンクするサーバーレスセクションに置き換えられます。
+ログがサーバーレスソースからのものであるとき、ホストセクションは、対応する[サーバーレスページ][8]にリンクするサーバーレスセクションに置き換えられます。
 
 {{< img src="logs/explorer/side_panel/infra-serverless.png" alt="サーバーレスへのハブ" style="width:80%;">}}
 
@@ -52,11 +52,11 @@ Datadog は次の一般的なサイドパネルレイアウトに従い、個々
 
 [ログへのトレースの挿入][9]を有効にし、[統合サービスタグ付け][10]のベストプラクティスに従って、ログと APM の相関のすべての機能を活用してください。
 
-**APM タブ**をクリックして、アップストリームサービスとダウンストリームサービスが実行されている、トレース全体のコンテキストでログを表示します。APM データの詳細と [APM のトレース][11]機能を確認します。
+**Trace タブ**をクリックし、アップストリームおよびダウンストリームのサービスが実行されている状態で、トレース全体のコンテキストでログを確認します。[View Trace Details][11] をクリックして、対応する APM データを深く掘り下げます。
 
-**Service** セクションを操作して、ログエクスプローラーでの検索に再度焦点を合わせ、同じトレースからの他のすべてのログを表示します。
+**Service** セクションを操作して、選択したサービスに対応するトレース部をハイライトします。この情報を使用して、ログエクスプローラーのクエリに再度フォーカスしたり、同じトレースからの他のログを確認したりできます。
 
-{{< img src="logs/explorer/side_panel/infra.gif" alt="APM へのハブ" style="width:100%;">}}
+{{< img src="logs/explorer/side_panel/trace.mp4" alt="APM へのハブ" video=true style="width:100%;">}}
 
 ## トラブルシューティングのコンテキストを構成
 
@@ -65,11 +65,11 @@ Datadog は次の一般的なサイドパネルレイアウトに従い、個々
 - ログテーブルに列を追加または削除する
 - 検索リクエストに特定の値 (include または exclude) を付加します。
 
-{{< img src="logs/explorer/side_panel/context.gif" alt="サイドパネルのコンテキスト"  style="width:100%;">}}
+{{< img src="logs/explorer/side_panel/context.jpg" alt="サイドパネルコンテキスト" style="width:50%;">}} {{< img src="logs/explorer/side_panel/context2.jpg" alt="サイドパネルコンテキスト" style="width:50%;">}}
 
 - 属性からファセットまたはメジャーを作成または編集します。[ログファセット][12]を参照してください。
 
-{{< img src="logs/explorer/side_panel/facets.gif" alt="サイドパネルファセット"  style="width:100%;">}}
+{{< img src="logs/explorer/side_panel/facets.mp4" alt="サイドパネルファセット" video=true style="width:100%;">}}
 
 ## ログの共有
 
@@ -78,22 +78,20 @@ Datadog は次の一般的なサイドパネルレイアウトに従い、個々
 - **Copy to clipboard** または `Ctrl+C` / `Cmd+C` を使用して、ログの JSON をクリップボードにコピーします。
 - **Share Event** は、メールや Slack などを介して、ログを (基底のビューとともに) チームメイトと共有します。利用可能なすべての [Datadog 通知インテグレーション][13]を参照してください。
 
-{{< img src="logs/explorer/side_panel/upper_log_panel.png" alt="上部ログパネル"  style="width:80%;">}}
-
 ## その他の参考資料
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/logs/log_configuration/pipelines
-[2]: /ja/integrations/#cat-log-collection
-[3]: /ja/agent/autodiscovery/integrations/?tab=kubernetes
-[4]: /ja/logs/log_configuration/attributes_naming_convention
-[5]: /ja/dashboards/#preset-lists
-[6]: /ja/network_monitoring/performance/network_page/
-[7]: /ja/infrastructure/livecontainers/?tab=linuxwindows#introduction
-[8]: /ja/infrastructure/serverless/#function-detail-view
-[9]: /ja/tracing/connect_logs_and_traces/
-[10]: /ja/getting_started/tagging/unified_service_tagging
-[11]: /ja/tracing/app_analytics/search/#displaying-a-full-trace
-[12]: /ja/logs/explorer/facets/#overview
-[13]: /ja/integrations/#cat-notification
+[1]: /logs/log_configuration/pipelines
+[2]: /integrations/#cat-log-collection
+[3]: /agent/autodiscovery/integrations/?tab=kubernetes
+[4]: /logs/log_configuration/attributes_naming_convention
+[5]: /dashboards/#preset-lists
+[6]: /network_monitoring/performance/network_page/
+[7]: /infrastructure/livecontainers/?tab=linuxwindows#introduction
+[8]: /infrastructure/serverless/#function-detail-view
+[9]: /tracing/connect_logs_and_traces/
+[10]: /getting_started/tagging/unified_service_tagging
+[11]: /tracing/app_analytics/search/#displaying-a-full-trace
+[12]: /logs/explorer/facets/#overview
+[13]: /integrations/#cat-notification
