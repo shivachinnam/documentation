@@ -1,9 +1,9 @@
 ---
-title: Agent v5 を使用したオートディスカバリー
+aliases:
+- /ja/agent/faq/agent-5-autodiscovery
 kind: ガイド
 private: true
-aliases:
-  - /ja/agent/faq/agent-5-autodiscovery
+title: Agent v5 を使用したオートディスカバリー
 ---
 <div class="alert alert-info">
 オートディスカバリーは、これまでのサービスディスカバリーのことです。Agent のコード内や一部の構成オプションでは、引き続きサービスディスカバリーと呼びます。
@@ -70,7 +70,7 @@ Docker Swarm を使用する場合は、マネージャーノードのいずれ�
 
 ### ファイル (Auto-conf)
 
-テンプレートをローカルファイルとして保存する方法はわかりやすく、外部サービスやオーケストレーションプラットフォームを必要としません。この方法の欠点は、テンプレートを変更、追加、または削除するたびに、Agent コンテナを再起動する必要がある点です。
+テンプレートをローカルファイルとして保存するには、外部サービスやオーケストレーションプラットフォームを必要としません。この方法の欠点は、テンプレートを変更、追加、または削除するたびに、Agent コンテナを再起動する必要がある点です。
 
 Agent は、自分の `conf.d/auto_conf` ディレクトリでオートディスカバリーテンプレートを探します。以下のチェックのデフォルトテンプレートはここに置かれます。
 
@@ -174,8 +174,8 @@ key-value ストアがテンプレートソースとして有効になってい�
 ```text
 /datadog/
   check_configs/
-    docker_image_1/                 # container identifier, e.g. httpd
-      - check_names: [<CHECK_NAME>] # e.g. apache
+    docker_image_1/                 # コンテナ識別子 (httpd など)
+      - check_names: [<CHECK_NAME>] # apache など
       - init_configs: [<INIT_CONFIG>]
       - instances: [<INSTANCE_CONFIG>]
     ...
@@ -389,8 +389,8 @@ checks:
 [1]: https://www.datadoghq.com/docker-adoption
 [2]: https://github.com/DataDog/integrations-core/blob/master/go_expvar/datadog_checks/go_expvar/data/conf.yaml.example
 [3]: https://gcr.io/datadoghq/docker-dd-agent
-[4]: /ja/agent/kubernetes/
-[5]: /ja/integrations/amazon_ecs/#installation
+[4]: /agent/kubernetes/
+[5]: /integrations/amazon_ecs/#installation
 [6]: https://github.com/DataDog/docker-dd-agent#environment-variables
 [7]: https://github.com/DataDog/jmxfetch
 [8]: https://github.com/DataDog/integrations-core/blob/master/apache/datadog_checks/apache/data/auto_conf.yaml
@@ -407,5 +407,5 @@ checks:
 [19]: https://github.com/DataDog/integrations-core/blob/master/riak/datadog_checks/riak/data/auto_conf.yaml
 [20]: https://github.com/DataDog/docker-dd-agent#configuration-files
 [21]: https://github.com/DataDog/integrations-core/blob/master/apache/datadog_checks/apache/data/conf.yaml.example
-[22]: /ja/agent/guide/agent-commands/#start-stop-restart-the-agent
+[22]: /agent/guide/agent-commands/#start-stop-restart-the-agent
 [23]: https://github.com/DataDog/integrations-core/blob/master/http_check/datadog_checks/http_check/data/conf.yaml.example
