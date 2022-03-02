@@ -1,38 +1,41 @@
 ---
-assets:
-  dashboards:
-    Nvidia Jetson: assets/dashboards/nvidia_jetson.json
-  logs: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - iot
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/nvidia_jetson/README.md
-display_name: Nvidia Jetson
-draft: false
-git_integration_title: nvidia_jetson
-guid: 72845bb7-c3a6-4017-96f6-c232171102f8
-integration_id: nvidia-jetson
-integration_title: Nvidia Jetson
-integration_version: ''
-is_public: true
-kind: インテグレーション
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: nvidia.jetson.
-metric_to_check: nvidia.jetson.mem.used
-name: nvidia_jetson
-public_title: Nvidia Jetson
-short_description: Nvidia Jetson ボードに関するメトリクスを収集します
-support: コア
-supported_os:
-  - linux
+"assets":
+  "dashboards":
+    "Nvidia Jetson": assets/dashboards/nvidia_jetson.json
+  "logs": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- iot
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-core/blob/master/nvidia_jetson/README.md"
+"display_name": "Nvidia Jetson"
+"draft": false
+"git_integration_title": "nvidia_jetson"
+"guid": "72845bb7-c3a6-4017-96f6-c232171102f8"
+"integration_id": "nvidia-jetson"
+"integration_title": "Nvidia Jetson"
+"integration_version": ""
+"is_public": true
+"kind": "インテグレーション"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "nvidia.jetson."
+"metric_to_check": "nvidia.jetson.mem.used"
+"name": "nvidia_jetson"
+"public_title": "Nvidia Jetson"
+"short_description": "Nvidia Jetson ボードに関するメトリクスを収集します"
+"support": "コア"
+"supported_os":
+- linux
 ---
+
+
+
 ## 概要
 
 このチェックは [Nvidia Jetson][1] ボードを監視します。
@@ -55,7 +58,7 @@ Nvidia Jetson チェックは [Datadog Agent][2] パッケージに含まれて�
 
 ### 検証
 
-[Agent の status サブコマンドを実行][5]し、Checks セクションで `jetson` を探します。
+[Agent の status サブコマンド][5]を実行し、Checks セクションで `jetson` を探します。
 
 ## 収集データ
 
@@ -73,11 +76,11 @@ Nvidia Jetson チェックは [Datadog Agent][2] パッケージに含まれて�
 
 ### サービスのチェック
 
-Nvidia Jetson には、サービスのチェック機能は含まれません。 
+Nvidia Jetson インテグレーションには、サービスのチェック機能は含まれません。
 
 ### イベント
 
-Nvidia Jetson には、イベントは含まれません。
+Nvidia Jetson インテグレーションには、イベントは含まれません。
 
 ## トラブルシューティング
 
@@ -86,7 +89,8 @@ Nvidia Jetson には、イベントは含まれません。
 [1]: https://developer.nvidia.com/embedded-computing
 [2]: https://app.datadoghq.com/account/settings#agent
 [3]: https://github.com/DataDog/datadog-agent/blob/master/cmd/agent/dist/conf.d/jetson.d/conf.yaml.example
-[4]: https://docs.datadoghq.com/ja/agent/guide/agent-commands/#start-stop-restart-the-agent
-[5]: https://docs.datadoghq.com/ja/agent/guide/agent-commands/#agent-status-and-information
+[4]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-restart-the-agent
+[5]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [6]: https://github.com/DataDog/integrations-core/blob/master/nvidia_jetson/metadata.csv
-[7]: https://docs.datadoghq.com/ja/help/
+[7]: https://docs.datadoghq.com/help/
+
