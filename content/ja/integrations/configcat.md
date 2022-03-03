@@ -1,35 +1,38 @@
 ---
-assets:
-  dashboards: {}
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - notification
-creates_events: true
-ddtype: crawler
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/configcat/README.md
-description: Datadog-ConfigCat インテグレーションにより、ConfigCat のすべての設定変更が確実にイベントとして Datadog に送信されます。この機能を使用すれば、設定を変更する際にシステムの挙動を確認することができます。製品の Datadog インテグレーションは ConfigCat で設定できます。
-display_name: ConfigCat
-draft: false
-git_integration_title: configcat
-guid: 5e98d95a-519d-460c-945a-5e3a4e1f8d72
-integration_id: configcat
-integration_title: ConfigCat
-integration_version: ''
-is_public: true
-kind: インテグレーション
-maintainer: developer@configcat.com
-manifest_version: 1.0.0
-name: configcat
-public_title: Datadog-ConfigCat インテグレーション
-short_description: Datadog により追跡する設定変更イベント
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards": {}
+  "monitors": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- notification
+"creates_events": true
+"ddtype": "crawler"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/configcat/README.md"
+"description": "Datadog-ConfigCat インテグレーションにより、ConfigCat のすべての設定変更が確実にイベントとして Datadog に送信されます。この機能を使用すれば、設定を変更する際にシステムの挙動を確認することができます。製品の Datadog インテグレーションは ConfigCat で設定できます。"
+"display_name": "ConfigCat"
+"draft": false
+"git_integration_title": "configcat"
+"guid": "5e98d95a-519d-460c-945a-5e3a4e1f8d72"
+"integration_id": "configcat"
+"integration_title": "ConfigCat"
+"integration_version": ""
+"is_public": true
+"kind": "インテグレーション"
+"maintainer": "developer@configcat.com"
+"manifest_version": "1.0.0"
+"name": "configcat"
+"public_title": "Datadog-ConfigCat インテグレーション"
+"short_description": "Datadog により追跡する設定変更イベント"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## 概要
 
 [ConfigCat 機能フラグ][1]を使用すれば、コードを再デプロイすることなく、機能の管理やソフトウェアのコンフィギュレーション変更が可能になります。技術チーム以外のメンバーでも、[ダッシュボードから 10 分で習得][2]し機能を直接管理できるため、いつでもデプロイし、自信を持ってリリースできます。新しい機能の場合は、初めに特定のユーザーグループをターゲットにするとよいでしょう。A/B/n テストやソフトウェアの発売をサポートしているほか、ウェブ、モバイル、バックエンドアプリケーションと容易に統合が可能な[オープンソース SDK][3]  が提供されています。
@@ -81,9 +84,10 @@ ConfigCat インテグレーションには、サービスのチェック機能�
 [3]: https://github.com/configcat
 [4]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/configcat/images/datadog_event.png
 [5]: https://www.datadoghq.com
-[6]: https://docs.datadoghq.com/ja/account_management/api-app-keys/#api-keys
+[6]: https://docs.datadoghq.com/account_management/api-app-keys/#api-keys
 [7]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/configcat/images/datadog_apikey.png
 [8]: https://app.configcat.com/product/integrations
 [9]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/configcat/images/datadog_filtering.png
 [10]: https://configcat.com/docs/integrations/datadog/
 [11]: https://configcat.com/support
+
