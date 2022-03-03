@@ -2,22 +2,23 @@
 title: Kubernetes ログの収集
 kind: documentation
 further_reading:
-  - link: /agent/kubernetes/apm/
-    tag: ドキュメント
-    text: アプリケーショントレースの収集
-  - link: /agent/kubernetes/prometheus/
-    tag: ドキュメント
-    text: Prometheus メトリクスの収集
-  - link: /agent/kubernetes/integrations/
-    tag: ドキュメント
-    text: アプリケーションのメトリクスとログを自動で収集
-  - link: /agent/guide/autodiscovery-management/
-    tag: ドキュメント
-    text: データ収集をコンテナのサブセットのみに制限
-  - link: /agent/kubernetes/tag/
-    tag: ドキュメント
-    text: コンテナから送信された全データにタグを割り当て
+- link: /agent/kubernetes/apm/
+  tag: ドキュメント
+  text: アプリケーショントレースの収集
+- link: /agent/kubernetes/prometheus/
+  tag: ドキュメント
+  text: Prometheus メトリクスの収集
+- link: /agent/kubernetes/integrations/
+  tag: ドキュメント
+  text: アプリケーションのメトリクスとログを自動で収集
+- link: /agent/guide/autodiscovery-management/
+  tag: ドキュメント
+  text: データ収集をコンテナのサブセットのみに制限
+- link: /agent/kubernetes/tag/
+  tag: ドキュメント
+  text: コンテナから送信された全データにタグを割り当て
 ---
+
 Agent がログを収集する方法には、[Docker ソケット][1]から収集する方法と、[Kubernetes ログファイル](#ログの収集)から収集する方法 (Kubernetes によって自動的に処理されます) の 2 つがあります。次の場合、Datadog では Kubernetes ログファイルの使用を推奨しています。
 
 * Docker がランタイムではない、**または**
@@ -106,7 +107,7 @@ DaemonSet によるログの収集を有効にするには
 
 Agent が非ルートユーザーで実行しているときは、`/var/lib/docker/containers` に含まれるログファイルを直接読み取れません。この場合、Docker Daemon からコンテナログをフェッチできるよう、Agent コンテナの Docker ソケットをマウントする必要があります。
 
-[1]: /ja/agent/docker/?tab=standard#ignore-containers
+[1]: /agent/docker/?tab=standard#ignore-containers
 {{% /tab %}}
 {{% tab "Helm" %}}
 
@@ -283,7 +284,7 @@ logs:
 
 **注**: Agent はファイル名から直接 `<INTEGRATIONS_NAME>` を推測するため、この名前を設定する必要はありません。
 
-[1]: /ja/agent/guide/ad_identifiers/
+[1]: /agent/guide/ad_identifiers/
 {{% /tab %}}
 {{% tab "ConfigMap" %}}
 
@@ -305,9 +306,9 @@ data:
 
 `<INTEGRATION_AUTODISCOVERY_IDENTIFIER>` の詳細については、[オートディスカバリーコンテナ識別子][3]のドキュメントを参照してください。
 
-[1]: /ja/agent/kubernetes/integrations/#configmap
-[2]: /ja/agent/kubernetes/integrations/
-[3]: /ja/agent/guide/ad_identifiers/
+[1]: /agent/kubernetes/integrations/#configmap
+[2]: /agent/kubernetes/integrations/
+[3]: /agent/guide/ad_identifiers/
 {{% /tab %}}
 {{% tab "Key-value store" %}}
 
@@ -362,8 +363,8 @@ key-value ストアがテンプレートソースとして有効になってい�
 
 **注**: key-value ストアを使用している場合、オートディスカバリーは特定の構成を特定のコンテナに適用するために、`<CONTAINER_IDENTIFIER>` と `.spec.containers[0].image` の一致を試みることで、コンテナを**イメージ**で識別します。
 
-[1]: /ja/integrations/consul/
-[2]: /ja/agent/guide/agent-commands/
+[1]: /integrations/consul/
+[2]: /agent/guide/agent-commands/
 {{% /tab %}}
 {{% tab "Helm" %}}
 
@@ -536,11 +537,11 @@ Agent v6.12+ では、K8s ファイルログ収集方法 (`/var/log/pods` 経由
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/agent/faq/log-collection-with-docker-socket/
-[2]: /ja/agent/kubernetes/
-[3]: /ja/integrations/#cat-autodiscovery
-[4]: /ja/getting_started/tagging/unified_service_tagging
-[5]: /ja/agent/logs/advanced_log_collection/?tab=kubernetes#filter-logs
-[6]: /ja/agent/logs/advanced_log_collection/?tab=kubernetes#scrub-sensitive-data-from-your-logs
-[7]: /ja/agent/logs/advanced_log_collection/?tab=kubernetes#multi-line-aggregation
-[8]: /ja/agent/guide/autodiscovery-management/
+[1]: /agent/faq/log-collection-with-docker-socket/
+[2]: /agent/kubernetes/
+[3]: /integrations/#cat-autodiscovery
+[4]: /getting_started/tagging/unified_service_tagging
+[5]: /agent/logs/advanced_log_collection/?tab=kubernetes#filter-logs
+[6]: /agent/logs/advanced_log_collection/?tab=kubernetes#scrub-sensitive-data-from-your-logs
+[7]: /agent/logs/advanced_log_collection/?tab=kubernetes#multi-line-aggregation
+[8]: /agent/guide/autodiscovery-management/
