@@ -37,3 +37,17 @@ Datadog で RSS フィードのアクティビティをキャプチャして、�
 **オプション**: RSS フィードにアクセスするためのユーザー名とパスワードを入力します。
 
 {{< img src="integrations/rss/rss_setup.png" alt="RSS セットアップ"  >}}
+
+### 検証
+
+Datadog で RSS フィードのアクティビティを表示するには、[Events Stream][1] と [Events Explorer][2] を確認してください。
+
+## その他の参考資料
+
+### ドキュメント
+
+- [Datadog のイベントを探索する][3]
+
+[1]: https://app.datadoghq.com/event/stream
+[2]: https://app.datadoghq.com/event/explorer
+[3]: https://docs.datadoghq.com/events/#exploring-datadog-events
