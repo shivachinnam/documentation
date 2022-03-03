@@ -1,42 +1,45 @@
 ---
-assets:
-  dashboards:
-    JMeter Overview: assets/dashboards/JMeterOverview.json
-  logs:
-    source: jmeter
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - ログの収集
-  - テスト
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/jmeter/README.md
-display_name: JMeter
-draft: false
-git_integration_title: jmeter
-guid: 73e25799-9bc1-413b-a5f3-989a7c5bd554
-integration_id: jmeter
-integration_title: JMeter
-integration_version: ''
-is_public: true
-kind: integration
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: jmeter.
-metric_to_check: jmeter.responses_count
-name: jmeter
-public_title: JMeter
-short_description: Apache JMeter 用 Datadog プラグイン
-support: コア
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards":
+    "JMeter Overview": assets/dashboards/JMeterOverview.json
+  "logs":
+    "source": jmeter
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- ログの収集
+- テスト
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-core/blob/master/jmeter/README.md"
+"display_name": "JMeter"
+"draft": false
+"git_integration_title": "jmeter"
+"guid": "73e25799-9bc1-413b-a5f3-989a7c5bd554"
+"integration_id": "jmeter"
+"integration_title": "JMeter"
+"integration_version": ""
+"is_public": true
+"kind": "integration"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "jmeter."
+"metric_to_check": "jmeter.responses_count"
+"name": "jmeter"
+"public_title": "JMeter"
+"short_description": "Apache JMeter 用 Datadog プラグイン"
+"support": "コア"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## 概要
 
 Datadog Backend Listener for Apache JMeter は、テスト結果を Datadog プラットフォームに送信するために使用される、オープンソースの JMeter プラグインです。これにより、レイテンシー、送受信されるバイト数などのテストメトリクスをリアルタイムで報告できます。また、完全なテスト結果をログエントリとして Datadog へ送信することも可能です。
@@ -88,5 +91,6 @@ JMeter には、イベントは含まれません。
 
 [1]: https://github.com/DataDog/jmeter-datadog-backend-listener/releases
 [2]: https://github.com/DataDog/integrations-core/blob/master/jmeter/metadata.csv
-[3]: https://docs.datadoghq.com/ja/help/
+[3]: https://docs.datadoghq.com/help/
 [4]: https://www.datadoghq.com/blog/monitor-jmeter-test-results-datadog/
+
