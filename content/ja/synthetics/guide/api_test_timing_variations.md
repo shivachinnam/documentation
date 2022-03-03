@@ -1,14 +1,15 @@
 ---
-title: API テストのタイミングと各バリエーションのトラブルシューティングを理解する
-kind: documentation
-description: API テストのタイミングと各バリエーションのトラブルシューティングを理解する
 aliases:
-  - /ja/synthetics/api_test_timing_variations
+- /ja/synthetics/api_test_timing_variations
+description: API テストのタイミングと各バリエーションのトラブルシューティングを理解する
 further_reading:
-  - link: https://docs.datadoghq.com/synthetics/metrics/#api-tests
-    tag: ドキュメント
-    text: Synthetics API テストのメトリクス
+- link: https://docs.datadoghq.com/synthetics/metrics/#api-tests
+  tag: ドキュメント
+  text: Synthetics API テストのメトリクス
+kind: documentation
+title: API テストのタイミングと各バリエーションのトラブルシューティングを理解する
 ---
+
 ## 概要
 
 Synthetic API テストで収集した[タイミングメトリクス][1]を用いて、サーバーとクライアント間の通信におけるボトルネックを特定することができます。
@@ -122,12 +123,12 @@ SSL ハンドシェイク時間のバリエーションは、サーバーの負�
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/synthetics/metrics/#api-tests
-[2]: /ja/synthetics/api_tests/http_tests?tab=requestoptions#define-request
-[3]: /ja/synthetics/private_locations/configuration#dns-configuration
-[4]: /ja/synthetics/api_tests/dns_tests#define-request
-[5]: /ja/synthetics/private_locations/?tab=docker#overview
-[6]: /ja/network_monitoring/performance/#overview
-[7]: /ja/synthetics/api_tests/icmp_tests/#overview
-[8]: /ja/getting_started/agent/#overview
-[9]: /ja/integrations/
+[1]: /synthetics/metrics/#api-tests
+[2]: /synthetics/api_tests/http_tests?tab=requestoptions#define-request
+[3]: /synthetics/private_locations/configuration#dns-configuration
+[4]: /synthetics/api_tests/dns_tests#define-request
+[5]: /synthetics/private_locations/?tab=docker#overview
+[6]: /network_monitoring/performance/#overview
+[7]: /synthetics/api_tests/icmp_tests/#overview
+[8]: /getting_started/agent/#overview
+[9]: /integrations/
