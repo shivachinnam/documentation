@@ -1,38 +1,41 @@
 ---
-assets:
-  dashboards:
-    Contrast Security Integration Overview: assets/dashboards/contrast_security_protect.json
-  metrics_metadata: metadata.csv
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - ログの収集
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/contrastsecurity/README.md
-display_name: contrastsecurity
-draft: false
-git_integration_title: contrastsecurity
-guid: 8483bcdc-3d45-48ee-8a73-75511a67ad5f
-integration_id: contrastsecurity
-integration_title: Contrast Security
-integration_version: ''
-is_public: true
-kind: インテグレーション
-maintainer: kristiana.mitchell@contrastsecurity.com
-manifest_version: 1.0.0
-metric_prefix: contrastsecurity.
-metric_to_check: ''
-name: contrastsecurity
-public_title: Datadog-Contrast Security インテグレーション
-short_description: Datadog で Contrast Security から攻撃や脆弱性をチェックする
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards":
+    "Contrast Security Integration Overview": assets/dashboards/contrast_security_protect.json
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- ログの収集
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/contrastsecurity/README.md"
+"display_name": "contrastsecurity"
+"draft": false
+"git_integration_title": "contrastsecurity"
+"guid": "8483bcdc-3d45-48ee-8a73-75511a67ad5f"
+"integration_id": "contrastsecurity"
+"integration_title": "Contrast Security"
+"integration_version": ""
+"is_public": true
+"kind": "インテグレーション"
+"maintainer": "kristiana.mitchell@contrastsecurity.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "contrastsecurity."
+"metric_to_check": ""
+"name": "contrastsecurity"
+"public_title": "Datadog-Contrast Security インテグレーション"
+"short_description": "Datadog で Contrast Security から攻撃や脆弱性をチェックする"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## 概要
 
 Datadog-Contrast インテグレーションでは、Contrast のログを Datadog に収集することができます。
@@ -65,7 +68,7 @@ logs_enabled: true
 
 詳細については、次を参照してください:
 - [Datadog ログのドキュメント][4]
-- [ダッシュボードの作成に関する Datadog API ドキュメント][5]
+- [Datadog ダッシュボード API][5]
 
 ## 収集データ
 
@@ -82,8 +85,9 @@ Contrast インテグレーションは、イベントを送信しません。
 Contrast インテグレーションには、サービス チェック機能は含まれません。
 
 
-[1]: https://docs.datadoghq.com/ja/agent/guide/agent-configuration-files/
+[1]: https://docs.datadoghq.com/agent/guide/agent-configuration-files/
 [2]: https://docs.contrastsecurity.com/
-[3]: https://docs.datadoghq.com/ja/agent/guide/agent-commands/#restart-the-agent
-[4]: https://docs.datadoghq.com/ja/logs/log_collection/#getting-started-with-the-agent
-[5]: https://docs.datadoghq.com/ja/api/#create-a-dashboard
+[3]: https://docs.datadoghq.com/agent/guide/agent-commands/#restart-the-agent
+[4]: https://docs.datadoghq.com/logs/log_collection/
+[5]: https://docs.datadoghq.com/api/#create-a-dashboard
+
