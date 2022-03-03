@@ -1,27 +1,27 @@
 ---
-title: PHP ログ収集
-kind: documentation
 aliases:
-  - /ja/logs/languages/php
+- /ja/logs/languages/php
 further_reading:
-  - link: https://www.datadoghq.com/blog/php-logging-guide
-    tag: ブログ
-    text: PHP ログの収集、カスタマイズ、分析方法
-  - link: /logs/log_configuration/processors
-    tag: Documentation
-    text: ログの処理方法
-  - link: /logs/log_configuration/parsing
-    tag: Documentation
-    text: パースの詳細
-  - link: /logs/explorer/
-    tag: Documentation
-    text: ログの調査方法
-  - link: /logs/explorer/#visualize
-    tag: Documentation
-    text: ログ分析の実行
-  - link: /logs/faq/log-collection-troubleshooting-guide
-    tag: FAQ
-    text: ログ収集のトラブルシューティングガイド
+- link: https://www.datadoghq.com/blog/php-logging-guide
+  tag: ブログ
+  text: PHP ログの収集、カスタマイズ、分析方法
+- link: /logs/log_configuration/processors
+  tag: Documentation
+  text: ログの処理方法
+- link: /logs/log_configuration/parsing
+  tag: Documentation
+  text: パースの詳細
+- link: /logs/explorer/
+  tag: Documentation
+  text: ログの調査方法
+- link: /logs/explorer/#visualize
+  tag: Documentation
+  text: ログ分析の実行
+- link: /logs/faq/log-collection-troubleshooting-guide
+  tag: FAQ
+  text: ログ収集のトラブルシューティングガイド
+kind: documentation
+title: PHP ログ収集
 ---
 ## 概要
 
@@ -155,7 +155,7 @@ services:
 
 次に、[ログファイルを Datadog にストリーミングします][1]。
 
-[1]: /ja/logs/log_collection/
+[1]: /logs/log_collection/
 {{% /tab %}}
 {{% tab "PHP Symfony" %}}
 
@@ -209,7 +209,7 @@ logs:
   $logger->info('Adding a new user', array('username' => 'Seldaek'));
 ```
 
-Monolog にはプリプロセッサー機能が付属しています。これは、イベントにメタデータ (セッション ID、リクエスト ID など) を設定して情報を補完できる簡単なコールバックです。
+Monolog にはプリプロセッサー機能が付属しています。これは、イベントにメタデータ (例: セッション ID、リクエスト ID) を設定して情報を補完できる簡単なコールバックです。
 
 ```php
  <?php
@@ -234,7 +234,7 @@ Monolog にはプリプロセッサー機能が付属しています。これは
 {{% /tab %}}
 {{% tab "PHP Zend-Log" %}}
 
-有益な情報の多くは、ログやイベントに追加できるコンテキストデータから得られます。Zend-Log では、これを簡単に行えるよう、スレッドローカルなコンテキストデータを設定すると、すべてのイベントと一緒に自動的に送信されるメソッドが提供されています。コンテキストデータを含むイベントをいつでも記録できます。
+有益なログ情報は、ログやイベントに追加できるコンテキストデータから得られます。Zend-Log では、これを簡単に行えるよう、スレッドローカルなコンテキストデータを設定すると、すべてのイベントと一緒に自動的に送信されるメソッドが提供されています。コンテキストデータを含むイベントをいつでも記録できます。
 
 ```php
 <?php
@@ -352,7 +352,7 @@ Monolog にはプリプロセッサー機能が付属しています。これは
 
 3. [生成された JSON ファイルを Datadog にストリーミングします][1]。
 
-[1]: /ja/logs/log_collection/
+[1]: /logs/log_collection/
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -538,10 +538,10 @@ class AppServiceProvider extends ServiceProvider
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/agent/logs/
-[2]: /ja/tracing/connect_logs_and_traces/php/
-[3]: /ja/logs/log_collection/php/#symfony-v2-v3
-[4]: /ja/logs/log_collection/php/#ppi
-[5]: /ja/logs/log_collection/php/#laravel
-[6]: /ja/logs/log_collection/php/#silex
-[7]: /ja/logs/log_collection/php/#lumen
+[1]: /agent/logs/
+[2]: /tracing/connect_logs_and_traces/php/
+[3]: /logs/log_collection/php/#symfony-v2-v3
+[4]: /logs/log_collection/php/#ppi
+[5]: /logs/log_collection/php/#laravel
+[6]: /logs/log_collection/php/#silex
+[7]: /logs/log_collection/php/#lumen
