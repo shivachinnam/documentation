@@ -1,15 +1,16 @@
 ---
 title: Ruby ログとトレースの接続
 kind: ドキュメント
-description: Ruby ログとトレースを接続して Datadog で関連付けます。
+description: 'Ruby ログとトレースを接続して Datadog で関連付けます。'
 further_reading:
-  - link: https://www.datadoghq.com/blog/request-log-correlation/
-    tag: ブログ
-    text: 自動的にリクエストログとトレースに相関性を持たせる
-  - link: /logs/guide/ease-troubleshooting-with-cross-product-correlation/
-    tag: ガイド
-    text: クロスプロダクト相関で容易にトラブルシューティング。
+    - link: "https://www.datadoghq.com/blog/request-log-correlation/"
+      tag: ブログ
+      text: 自動的にリクエストログとトレースに相関性を持たせる
+    - link: /logs/guide/ease-troubleshooting-with-cross-product-correlation/
+      tag: ガイド
+      text: クロスプロダクト相関で容易にトラブルシューティング。
 ---
+
 ## トレース相関
 
 ロギングなどの多くの場合において、相互参照を容易にするために、トレース ID を他のイベントまたはデータストリームに関連付けると便利です。
@@ -122,4 +123,4 @@ Datadog.tracer.trace('my.operation') { logger.warn('これはトレースされ�
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/logs/log_collection/ruby/
+[1]: /logs/log_collection/ruby/
