@@ -1,17 +1,17 @@
 ---
-title: JSON を使用したグラフ作成
-kind: documentation
 aliases:
-  - /ja/graphingjson/
-  - /ja/graphing/miscellaneous/graphingjson
-  - /ja/graphing/graphing_json/
+- /ja/graphingjson/
+- /ja/graphing/miscellaneous/graphingjson
+- /ja/graphing/graphing_json/
 further_reading:
-  - link: /dashboards/widgets/
-    tag: ドキュメント
-    text: ウィジェット
-  - link: /dashboards/graphing_json/request_json/
-    tag: ドキュメント
-    text: リクエスト JSON スキーマ
+- link: /dashboards/widgets/
+  tag: ドキュメント
+  text: ウィジェット
+- link: /dashboards/graphing_json/request_json/
+  tag: ドキュメント
+  text: リクエスト JSON スキーマ
+kind: documentation
+title: JSON を使用したグラフ作成
 ---
 [ダッシュボード API][2] を使用して [Datadog タイムボード][1]をクエリすると、結果は、以下のレイアウトの JSON オブジェクトになります。
 
@@ -39,7 +39,7 @@ DASHBOARD_SCHEMA = {
 | `title`              | string           | ダッシュボードのタイトル。                                                                                                                  |
 | `description`        | string           | ダッシュボードの説明。                                                                                                             |
 | `layout_type`        | enum             | ダッシュボードのレイアウトタイプ。使用可能な値: `ordered` または `free`               |
-| `is_read_only`       | Boolean          | このダッシュボードが読み取り専用かどうか。`true` の場合は、ダッシュボードの作成者と管理者だけがダッシュボードに変更を加えることができます。                     |
+| `is_read_only`       | Boolean          | このダッシュボードを読み取り専用にするかどうかを指定します。`true` の場合、ダッシュボードの作成者とアクセス管理 (`user_access_manage`) 権限を持つユーザーのみが変更できます。                     |
 | `template_variables` | オブジェクトの配列  | このダッシュボードのテンプレート変数のリスト。詳細は、[テンプレート変数スキーマ](#template-variable-schema)をご参照ください。 |
 | `notify_list`        | 文字列の配列 | このダッシュボードに変更が加えられたときに通知するユーザーのハンドルのリスト。                                                               |
 | `widgets`            | オブジェクトの配列  | ダッシュボードに表示するウィジェットのリスト。`WIDGET_SCHEMA` の作成については、別途ドキュメントをご用意しています。[ウィジェットの JSON スキーマガイド][3]をご参照ください。        |
@@ -73,7 +73,7 @@ Datadog UI でテンプレート変数を使用する方法については、[�
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/dashboards/timeboard/
-[2]: /ja/api/v1/dashboards/
-[3]: /ja/dashboards/graphing_json/widget_json/
-[4]: /ja/dashboards/template_variables/
+[1]: /dashboards/timeboard/
+[2]: /api/v1/dashboards/
+[3]: /dashboards/graphing_json/widget_json/
+[4]: /dashboards/template_variables/
