@@ -21,7 +21,7 @@ Download the app from the [Apple App Store][1] for your iOS device, or from the 
 
 ### Logging in
 
-You can log in using standard authentication, Google authentication, or [SAML][3] - for both the US and the EU region.
+You can log in using standard authentication, Google authentication, or [SAML][3] - for both the US and the EU region. example don't merge
 
 #### Enabling SAML
 
