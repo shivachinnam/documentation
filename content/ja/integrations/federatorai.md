@@ -1,43 +1,46 @@
 ---
-assets:
-  dashboards:
-    ProphetStor Federator.ai Application Overview: assets/dashboards/application-overview.json
-    ProphetStor Federator.ai Cluster Overview: assets/dashboards/cluster-overview.json
-    ProphetStor Federator.ai Cost Analysis Overview: assets/dashboards/cost-analysis-overview.json
-    ProphetStor Federator.ai Kafka Overview: assets/dashboards/overview.json
-  metrics_metadata: metadata.csv
-  monitors:
-    Node CPU Load Prediction in Next 24 Hours is High: assets/recommended_monitors/federatorai_node_cpu_prediction.json
-    Node Memory Usage Prediction in Next 24 Hours is High: assets/recommended_monitors/federatorai_node_mem_prediction.json
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - コンテナ
-  - orchestration
-creates_events: false
-ddtype: crawler
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/federatorai/README.md
-display_name: Federator.ai
-draft: false
-git_integration_title: federatorai
-guid: ec0fd93a-ee4c-4652-9996-cc68cb5a4d45
-integration_id: federatorai
-integration_title: Federator.ai
-integration_version: ''
-is_public: true
-kind: インテグレーション
-maintainer: support@prophetstor.com
-manifest_version: 1.0.0
-metric_prefix: federatorai.
-metric_to_check: federatorai.integration.status
-name: federatorai
-public_title: Datadog-Federator.ai インテグレーション
-short_description: ProphetStor Federator.ai とのインテグレーションでアプリケーションのパフォーマンスを最適化します
-support: contrib
-supported_os:
-  - linux
+"assets":
+  "dashboards":
+    "ProphetStor Federator.ai Application Overview": assets/dashboards/application-overview.json
+    "ProphetStor Federator.ai Cluster Overview": assets/dashboards/cluster-overview.json
+    "ProphetStor Federator.ai Cost Analysis Overview": assets/dashboards/cost-analysis-overview.json
+    "ProphetStor Federator.ai Kafka Overview": assets/dashboards/overview.json
+  "metrics_metadata": metadata.csv
+  "monitors":
+    "Node CPU Load Prediction in Next 24 Hours is High": assets/recommended_monitors/federatorai_node_cpu_prediction.json
+    "Node Memory Usage Prediction in Next 24 Hours is High": assets/recommended_monitors/federatorai_node_mem_prediction.json
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- コンテナ
+- orchestration
+"creates_events": false
+"ddtype": "crawler"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/federatorai/README.md"
+"display_name": "Federator.ai"
+"draft": false
+"git_integration_title": "federatorai"
+"guid": "ec0fd93a-ee4c-4652-9996-cc68cb5a4d45"
+"integration_id": "federatorai"
+"integration_title": "Federator.ai"
+"integration_version": ""
+"is_public": true
+"kind": "インテグレーション"
+"maintainer": "support@prophetstor.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "federatorai."
+"metric_to_check": "federatorai.integration.status"
+"name": "federatorai"
+"public_title": "Datadog-Federator.ai インテグレーション"
+"short_description": "ProphetStor Federator.ai とのインテグレーションでアプリケーションのパフォーマンスを最適化します"
+"support": "contrib"
+"supported_os":
+- linux
 ---
+
+
+
 ## 概要
 
 
@@ -299,9 +302,10 @@ Federator.ai には、イベントは含まれません。
 [6]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/federatorai/images/application_overview_dashboard.png
 [7]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/federatorai/images/dashboard_overview.png
 [8]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/federatorai/images/cost_analysis_overview.png
-[9]: https://docs.datadoghq.com/ja/account_management/api-app-keys/
+[9]: https://docs.datadoghq.com/account_management/api-app-keys/
 [10]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/federatorai/images/add_cluster_window.png
 [11]: https://prophetstor.com/wp-content/uploads/documentation/Federator.ai/Latest%20Version/ProphetStor%20Federator.ai%20Installation%20Guide.pdf
 [12]: https://prophetstor.com/wp-content/uploads/documentation/Federator.ai/Latest%20Version/ProphetStor%20Federator.ai%20User%20Guide.pdf
 [13]: https://github.com/DataDog/integrations-extras/blob/master/federatorai/metadata.csv
-[14]: https://docs.datadoghq.com/ja/help/
+[14]: https://docs.datadoghq.com/help/
+
