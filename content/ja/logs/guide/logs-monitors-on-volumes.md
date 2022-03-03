@@ -2,13 +2,14 @@
 title: ログの使用量の監視
 kind: ガイド
 further_reading:
-  - link: /logs/log_configuration/processors
-    tag: ドキュメント
-    text: ログの処理方法
-  - link: /logs/log_configuration/parsing
-    tag: ドキュメント
-    text: パースの詳細
+- link: /logs/log_configuration/processors
+  tag: ドキュメント
+  text: ログの処理方法
+- link: /logs/log_configuration/parsing
+  tag: ドキュメント
+  text: パースの詳細
 ---
+
 このガイドでは、推定使用量メトリクスを利用してログ使用量を監視する方法を説明します。以下の各ステップについて解説していきます。
 
 * トラフィックの予期せぬスパイクにアラートを生成
@@ -36,8 +37,8 @@ further_reading:
 1. [新規の異常検知モニターを作成します][4]。
 2. `datadog.estimated_usage.logs.ingested_events` メトリクスを選択します。
 3. `from` セクションに `datadog_is_excluded:false` を追加します (取得したログではなく、インデックス化されたログを監視するため)
-4. **group by** に `service` タグと `datadog_index` タグを追加します (インデックスで特定のサービスがスパイクした場合、またはログの送信が停止した場合に通知を受け取るため)
-5. 使用状況に一致するアラート条件を設定します (例: 評価ウィンドウ、予測範囲外の回数など)
+4. **count by** に `service` タグと `datadog_index` タグを追加します (インデックスで特定のサービスがスパイクした場合、またはログの送信が停止した場合に通知を受け取るため)
+5. 使用状況に一致するアラート条件を設定します (例: 評価ウィンドウ、予測範囲外の回数)
 6. 実行可能な指示を記述した通知メッセージを設定します。
 
 {{< img src="logs/guide/anomaly_usage_notification.png" alt=" 異常検知通知の例"  style="width:70%;">}}
@@ -90,11 +91,11 @@ Slack で受信する通知の例:
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/logs/logs_to_metrics/#recommended-usage-metrics
-[2]: /ja/monitors/create/types/anomaly/
+[1]: /logs/logs_to_metrics/#recommended-usage-metrics
+[2]: /monitors/create/types/anomaly/
 [3]: https://app.datadoghq.com/metric/summary?filter=datadog.estimated_usage.logs.ingested_bytes&metric=datadog.estimated_usage.logs.ingested_bytes
 [4]: https://app.datadoghq.com/monitors#create/anomaly
 [5]: /resources/json/estimated_log_usage_dashboard_configuration.json
 [6]: https://app.datadoghq.com/logs
-[7]: /ja/logs/explorer/search/
-[8]: /ja/logs/indexes/#set-daily-quota
+[7]: /logs/explorer/search/
+[8]: /logs/indexes/#set-daily-quota
