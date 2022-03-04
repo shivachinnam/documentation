@@ -1,19 +1,19 @@
 ---
-title: Utiliser les intégrations de la communauté
-kind: guide
 aliases:
-  - /fr/agent/guide/community-integrations-installation-with-docker-agent
+- /fr/agent/guide/community-integrations-installation-with-docker-agent
 further_reading:
-  - link: /agent/troubleshooting/
-    tag: Documentation
-    text: Dépannage de l'Agent
-  - link: /developers/integrations/new_check_howto
-    tag: Documentation
-    text: Créer une intégration
+- link: /agent/troubleshooting/
+  tag: Documentation
+  text: Dépannage de l'Agent
+- link: /developers/integrations/new_check_howto
+  tag: Documentation
+  text: Créer une intégration
+kind: guide
+title: Utiliser les intégrations de la communauté
 ---
 ## Présentation
 
-Les intégrations développées par la communauté pour l'Agent Datadog sont stockées dans le référentiel Github [integrations-extra][1]. Elles ne sont pas incluses dans le package de l'Agent Datadog, mais elles peuvent être installées comme extensions.
+Les intégrations développées par la communauté pour l'Agent Datadog sont stockées dans le référentiel GitHub [integrations-extra][1]. Elles ne sont pas incluses dans le package de l'Agent Datadog, mais elles peuvent être installées comme extensions.
 
 ## Configuration
 
@@ -39,8 +39,8 @@ Pour l'Agent v7.21+/6.21+ :
 
 **Remarque** : si besoin, ajoutez `sudo -u dd-agent` en tant que préfixe dans la commande d'installation.
 
-[1]: /fr/getting_started/integrations/
-[2]: /fr/agent/guide/agent-commands/#restart-the-agent
+[1]: /getting_started/integrations/
+[2]: /agent/guide/agent-commands/#restart-the-agent
 {{% /tab %}}
 {{% tab "Docker" %}}
 
@@ -55,7 +55,7 @@ La commande `agent integration install` exécutée au sein de Docker génère l'
 
 Utilisez cette nouvelle image de l'Agent conjointement avec [Autodiscovery][1] pour activer l'intégration `<NOM_INTÉGRATION>`.
 
-[1]: /fr/agent/autodiscovery/
+[1]: /agent/autodiscovery/
 {{% /tab %}}
 
 {{% tab "Versions antérieures de l'Agent" %}}
@@ -72,9 +72,9 @@ Pour l'Agent < v7.21/v6.21 :
 
 
 [1]: https://github.com/DataDog/integrations-extras
-[2]: /fr/agent/guide/agent-configuration-files/#agent-configuration-directory
-[3]: /fr/getting_started/integrations/
-[4]: /fr/agent/guide/agent-commands/#restart-the-agent
+[2]: /agent/guide/agent-configuration-files/#agent-configuration-directory
+[3]: /getting_started/integrations/
+[4]: /agent/guide/agent-commands/#restart-the-agent
 {{% /tab %}}
 {{< /tabs >}}
 
