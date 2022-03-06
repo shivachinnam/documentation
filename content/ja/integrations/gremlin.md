@@ -1,36 +1,39 @@
 ---
-assets:
-  dashboards: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - コラボレーション
-  - 問題追跡
-creates_events: true
-ddtype: crawler
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/gremlin/README.md
-display_name: Gremlin
-draft: false
-git_integration_title: gremlin
-guid: 087cb38a-d119-4db6-8c54-30700fc1f355
-integration_id: gremlin
-integration_title: Gremlin
-integration_version: ''
-is_public: true
-kind: インテグレーション
-maintainer: support@gremlin.com
-manifest_version: 1.0.0
-name: gremlin
-public_title: Datadog-Gremlin インテグレーション
-short_description: Gremlin で発生したイベントを Datadog に送信
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- コラボレーション
+- 問題追跡
+"creates_events": true
+"ddtype": "crawler"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/gremlin/README.md"
+"display_name": "Gremlin"
+"draft": false
+"git_integration_title": "gremlin"
+"guid": "087cb38a-d119-4db6-8c54-30700fc1f355"
+"integration_id": "gremlin"
+"integration_title": "Gremlin"
+"integration_version": ""
+"is_public": true
+"kind": "インテグレーション"
+"maintainer": "support@gremlin.com"
+"manifest_version": "1.0.0"
+"name": "gremlin"
+"public_title": "Datadog-Gremlin インテグレーション"
+"short_description": "Gremlin で発生したイベントを Datadog に送信"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
+
+
 ## 概要
 
 Gremlin の攻撃の表示、再実行、停止を Datadog から直接行うことができます。
@@ -72,11 +75,14 @@ Gremlin インテグレーションには、サービスのチェック機能は
 
 ## その他の参考資料
 
-インフラストラクチャーの監視の詳細および Datadog の全インテグレーションについては、[ブログ記事][6]を参照してください。
+お役に立つドキュメント、リンクや記事:
 
-[1]: https://docs.datadoghq.com/ja/getting_started/#events
+- [Gremlin が Datadog を使用して自社の Chaos Engineering サービスを監視する方法][6]
+
+[1]: https://docs.datadoghq.com/getting_started/#events
 [2]: https://app.datadoghq.com/event/stream
 [3]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/gremlin/images/events-overlay.png
 [4]: https://app.gremlin.com/settings/integrations
-[5]: https://docs.datadoghq.com/ja/help/
-[6]: https://www.datadoghq.com/blog
+[5]: https://docs.datadoghq.com/help/
+[6]: https://www.datadoghq.com/blog/gremlin-datadog/
+
