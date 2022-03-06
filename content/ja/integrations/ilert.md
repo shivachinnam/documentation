@@ -1,41 +1,42 @@
 ---
-assets:
-  dashboards: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  saved_views: {}
-  service_checks: assets/service_checks.json
-categories:
-  - 問題追跡
-  - コラボレーション
-  - notification
-  - モニタリング
-creates_events: false
-ddtype: crawler
-dependencies:
-  - https://github.com/DataDog/integrations-extras/blob/master/ilert/README.md
-display_name: iLert
-draft: false
-git_integration_title: ilert
-guid: 875497b9-a27e-4099-92e9-968a70c592fa
-integration_id: ilert
-integration_title: iLert
-integration_version: ''
-is_public: true
-kind: integration
-maintainer: support@ilert.com
-manifest_version: 1.0.0
-metric_prefix: ilert.
-metric_to_check: ''
-name: ilert
-public_title: iLert インテグレーション
-short_description: Datadog アラートの通知を受け取り iLert でアクションを実行します。
-support: contrib
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "dashboards": {}
+  "metrics_metadata": metadata.csv
+  "monitors": {}
+  "saved_views": {}
+  "service_checks": assets/service_checks.json
+"categories":
+- 問題追跡
+- コラボレーション
+- notification
+- モニタリング
+"creates_events": false
+"ddtype": "crawler"
+"dependencies":
+- "https://github.com/DataDog/integrations-extras/blob/master/ilert/README.md"
+"display_name": "iLert"
+"draft": false
+"git_integration_title": "ilert"
+"guid": "875497b9-a27e-4099-92e9-968a70c592fa"
+"integration_id": "ilert"
+"integration_title": "iLert"
+"integration_version": ""
+"is_public": true
+"kind": "integration"
+"maintainer": "support@ilert.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "ilert."
+"metric_to_check": ""
+"name": "ilert"
+"public_title": "iLert インテグレーション"
+"short_description": "Datadog アラートの通知を受け取り iLert でアクションを実行します。"
+"support": "contrib"
+"supported_os":
+- linux
+- mac_os
+- windows
 ---
+
 ## 概要
 
 [iLert][1] インテグレーションは、Datadog アラートを iLert に送信し、iLert プラットフォーム内でこれらのアラートに対してシームレスにアクションを実行します。
@@ -95,10 +96,9 @@ iLert と統合すると、以下のことができます。
 
    ![Datadog Webhook View][6]
 
-4. Save ボタンをクリックします
-5. これでインテグレーションがセットアップされました。
+4. 保存ボタンをクリックして、このチェックの設定を終了します。
 
-   手順に関する詳細は、iLert の[公式ドキュメント][7]を参照してください。
+   詳細については、[iLert Datadog インテグレーションのドキュメント][7]を参照してください。
 
 ## 収集データ
 
@@ -108,7 +108,7 @@ iLert インテグレーションには、メトリクスは含まれません�
 
 ### イベント
 
-トリガー/解決された iLert イベントが iLert プラットフォームダッシュボードに表示されます。
+iLert のトリガーおよび解決されたイベントは、iLert プラットフォーム ダッシュボードに表示されます。
 
 ### サービスのチェック
 
@@ -125,4 +125,5 @@ iLert インテグレーションには、サービスのチェック機能は�
 [5]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/ilert/images/datadog-webhook-new.png
 [6]: https://raw.githubusercontent.com/DataDog/integrations-extras/master/ilert/images/datadog-webhook-view.png
 [7]: https://docs.ilert.com/integrations/datadog
-[8]: https://docs.datadoghq.com/ja/help/
+[8]: https://docs.datadoghq.com/help/
+
