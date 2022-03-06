@@ -1,21 +1,21 @@
 ---
-title: ログ収集のトラブルシューティングガイド
-kind: ガイド
 aliases:
-  - /ja/logs/faq/log-collection-troubleshooting-guide
+- /ja/logs/faq/log-collection-troubleshooting-guide
 further_reading:
-  - link: /logs/log_collection/
-    tag: Documentation
-    text: ログの収集方法
-  - link: /logs/explorer/
-    tag: Documentation
-    text: ログの調査方法
-  - link: /logs/faq/why-do-my-logs-not-have-the-expected-timestamp/
-    tag: FAQ
-    text: あるはずのタイムスタンプがログに含まれないのはなぜですか
-  - link: /logs/faq/why-do-my-logs-show-up-with-an-info-status-even-for-warnings-or-errors/
-    tag: FAQ
-    text: 警告またはエラーのログが Info ステータスで表示されるのはなぜですか
+- link: /logs/log_collection/
+  tag: Documentation
+  text: ログの収集方法
+- link: /logs/explorer/
+  tag: Documentation
+  text: ログの調査方法
+- link: /logs/faq/why-do-my-logs-not-have-the-expected-timestamp/
+  tag: FAQ
+  text: あるはずのタイムスタンプがログに含まれないのはなぜですか
+- link: /logs/faq/why-do-my-logs-show-up-with-an-info-status-even-for-warnings-or-errors/
+  tag: FAQ
+  text: 警告またはエラーのログが Info ステータスで表示されるのはなぜですか
+kind: ガイド
+title: ログ収集のトラブルシューティングガイド
 ---
 `dd-agent` でログコレクターから[新しいログを Datadog に送信][1]する際に、よく障害となる問題がいくつかあります。新しいログを Datadog に送信する際に問題が発生した場合は、このページに挙げられたトラブルシューティングをお役立てください。それでも問題が解決しない場合は、[ Datadog サポート][2]までお問い合わせください。
 
@@ -57,7 +57,7 @@ Datadog Agent は、ログの収集 (ログの追跡またはリスニング) �
 
 ## ログファイル追跡のアクセス許可の問題
 
-`datadog-agent` はルートとして実行されません (一般的なベストプラクティスとしても、ルートとして実行することはお勧めしていません)。このため、(カスタムログまたはインテグレーションの) ログファイルを追跡するように `datadog-agent` を構成する場合は、追跡して収集するログファイルへの読み取りアクセス権を `datadog-agent` ユーザーが持つことを特に注意して確認する必要があります。
+`datadog-agent` はルートとして実行されません (一般的なベストプラクティスとして、ルートで実行することは推奨されません)。このため、(カスタムログまたはインテグレーションの) ログファイルを追跡するように `datadog-agent` を構成する場合は、追跡して収集するログファイルへの読み取りアクセス権を `datadog-agent` ユーザーが持つことを特に注意して確認する必要があります。
 
 そのような場合、[Agent のステータス][5] に次のようなエラーメッセージが表示されます。
 
@@ -85,7 +85,7 @@ Logs Agent
  -rw-r----- error.log
 ```
 
-この例の場合、`application` ディレクトリが実行可能ディレクトリではないため、Agent はファイルをリストできません。さらに、Agent には `error.log` ファイルに対する読み取りアクセス許可がありません。
+この例の場合、`application` ディレクトリが Agent による実行可能ディレクトリではないため、Agent はファイルをリストできません。さらに、Agent には `error.log` ファイルに対する読み取りアクセス許可がありません。
 [chmod コマンド][6]を使用して、不足しているアクセス許可を追加してください。
 
 {{< img src="logs/agent-log-permission-ok.png" alt="アクセス許可 OK"  style="width:70%;">}}
@@ -135,15 +135,15 @@ sudo cat /var/log/datadog/agent.log | grep ERROR
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /ja/logs/
-[2]: /ja/help/
-[3]: /ja/agent/guide/agent-commands/#restart-the-agent
-[4]: /ja/agent/logs/log_transport?tab=https#enforce-a-specific-transport
-[5]: /ja/agent/guide/agent-commands/#agent-status-and-information
+[1]: /logs/
+[2]: /help/
+[3]: /agent/guide/agent-commands/#restart-the-agent
+[4]: /agent/logs/log_transport?tab=https#enforce-a-specific-transport
+[5]: /agent/guide/agent-commands/#agent-status-and-information
 [6]: https://en.wikipedia.org/wiki/Chmod
-[7]: /ja/integrations/journald/
+[7]: /integrations/journald/
 [8]: https://codebeautify.org/yaml-validator
-[9]: /ja/logs/guide/docker-logs-collection-troubleshooting-guide/
-[10]: /ja/logs/guide/lambda-logs-collection-troubleshooting-guide/
+[9]: /logs/guide/docker-logs-collection-troubleshooting-guide/
+[10]: /logs/guide/lambda-logs-collection-troubleshooting-guide/
 [11]: https://app.datadoghq.com/logs/livetail
-[12]: /ja/logs/indexes/#exclusion-filters
+[12]: /logs/indexes/#exclusion-filters
