@@ -2,19 +2,20 @@
 title: Surveillance des performances de ressources
 kind: documentation
 further_reading:
-  - link: https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/
+  - link: "https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/"
     tag: Blog
     text: Real User Monitoring
   - link: /real_user_monitoring/explorer/
     tag: Documentation
     text: Explorer vos vues dans Datadog
-  - link: /real_user_monitoring/explorer/analytics/
+  - link: /real_user_monitoring/explorer/visualize/
     tag: Documentation
-    text: Générer des analyses à partir de vos événements
+    text: Appliquer des visualisations sur vos événements
   - link: /real_user_monitoring/dashboards/
     tag: Documentation
     text: Dashboards RUM
 ---
+
 LE SDK RUM recueille les ressources de chaque vue RUM (chargement de page) : [XMLHttpRequest][1] (XHR), requêtes Fetch, mais également les images, les fichiers CSS, les ressources JavaScript et les fichiers de police. Un événement de ressource RUM est généré pour chaque ressource, avec des métadonnées et des durées précises.
 
 Les ressources RUM héritent de tout le contexte lié à la vue RUM active au moment de la collecte.
@@ -79,6 +80,6 @@ Pour y remédier, activez la collecte de données supplémentaires pour les ress
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-[2]: /fr/real_user_monitoring/connect_rum_and_traces
+[2]: /real_user_monitoring/connect_rum_and_traces
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API#Coping_with_CORS
