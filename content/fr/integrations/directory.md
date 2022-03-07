@@ -1,40 +1,43 @@
 ---
-assets:
-  configuration:
-    spec: assets/configuration/spec.yaml
-  dashboards: {}
-  logs: {}
-  metrics_metadata: metadata.csv
-  monitors: {}
-  service_checks: assets/service_checks.json
-categories:
-  - os & system
-creates_events: false
-ddtype: check
-dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/directory/README.md
-display_name: Directory
-draft: false
-git_integration_title: directory
-guid: 0c38c4ef-5266-4667-9fb1-de8f2b73708a
-integration_id: system
-integration_title: Directory
-integration_version: 1.11.1
-is_public: true
-kind: integration
-maintainer: help@datadoghq.com
-manifest_version: 1.0.0
-metric_prefix: system.
-metric_to_check: system.disk.directory.file.bytes
-name: directory
-public_title: Intégration Datadog/Directory
-short_description: L'intégration Directory transmet des métriques sur des fichiers pour un répertoire donné.
-support: core
-supported_os:
-  - linux
-  - mac_os
-  - windows
+"assets":
+  "configuration":
+    "spec": "assets/configuration/spec.yaml"
+  "dashboards": {}
+  "logs": {}
+  "metrics_metadata": "metadata.csv"
+  "monitors": {}
+  "service_checks": "assets/service_checks.json"
+"categories":
+- "os & system"
+"creates_events": false
+"ddtype": "check"
+"dependencies":
+- "https://github.com/DataDog/integrations-core/blob/master/directory/README.md"
+"display_name": "Directory"
+"draft": false
+"git_integration_title": "directory"
+"guid": "0c38c4ef-5266-4667-9fb1-de8f2b73708a"
+"integration_id": "system"
+"integration_title": "Directory"
+"integration_version": "1.12.0"
+"is_public": true
+"kind": "integration"
+"maintainer": "help@datadoghq.com"
+"manifest_version": "1.0.0"
+"metric_prefix": "system."
+"metric_to_check": "system.disk.directory.file.bytes"
+"name": "directory"
+"public_title": "Intégration Datadog/Directory"
+"short_description": "L'intégration Directory transmet des métriques sur des fichiers pour un répertoire donné."
+"support": "core"
+"supported_os":
+- "linux"
+- "mac_os"
+- "windows"
 ---
+
+
+
 ## Présentation
 
 Capturez des métriques à partir des répertoires et des fichiers de votre choix. L'Agent recueille les éléments suivants :
@@ -95,10 +98,11 @@ Besoin d'aide ? Contactez [l'assistance Datadog][8].
 
 
 [1]: https://app.datadoghq.com/account/settings#agent
-[2]: https://docs.datadoghq.com/fr/agent/guide/agent-configuration-files/#agent-configuration-directory
+[2]: https://docs.datadoghq.com/agent/guide/agent-configuration-files/#agent-configuration-directory
 [3]: https://github.com/DataDog/integrations-core/blob/master/directory/datadog_checks/directory/data/conf.yaml.example
-[4]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
-[5]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#agent-status-and-information
+[4]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[5]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [6]: https://github.com/DataDog/integrations-core/blob/master/directory/metadata.csv
 [7]: https://github.com/DataDog/integrations-core/blob/master/directory/assets/service_checks.json
-[8]: https://docs.datadoghq.com/fr/help/
+[8]: https://docs.datadoghq.com/help/
+
