@@ -37,3 +37,17 @@ La configuration nécessite :
 **Facultatif** : saisissez un nom d'utilisateur et un mot de passe pour accéder au flux RSS.
 
 {{< img src="integrations/rss/rss_setup.png" alt="Configuration RSS"  >}}
+
+### Validation
+
+Consultez les vues [Events Stream][1] et [Events Explorer][2] pour visualiser les activités de flux RSS dans Datadog.
+
+## Pour aller plus loin
+
+### Documentation
+
+- [Explorer les événements Datadog][3]
+
+[1]: https://app.datadoghq.com/event/stream
+[2]: https://app.datadoghq.com/event/explorer
+[3]: https://docs.datadoghq.com/events/#exploring-datadog-events
