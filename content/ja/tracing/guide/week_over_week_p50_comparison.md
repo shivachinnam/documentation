@@ -2,22 +2,23 @@
 title: サービスのレイテンシーを前週と比較する
 kind: ガイド
 further_reading:
-  - link: /tracing/guide/alert_anomalies_p99_database/
-    tag: 3 分
-    text: データベースサービスの異常な p99 レイテンシーに関するアラート
-  - link: /tracing/guide/apm_dashboard/
-    tag: 4 分
-    text: ダッシュボードを作成して、APM メトリクスを追跡、関連付ける
-  - link: /tracing/guide/slowest_request_daily/
-    tag: 3 分
-    text: ウェブサービスの最も遅いエンドポイントで最も遅いトレースをデバッグする
-  - link: /tracing/guide/add_span_md_and_graph_it/
-    tag: 7 分
-    text: スパンタグを追加し、アプリケーションのパフォーマンスを分類する
-  - link: /tracing/guide/
-    tag: ''
-    text: すべてのガイド
+- link: /tracing/guide/alert_anomalies_p99_database/
+  tag: 3 分
+  text: データベースサービスの異常な p99 レイテンシーに関するアラート
+- link: /tracing/guide/apm_dashboard/
+  tag: 4 分
+  text: ダッシュボードを作成して、APM メトリクスを追跡、関連付ける
+- link: /tracing/guide/slowest_request_daily/
+  tag: 3 分
+  text: ウェブサービスの最も遅いエンドポイントで最も遅いトレースをデバッグする
+- link: /tracing/guide/add_span_md_and_graph_it/
+  tag: 7 分
+  text: スパンタグを追加し、アプリケーションのパフォーマンスをフィルタリングし、グループ化する
+- link: /tracing/guide/
+  tag: ""
+  text: すべてのガイド
 ---
+
 _2 分で読了_
 
 {{< img src="tracing/guide/week_over_week_p50_comparison/wow_p50_comp_3.mp4" alt="比較ビデオ" video="true"  style="width:90%;">}}
@@ -29,7 +30,7 @@ Datadog では、経時的なアプリケーションのレイテンシーと、
     このページには、 Datadog  APM で利用可能なインスツルメント済みの全[サービス][2]の一覧が表示されます。キーワードによるサービスの検索、`env` タグによるフィルター設定、タイムラインの設定が可能です。
 2. **関連するアクティブなサービスを検索して開きます**。
 
-   この例では、ウェブストアサービスが使用されています。これは安定したサービスであり、先月問題が発生していないことを再確認したいためです。
+   この例では、安定しているため、ウェブストアサービスを使用しています。この 1 ヶ月で問題が発生していないか再確認してください。
 
     {{< img src="tracing/guide/week_over_week_p50_comparison/wow_p50_comp_2.png" alt="比較 2"  style="width:90%;">}}
 
@@ -53,5 +54,5 @@ Datadog APM を使用すると、サービスのレイテンシーのさまざ�
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://app.datadoghq.com/apm/services
-[2]: /ja/tracing/visualization/#services
-[3]: /ja/tracing/visualization/#resources
+[2]: /tracing/visualization/#services
+[3]: /tracing/visualization/#resources
