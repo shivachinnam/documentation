@@ -1,6 +1,6 @@
 ---
 aliases:
-  - /fr/integrations/winservices
+- /fr/integrations/winservices
 assets:
   configuration:
     spec: assets/configuration/spec.yaml
@@ -10,18 +10,18 @@ assets:
   monitors: {}
   service_checks: assets/service_checks.json
 categories:
-  - os & system
+- os & system
 creates_events: false
 ddtype: check
 dependencies:
-  - https://github.com/DataDog/integrations-core/blob/master/windows_service/README.md
+- https://github.com/DataDog/integrations-core/blob/master/windows_service/README.md
 display_name: Windows Service
 draft: false
 git_integration_title: windows_service
 guid: 2289acf0-e413-4384-83f7-88157b430805
 integration_id: windows-service
 integration_title: Windows Services
-integration_version: 3.3.0
+integration_version: 4.1.0
 is_public: true
 kind: integration
 maintainer: help@datadoghq.com
@@ -32,8 +32,10 @@ public_title: Intégration Datadog/Services Windows
 short_description: Surveillez l'état de vos services Windows.
 support: core
 supported_os:
-  - windows
+- windows
 ---
+
+
 ## Présentation
 
 Ce check surveille l'état de n'importe quel service Windows et envoie un check de service à Datadog.
@@ -85,14 +87,14 @@ Besoin d'aide ? Contactez [l'assistance Datadog][9].
 - [Surveillance de Windows Server 2012 avec Datadog][12]
 
 [1]: https://app.datadoghq.com/account/settings#agent
-[2]: https://docs.datadoghq.com/fr/agent/guide/agent-configuration-files/#agent-configuration-directory
+[2]: https://docs.datadoghq.com/agent/guide/agent-configuration-files/#agent-configuration-directory
 [3]: https://github.com/DataDog/integrations-core/blob/master/windows_service/datadog_checks/windows_service/data/conf.yaml.example
-[4]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
-[5]: https://docs.datadoghq.com/fr/developers/metrics/custom_metrics/
-[6]: https://docs.datadoghq.com/fr/account_management/billing/custom_metrics/
-[7]: https://docs.datadoghq.com/fr/agent/guide/agent-commands/#agent-status-and-information
+[4]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[5]: https://docs.datadoghq.com/developers/metrics/custom_metrics/
+[6]: https://docs.datadoghq.com/account_management/billing/custom_metrics/
+[7]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [8]: https://github.com/DataDog/integrations-core/blob/master/windows_service/assets/service_checks.json
-[9]: https://docs.datadoghq.com/fr/help/
+[9]: https://docs.datadoghq.com/help/
 [10]: https://www.datadoghq.com/blog/monitoring-windows-server-2012
 [11]: https://www.datadoghq.com/blog/collect-windows-server-2012-metrics
 [12]: https://www.datadoghq.com/blog/windows-server-monitoring
