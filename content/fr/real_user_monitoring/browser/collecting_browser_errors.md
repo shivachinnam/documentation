@@ -5,19 +5,20 @@ further_reading:
   - link: /real_user_monitoring/error_tracking/
     tag: Documentation
     text: Suivi des erreurs
-  - link: https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/
+  - link: "https://www.datadoghq.com/blog/real-user-monitoring-with-datadog/"
     tag: Blog
     text: Real User Monitoring
   - link: /real_user_monitoring/explorer/
     tag: Documentation
     text: Explorer vos vues dans Datadog
-  - link: /real_user_monitoring/explorer/analytics/
+  - link: /real_user_monitoring/explorer/visualize/
     tag: Documentation
-    text: Générer des analyses à partir de vos événements
+    text: Appliquer des visualisations sur vos événements
   - link: /real_user_monitoring/dashboards/
     tag: Documentation
     text: Dashboards RUM
 ---
+
 Les erreurs frontend sont recueillies par le service Real User Monitoring (RUM). Le message d'erreur et la stack trace sont inclus lorsque cela est possible.
 
 ## Origines des erreurs
@@ -166,9 +167,9 @@ Pour gagner en visibilité sur les scripts interorigines, suivez les deux étape
 {{< partial name="whats-next/whats-next.html" >}}
 
 
-[1]: /fr/real_user_monitoring/browser/data_collected/
-[2]: /fr/real_user_monitoring/browser/modifying_data_and_context/
+[1]: /real_user_monitoring/browser/data_collected/
+[2]: /real_user_monitoring/browser/modifying_data_and_context/
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-[4]: /fr/real_user_monitoring/error_tracking
+[4]: /real_user_monitoring/error_tracking
 [5]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror#notes
