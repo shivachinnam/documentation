@@ -2,22 +2,23 @@
 title: ダッシュボードを作成して、APM メトリクスを追跡、関連付ける
 kind: ガイド
 further_reading:
-  - link: /tracing/guide/alert_anomalies_p99_database/
-    tag: 3 分
-    text: データベースサービスの異常な p99 レイテンシーに関するアラート
-  - link: /tracing/guide/week_over_week_p50_comparison/
-    tag: 2 分
-    text: サービスのレイテンシーを前週と比較する
-  - link: /tracing/guide/slowest_request_daily/
-    tag: 3 分
-    text: ウェブサービスの最も遅いエンドポイントで最も遅いトレースをデバッグする
-  - link: /tracing/guide/add_span_md_and_graph_it/
-    tag: 7 分
-    text: スパンタグを追加し、アプリケーションのパフォーマンスを分類する
-  - link: /tracing/guide/
-    tag: ''
-    text: すべてのガイド
+- link: /tracing/guide/alert_anomalies_p99_database/
+  tag: 3 分
+  text: データベースサービスの異常な p99 レイテンシーに関するアラート
+- link: /tracing/guide/week_over_week_p50_comparison/
+  tag: 2 分
+  text: サービスのレイテンシーを前週と比較する
+- link: /tracing/guide/slowest_request_daily/
+  tag: 3 分
+  text: ウェブサービスの最も遅いエンドポイントで最も遅いトレースをデバッグする
+- link: /tracing/guide/add_span_md_and_graph_it/
+  tag: 7 分
+  text: スパンタグを追加し、アプリケーションのパフォーマンスをフィルタリングし、グループ化する
+- link: /tracing/guide/
+  tag: ""
+  text: すべてのガイド
 ---
+
 _4 分で読了_
 
 {{< img src="tracing/guide/apm_dashboard/dashboard_7.mp4" alt="ダッシュボード 7" video="true"  style="width:90%;">}}
@@ -118,7 +119,7 @@ Datadog APM では、ビジネスの優先順位と重要なメトリクスに�
 
     {{< img src="tracing/guide/apm_dashboard/dashboard_10.mp4" alt="ダッシュボード 10" video="true"  style="width:90%;">}}
 
-    使用可能なメトリクスをすべて確認し、Datadog の可観測性の 3 本の柱を最大限に活用してください。この基本的なダッシュボードは、組織の監視と可観測性のためのワンストップショップである強力なツールに簡単に変換できます。
+    使用可能なメトリクスをすべて確認し、Datadog の可観測性の 3 本の柱を最大限に活用してください。この基本的なダッシュボードは、組織の監視と可観測性のためのワンストップショップである強力なツールに変換できます。
 
     {{< img src="tracing/guide/apm_dashboard/dashboard_7.mp4" alt="ダッシュボード 7" video="true"  style="width:90%;">}}
 
@@ -128,7 +129,7 @@ Datadog APM では、ビジネスの優先順位と重要なメトリクスに�
 {{< partial name="whats-next/whats-next.html" >}}
 
 [1]: https://app.datadoghq.com/apm/services
-[2]: /ja/dashboards/widgets/timeseries/
-[3]: /ja/tracing/guide/metrics_namespace/
+[2]: /dashboards/widgets/timeseries/
+[3]: /tracing/guide/metrics_namespace/
 [4]: https://app.datadoghq.com/apm/analytics
-[5]: /ja/events/
+[5]: /events/
