@@ -1,19 +1,20 @@
 ---
-title: "Configuration de la surveillance de bases de données pour Postgres avec une gestion sur Google\_Cloud\_SQL"
+title: Configuration de Database Monitoring pour Postgres avec une gestion sur Google Cloud SQL
 kind: documentation
-description: "Installez et configurez la surveillance de bases de données pour Postgres avec une gestion sur Google\_Cloud\_SQL."
+description: Installez et configurez Database Monitoring pour Postgres avec une gestion sur Google Cloud SQL.
 further_reading:
-  - link: /integrations/postgres/
-    tag: Documentation
-    text: Intégration Postgres basique
+- link: /integrations/postgres/
+  tag: Documentation
+  text: Intégration Postgres basique
 ---
-{{< site-region region="us3,us5,gov" >}}
-<div class="alert alert-warning">La surveillance de base de données n'est pas prise en charge pour ce site.</div>
+
+{{< site-region region="us5,gov" >}}
+<div class="alert alert-warning">La solution Database Monitoring n'est pas prise en charge pour ce site.</div>
 {{< /site-region >}}
 
-La surveillance des bases de données vous permet de bénéficier d'une visibilité complète sur vos bases de données Postgres, en exposant des métriques de requête, des échantillons de requête, des plans d'exécution, des états, des failovers et des événements de base de données.
+La solution Database Monitoring vous permet de bénéficier d'une visibilité complète sur vos bases de données Postgres, en exposant des métriques de requête, des échantillons de requête, des plans d'exécution, des états, des failovers et des événements de base de données.
 
-L'Agent recueille la télémétrie directement depuis la base de données, en se connectant en tant qu'utilisateur en lecture seule. Suivez les étapes ci-dessous pour activer la surveillance de bases de données avec votre base de données Postgres :
+L'Agent recueille la télémétrie directement depuis la base de données, en se connectant en tant qu'utilisateur en lecture seule. Suivez les étapes ci-dessous pour activer la solution Database Monitoring avec votre base de données Postgres :
 
 1. [Configurer les paramètres de base de données](#configurer-les-parametres-postgres)
 1. [Autoriser l'Agent à accéder à la base de données](#accorder-un-acces-a-l-agent)
@@ -26,11 +27,11 @@ Versions de PostgresSQL prises en charge
 : 9.6, 10, 11, 12 et 13
 
 Versions de l'Agent prises en charge
-: 7.30.0+
+: 7.33.0+
 
 Incidence sur les performances
-: La configuration par défaut de l'Agent pour la surveillance de bases de données est relativement souple. Néanmoins, vous pouvez ajuster certains paramètres comme l'intervalle de collecte et le taux d'échantillonnage des requêtes pour mieux répondre à vos besoins. Pour la plupart des workloads, l'Agent monopolise moins d'un pour cent du temps d'exécution des requêtes sur la base de données, et moins d'un pour cent du CPU. <br/><br/>
-La surveillance de base de données Datadog fonctionne comme une intégration et vient compléter l'Agent de base ([voir les benchmarks][1]).
+: La configuration par défaut de l'Agent pour Database Monitoring est relativement souple. Néanmoins, vous pouvez ajuster certains paramètres comme l'intervalle de collecte et le taux d'échantillonnage des requêtes pour mieux répondre à vos besoins. Pour la plupart des workloads, l'Agent monopolise moins d'un pour cent du temps d'exécution des requêtes sur la base de données, et moins d'un pour cent du CPU. <br/><br/>
+La solution Database Monitoring de Datadog fonctionne comme une intégration et vient compléter l'Agent de base ([voir les benchmarks][1]).
 
 Proxies, répartiteurs de charge et outils de regroupement de connexions
 : L'Agent doit se connecter directement au host surveillé. Pour les bases de données auto-hébergées, il est préférable d'utiliser `127.0.0.1` ou le socket. L'Agent ne doit pas se connecter aux bases de données via un proxy, un répartiteur de charge ni un outil de groupement de connexions comme `pgbouncer`. Bien qu'il puisse s'agir d'un antipattern pour des applications client, chaque Agent doit connaître le hostname sous-jacent et rester sur un seul host pendant toute sa durée de vie, même en cas de failover. Si l'Agent Datadog se connecte à plusieurs hosts pendant son exécution, les valeurs des métriques seront incorrectes.
@@ -181,7 +182,7 @@ Pour surveiller les hosts Cloud SQL, installez l'Agent Datadog dans votre infra
 {{< tabs >}}
 {{% tab "Host" %}}
 
-Pour configurer la collecte de métriques de surveillance de bases de données pour un Agent s'exécutant sur un host, par exemple si vous provisionnez une petite instance GCE pour l'Agent afin de recueillir des données depuis une base de données Google Cloud SQL, procédez comme suit :
+Pour configurer la collecte de métriques Database Monitoring pour un Agent s'exécutant sur un host, par exemple si vous provisionnez une petite instance GCE pour l'Agent afin de recueillir des données depuis une base de données Google Cloud SQL, procédez comme suit :
 
 1. Modifiez le fichier `postgres.d/conf.yaml` afin de spécifier votre `host` / `port` et de définir les masters à surveiller. Consultez le [fichier d'exemple postgres.d/conf.yaml][1] pour découvrir toutes les options de configuration disponibles.
    ```yaml
@@ -202,11 +203,11 @@ Pour configurer la collecte de métriques de surveillance de bases de données p
 
 
 [1]: https://github.com/DataDog/integrations-core/blob/master/postgres/datadog_checks/postgres/data/conf.yaml.example
-[2]: /fr/agent/guide/agent-commands/#start-stop-and-restart-the-agent
+[2]: /agent/guide/agent-commands/#start-stop-and-restart-the-agent
 {{% /tab %}}
 {{% tab "Docker" %}}
 
-Pour configurer l'Agent de surveillance de bases de données qui s'exécute dans un conteneur Docker, par exemple dans Google Cloud Run, vous pouvez définir des [modèles d'intégration Autodiscovery][1] en tant qu'étiquettes Docker sur le conteneur de votre Agent.
+Pour configurer l'Agent Database Monitoring qui s'exécute dans un conteneur Docker, par exemple dans Google Cloud Run, vous pouvez définir des [modèles d'intégration Autodiscovery][1] en tant qu'étiquettes Docker sur le conteneur de votre Agent.
 
 **Remarque** : pour que le processus de découverte automatique des étiquettes fonctionne, l'Agent doit être autorisé à lire le socket Docker.
 
@@ -216,7 +217,7 @@ Pour exécuter rapidement l'Agent depuis une interface de ligne de commande, uti
 
 ```bash
 export DD_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-export DD_AGENT_VERSION=7.30.0
+export DD_AGENT_VERSION=7.32.0
 
 docker run -e "DD_API_KEY=${DD_API_KEY}" \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
@@ -244,7 +245,7 @@ pg_stat_activity_view: datadog.pg_stat_activity()
 Vous pouvez également spécifier des étiquettes dans un `Dockerfile`. Cette approche vous permet de concevoir et de déployer un Agent personnalisé sans avoir à modifier la configuration de l'infrastructure :
 
 ```Dockerfile
-FROM gcr.io/datadoghq/agent:7.30.0
+FROM gcr.io/datadoghq/agent:7.32.0
 
 LABEL "com.datadoghq.ad.check_names"='["postgres"]'
 LABEL "com.datadoghq.ad.init_configs"='[{}]'
@@ -261,9 +262,9 @@ pg_stat_activity_view: datadog.pg_stat_activity()
 Pour éviter d'exposer le mot de passe de l'utilisateur `datadog` en clair, utilisez le [package de gestion des secrets][2] de l'Agent et déclarez le mot de passe à l'aide de la syntaxe `ENC[]`. Sinon, consultez la section [Template variables Autodiscovery][3] pour découvrir comment transmettre le mot de passe en tant que variable d'environnement.
 
 
-[1]: /fr/agent/docker/integrations/?tab=docker
-[2]: /fr/agent/guide/secrets-management
-[3]: /fr/agent/faq/template_variables/
+[1]: /agent/docker/integrations/?tab=docker
+[2]: /agent/guide/secrets-management
+[3]: /agent/faq/template_variables/
 {{% /tab %}}
 {{% tab "Kubernetes" %}}
 
@@ -362,10 +363,10 @@ L'Agent de cluster enregistre automatiquement cette configuration et commence à
 
 Pour éviter d'exposer le mot de passe de l'utilisateur `datadog` en clair, utilisez le [package de gestion des secrets][4] de l'Agent et déclarez le mot de passe à l'aide de la syntaxe `ENC[]`.
 
-[1]: /fr/agent/cluster_agent
-[2]: /fr/agent/cluster_agent/clusterchecks/
+[1]: /agent/cluster_agent
+[2]: /agent/cluster_agent/clusterchecks/
 [3]: https://helm.sh
-[4]: /fr/agent/guide/secrets-management
+[4]: /agent/guide/secrets-management
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -379,21 +380,21 @@ Pour recueillir des métriques de base de données plus complètes depuis GCP, i
 
 ## Dépannage
 
-Si vous avez respecté les instructions d'installation et de configuration des intégrations et de l'Agent, mais que vous rencontrez un problème, consultez la section [Dépannage de la surveillance de bases de données][12].
+Si vous avez respecté les instructions d'installation et de configuration des intégrations et de l'Agent, mais que vous rencontrez un problème, consultez la section [Dépannage][12].
 
 ## Pour aller plus loin
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/agent/basic_agent_usage#agent-overhead
-[2]: /fr/database_monitoring/data_collected/#sensitive-information
+[1]: /agent/basic_agent_usage#agent-overhead
+[2]: /database_monitoring/data_collected/#sensitive-information
 [3]: https://www.postgresql.org/docs/current/config-setting.html
 [4]: https://cloud.google.com/sql/docs/postgres/flags
 [5]: https://www.postgresql.org/docs/current/pgstatstatements.html
-[6]: /fr/integrations/faq/postgres-custom-metric-collection-explained/
+[6]: /integrations/faq/postgres-custom-metric-collection-explained/
 [7]: https://www.postgresql.org/docs/current/app-psql.html
 [8]: https://app.datadoghq.com/account/settings#agent
-[9]: /fr/agent/guide/agent-commands/#agent-status-and-information
+[9]: /agent/guide/agent-commands/#agent-status-and-information
 [10]: https://app.datadoghq.com/databases
-[11]: /fr/integrations/google_cloudsql
-[12]: /fr/database_monitoring/troubleshooting/?tab=postgres
+[11]: /integrations/google_cloudsql
+[12]: /database_monitoring/troubleshooting/?tab=postgres
