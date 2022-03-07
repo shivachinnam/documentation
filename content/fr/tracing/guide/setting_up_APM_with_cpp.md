@@ -2,10 +2,11 @@
 title: Configurer l'APM en C++
 kind: guide
 further_reading:
-  - link: /tracing/setup/cpp/
-    tag: Documentation
-    text: En savoir plus sur le tracing des applications en C++
+- link: /tracing/setup/cpp/
+  tag: Documentation
+  text: En savoir plus sur le tracing des applications en C++
 ---
+
 ## Présentation
 
 Ce guide vient compléter la [documentation sur la configuration de l'APM en C++][1]. Les instructions qui y sont détaillées vous permettent de configurer une application simple en C++ avec l'APM sur votre VM, afin de diagnostiquer vos éventuels problèmes.
@@ -44,7 +45,7 @@ get_latest_release() {
 DD_OPENTRACING_CPP_VERSION="$(get_latest_release DataDog/dd-opentracing-cpp)"
 ```
 
-Si vous obtenez un message de Github indiquant que votre taux est limité, patientez quelques minutes avant de relancer la commande. Une fois la mise à jour terminée, assurez-vous de son bon fonctionnement en vérifiant votre version de C++ :
+Si vous obtenez un message de GitHub indiquant que votre taux est limité, patientez quelques minutes avant de relancer la commande. Une fois le processus terminé, vérifiez votre version C++ pour vous assurer que la mise à jour a bien été installée.
 
 ```shell
 echo $DD_OPENTRACING_CPP_VERSION
@@ -164,5 +165,5 @@ Cliquez sur le service pour afficher vos traces.
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/tracing/setup/cpp/#compile-against-dd-opentracing-cpp
+[1]: /tracing/setup/cpp/#compile-against-dd-opentracing-cpp
 [2]: https://app.datadoghq.com/account/settings#agent/ubuntu
