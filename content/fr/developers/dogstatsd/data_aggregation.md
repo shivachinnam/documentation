@@ -1,19 +1,20 @@
 ---
-title: Agrégation de données DogStatsD
-kind: documentation
-description: Découvrez comment le serveur DogStatsD agrège vos données avant de les envoyer à Datadog
 aliases:
-  - /fr/developers/faq/data-aggregation-with-dogstatsd-threadstats
+- /fr/developers/faq/data-aggregation-with-dogstatsd-threadstats
+description: Découvrez comment le serveur DogStatsD agrège vos données avant de les
+  envoyer à Datadog
 further_reading:
-  - link: developers/dogstatsd
-    tag: Documentation
-    text: Présentation de DogStatsD
-  - link: developers/libraries
-    tag: Documentation
-    text: Bibliothèques client de Datadog et sa communauté pour DogStatsD et les API
-  - link: https://github.com/DataDog/datadog-agent/tree/master/pkg/dogstatsd
-    tag: GitHub
-    text: Code source de DogStatsD
+- link: developers/dogstatsd
+  tag: Documentation
+  text: Présentation de DogStatsD
+- link: developers/libraries
+  tag: Documentation
+  text: Bibliothèques client de Datadog et sa communauté pour DogStatsD et les API
+- link: https://github.com/DataDog/datadog-agent/tree/main/pkg/dogstatsd
+  tag: GitHub
+  text: Code source de DogStatsD
+kind: documentation
+title: Agrégation de données DogStatsD
 ---
 Le service DogStatsD de Datadog implémente le protocole StatsD, [avec quelques différences][1]. DogStatsD vous permet d'envoyer des métriques et de surveiller le code de votre application sans la bloquer. Les données sont transmises depuis votre application via UDP au [serveur DogStatsD][2] local (intégré à l'Agent Datadog), qui les agrège et les envoie ensuite à l'endpoint d'API Datadog. En savoir plus sur la [configuration de DogStatsD][2].
 
@@ -47,10 +48,10 @@ Parmi toutes les valeurs reçues pendant un même intervalle de transmission, la
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/developers/dogstatsd/
-[2]: /fr/metrics/dogstatsd_metrics_submission/
-[3]: /fr/metrics/types/?tab=count#metric-types
-[4]: /fr/metrics/types/
-[5]: /fr/metrics/types/?tab=gauge#metric-types
-[6]: /fr/metrics/types/?tab=histogram#metric-types
-[7]: /fr/metrics/types/?tab=distribution#metric-types
+[1]: /developers/dogstatsd/
+[2]: /metrics/dogstatsd_metrics_submission/
+[3]: /metrics/types/?tab=count#metric-types
+[4]: /metrics/types/
+[5]: /metrics/types/?tab=gauge#metric-types
+[6]: /metrics/types/?tab=histogram#metric-types
+[7]: /metrics/types/?tab=distribution#metric-types
