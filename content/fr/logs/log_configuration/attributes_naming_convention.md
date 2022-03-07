@@ -1,22 +1,22 @@
 ---
-title: Attributs et alias
-kind: documentation
-description: Apprenez à utiliser les attributs et à appliquer une convention de nommage.
 aliases:
-  - /fr/logs/processing/attributes_naming_convention/
+- /fr/logs/processing/attributes_naming_convention/
+description: Apprenez à utiliser les attributs et à appliquer une convention de nommage.
 further_reading:
-  - link: logs/log_configuration/pipelines
-    tag: Documentation
-    text: Découvrir les pipelines de Datadog
-  - link: logs/log_configuration/processors
-    tag: Documentation
-    text: Consulter la liste complète des processeurs disponibles
-  - link: logs/logging_without_limits
-    tag: Documentation
-    text: Logging without Limits™
-  - link: logs/explorer
-    tag: Documentation
-    text: Apprendre à explorer vos logs
+- link: logs/log_configuration/pipelines
+  tag: Documentation
+  text: Découvrir les pipelines de Datadog
+- link: logs/log_configuration/processors
+  tag: Documentation
+  text: Consulter la liste complète des processeurs disponibles
+- link: logs/logging_without_limits
+  tag: Documentation
+  text: Logging without Limits™
+- link: logs/explorer
+  tag: Documentation
+  text: Apprendre à explorer vos logs
+kind: documentation
+title: Attributs et alias
 ---
 ## Présentation
 
@@ -220,7 +220,7 @@ Ces attributs sont liés aux données ajoutées par un Agent syslog-shipper ou l
 | `syslog.timestamp` | `string` | Le timestamp du log. Généralement remappé vers l'attribut réservé `date`.       |
 | `syslog.env`       | `string` | Le nom de l'environnement d'où provient la source des logs.                      |
 
-Des intégrations comme [Rsyslog][21], [NxLog][22], [Syslog-ng][23], [Fluentd][24] ou encore [Logstash][25] reposent sur ces attributs.
+Des intégrations comme [Rsyslog][21], [NxLog][22], [Syslog-ng][23], [Fluentd][24] et [Logstash][25] reposent sur ces attributs.
 
 #### DNS
 
@@ -231,7 +231,7 @@ Tous les attributs et toutes les mesures sont précédés par `dns`.
 | `dns.id`             | `string` | L'identificateur de la question DNS.                                                 |
 | `dns.question.name`  | `string` | Le nom de domaine interrogé.                                                  |
 | `dns.question.type`  | `string` | Un [code de deux octets][26] spécifiant le type de question DNS.             |
-| `dns.question.class` | `string` | La classe recherchée par la question DNS (p. ex. IN lorsque vous utilisez Internet). |
+| `dns.question.class` | `string` | La classe recherchée par la question DNS (par exemple, IP lorsque vous utilisez Internet). |
 | `dns.question.size`  | `number` | La taille de la question DNS en octets.                                           |
 | `dns.answer.name`    | `string` | L'adresse IP avec laquelle le DNS répond.                                 |
 | `dns.answer.type`    | `string` | Un [code de deux octets][26] spécifiant le type de réponse DNS.               |
@@ -245,8 +245,8 @@ Tous les attributs sont précédés par `evt`.
 
 | **Nom complet** | **Type** | **Description**                                                                       |
 |:--------------|:---------|:-------------------------------------------------------------------------------------|
-| `evt.name`    | `string` | Le nom partagé entre les événements générés par une même activité (p. ex., authentification). |
-| `evt.outcome` | `string` | Le résultat de l'événement (p. ex., `success`, `failure`).                                 |
+| `evt.name`    | `string` | Le nom partagé entre les événements générés par une même activité (par exemple, authentification). |
+| `evt.outcome` | `string` | Le résultat de l'événement (par exemple, `success`, `failure`).                                 |
 
 ## Alias
 
@@ -271,31 +271,31 @@ Consultez la [documentation à ce sujet][28] pour en savoir plus.
 
 {{< partial name="whats-next/whats-next.html" >}}
 
-[1]: /fr/logs/explorer/facets/
-[2]: /fr/logs/search_syntax/#tags
+[1]: /logs/explorer/facets/
+[2]: /logs/search_syntax/#tags
 [3]: https://app.datadoghq.com/logs/pipelines/standard-attributes
-[4]: /fr/integrations/apache/
-[5]: /fr/integrations/amazon_cloudfront/
-[6]: /fr/getting_started/tagging/unified_service_tagging/
-[7]: /fr/logs/explorer/patterns/
-[8]: /fr/tracing/connect_logs_and_traces/
-[9]: /fr/integrations/varnish/
-[10]: /fr/integrations/amazon_elb/
-[11]: /fr/integrations/nginx/
-[12]: /fr/integrations/haproxy/
-[13]: /fr/logs/log_configuration/processors/#url-parser
-[14]: /fr/logs/log_configuration/processors/#user-agent-parser
-[15]: /fr/integrations/cassandra/
-[16]: /fr/integrations/mysql/
-[17]: /fr/integrations/amazon_rds/
-[18]: /fr/integrations/elastic/
-[19]: /fr/logs/log_configuration/processors/#remapper
-[20]: /fr/tracing/app_analytics/search/
-[21]: /fr/integrations/rsyslog/
-[22]: /fr/integrations/nxlog/
-[23]: /fr/integrations/syslog_ng/
-[24]: /fr/integrations/fluentd/
-[25]: /fr/integrations/logstash/
+[4]: /integrations/apache/
+[5]: /integrations/amazon_cloudfront/
+[6]: /getting_started/tagging/unified_service_tagging/
+[7]: /logs/explorer/patterns/
+[8]: /tracing/connect_logs_and_traces/
+[9]: /integrations/varnish/
+[10]: /integrations/amazon_elb/
+[11]: /integrations/nginx/
+[12]: /integrations/haproxy/
+[13]: /logs/log_configuration/processors/#url-parser
+[14]: /logs/log_configuration/processors/#user-agent-parser
+[15]: /integrations/cassandra/
+[16]: /integrations/mysql/
+[17]: /integrations/amazon_rds/
+[18]: /integrations/elastic/
+[19]: /logs/log_configuration/processors/#remapper
+[20]: /tracing/app_analytics/search/
+[21]: /integrations/rsyslog/
+[22]: /integrations/nxlog/
+[23]: /integrations/syslog_ng/
+[24]: /integrations/fluentd/
+[25]: /integrations/logstash/
 [26]: https://en.wikipedia.org/wiki/List_of_DNS_record_types
-[27]: /fr/logs/explorer/facets/#aliased-facets
-[28]: /fr/logs/explorer/facets/#alias-facets
+[27]: /logs/explorer/facets/#aliased-facets
+[28]: /logs/explorer/facets/#alias-facets
