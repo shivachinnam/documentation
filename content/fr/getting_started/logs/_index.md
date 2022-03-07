@@ -2,16 +2,17 @@
 title: Débuter avec les logs
 kind: documentation
 further_reading:
-  - link: https://learn.datadoghq.com/enrol/index.php?id=15
-    tag: Centre d'apprentissage
-    text: Présentation des logs dans Datadog
-  - link: /logs/log_collection/
-    tag: Documentation
-    text: Collecte de logs et intégrations
-  - link: /getting_started/tagging/unified_service_tagging
-    tag: Documentation
-    text: Apprendre à configurer le tagging de service unifié
+    - link: "https://learn.datadoghq.com/enrol/index.php?id=15"
+      tag: Centre d'apprentissage
+      text: Présentation des logs dans Datadog
+    - link: /logs/log_collection/
+      tag: Documentation
+      text: Collecte de logs et intégrations
+    - link: /getting_started/tagging/unified_service_tagging
+      tag: Documentation
+      text: Apprendre à configurer le tagging de service unifié
 ---
+
 ## Présentation
 
 Utilisez la fonction Datadog Log Management, également appelée logs, pour recueillir les logs issus de plusieurs sources de journalisation, comme votre serveur, votre conteneur, votre environnement Cloud, votre application ou vos processeurs et forwarders de logs existants. Avec un système de journalisation conventionnel, vous devez choisir les logs à analyser et à conserver afin de limiter les coûts. La fonctionnalité Logging without Limits* de Datadog vous permet de recueillir, traiter, archiver, explorer et surveiller vos logs sans limites de journalisation.
@@ -20,7 +21,7 @@ Cette page vous montre comment débuter avec la solution Log Management dans Dat
 
 ## Configurer une source de journalisation
 
-Avec la solution Log Management, vous pouvez analyser et explorer vos données dans le Log Explorer, associer vos [traces][2] à vos [métriques][3] pour mettre en corrélation des données importantes sur Datadog, et utiliser les logs ingérés pour la solution [Security Monitoring][4] de Datadog. Le cycle de vie d'un log dans Datadog commence lorsqu'il est ingéré à partir d'une source de journalisation.
+Avec la solution Log Management, vous pouvez analyser et explorer vos données dans le Log Explorer, associer vos [traces][2] à vos [métriques][3] pour mettre en corrélation des données importantes sur toute la plateforme Datadog, et utiliser les logs ingérés pour la solution [Cloud SIEM][4] de Datadog. Le cycle de vie d'un log dans Datadog commence lorsqu'il est ingéré à partir d'une source de journalisation.
 
 {{< img src="/getting_started/logs/getting-started-overview.png" alt="Différents types de configurations de logs">}}
 
@@ -125,25 +126,25 @@ Une fois qu'une source de journalisation est configurée et que vos logs sont di
 *Logging without Limits est une marque déposée de Datadog, Inc.
 
 [1]: https://www.datadoghq.com
-[2]: /fr/tracing/connect_logs_and_traces/
-[3]: /fr/logs/guide/correlate-logs-with-metrics/
-[4]: /fr/security_platform/security_monitoring/
-[5]: /fr/getting_started/integrations/
-[6]: /fr/agent/
+[2]: /tracing/connect_logs_and_traces/
+[3]: /logs/guide/correlate-logs-with-metrics/
+[4]: /security_platform/cloud_siem/
+[5]: /getting_started/integrations/
+[6]: /agent/
 [7]: https://github.com/DataDog/datadog-agent/blob/main/docs/agent/changes.md#cli
 [8]: https://app.datadoghq.com/logs/onboarding/server
-[9]: /fr/agent/logs/?tab=tailfiles#custom-log-collection
-[10]: /fr/agent/docker/log/?tab=containerinstallation
-[11]: /fr/agent/kubernetes/log/?tab=daemonset
+[9]: /agent/logs/?tab=tailfiles#custom-log-collection
+[10]: /agent/docker/log/?tab=containerinstallation
+[11]: /agent/kubernetes/log/?tab=daemonset
 [12]: https://app.datadoghq.com/logs/onboarding/container
 [13]: https://app.datadoghq.com/logs/onboarding/cloud
 [14]: https://app.datadoghq.com/logs/onboarding/client
 [15]: https://app.datadoghq.com/logs/onboarding/other
-[16]: /fr/logs/explorer/
-[17]: /fr/logs/explorer/#patterns
-[18]: /fr/logs/log_configuration/attributes_naming_convention/
-[19]: /fr/logs/log_configuration/pipelines/
-[20]: /fr/logs/log_configuration/processors/
-[21]: /fr/logs/log_configuration/
-[22]: /fr/logs/guide/getting-started-lwl/
-[23]: /fr/logs/guide/logs-rbac/
+[16]: /logs/explorer/
+[17]: /logs/explorer/#patterns
+[18]: /logs/log_configuration/attributes_naming_convention/
+[19]: /logs/log_configuration/pipelines/
+[20]: /logs/log_configuration/processors/
+[21]: /logs/log_configuration/
+[22]: /logs/guide/getting-started-lwl/
+[23]: /logs/guide/logs-rbac/
