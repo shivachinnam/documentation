@@ -77,6 +77,11 @@ You can put controls in place for both Indexed and Ingested span volumes. For mo
 * Datadog tracks the number of monthly active users who participate in incident management and response.
  * An **active user** is only counted if they contribute comments or signals (graphs, links, etc.) to an incident. Anyone who only opens or closes an incident or anyone who only views the incident are not counted. Additionally, these are not named seats, so you do not need to determine which specific users have access.
 
+## CI Visibility
+
+* Datadog tracks the number of unique committers that were reported in the tests and pipelines sent to the CI Visibility product.
+* A **committer** means an active Git committer; they are identified through their Git author email address. A committer is counted towards billing if they commit at least 3 times in a given month.
+* In the event that a pipeline is not associated to a git repository, or git metadata is unavailable, the username of the person triggering the pipeline execution will be used as the billable committer.
 
 ## Troubleshooting
 
