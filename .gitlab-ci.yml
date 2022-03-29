@@ -401,8 +401,7 @@ manage_untracked_translations:manual:
   script:
     - echo "Downloading untracked translation source files..."
     - manage_untracked_translation_files
-  when:
-    - manual
+  when: manual
 
 manage_translations:on-schedule:
   <<: *base_template
