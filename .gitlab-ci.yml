@@ -35,7 +35,7 @@ cache: &cache
 
 # ================== templates ================== #
 .base_template: &base_template
-  image: 486234852809.dkr.ecr.us-east-1.amazonaws.com/ci/corp-ci:master
+  image: 486234852809.dkr.ecr.us-east-1.amazonaws.com/ci/corp-ci:brian.deutsch/update-manage-translations
   tags:
     - "runner:main"
   except:
@@ -390,6 +390,19 @@ evaluate_missing_metrics:
   only:
     - master
 
+# Test
+manage_untracked_translations:manual:
+  <<: *base_template
+  stage: post-deploy
+  cache: {}
+  environment: "preview"
+  only:
+    - brian.deutsch/translation-sync-test
+  script:
+    - echo "Downloading untracked translation source files..."
+    - manage_untracked_translation_files
+  when:
+    - manual
 
 manage_translations:on-schedule:
   <<: *base_template
