@@ -1,4 +1,10 @@
 ---
+# New params
+sync_enabled: true
+sync_dry_run_enabled: true
+receive_enabled: true
+
+# Legacy params (to be removed)
 enabled: true
 enabled_send: true
 enabled_receive: true
@@ -6,6 +12,8 @@ transifex:
   org: 'datadog'
   project_slug: 'documentation_loc'
   user: 'api'
+
+# These files will be uploaded to Transifex for translation when syncing.
 sources:
 - src: "content/en/**/*.md"
   dst: "content/{lang}/**/*.md"
@@ -26,6 +34,7 @@ sources:
 - src: "content/en/agent/faq/certificate_verify_failed-error.md"
   dst: "content/{lang}/agent/faq/certificate_verify_failed-error.md"
 
+# These files will be ignored or deleted when syncing with Transifex.
 ignores:
   - "content/en/**/faq/!(agent_v6_changes|certificate_verify_failed-error).md"
   - "content/en/security_monitoring/default_rules/*.md"
@@ -42,6 +51,8 @@ ignores:
 filters:
 - src: "data/integrations/*.yaml"
   template: ".translate/templates/integrations.yaml"
+
+# Legacy params (to be removed)
 langs:
 - lang_country: "fr_FR"
   lang: "fr"
