@@ -236,7 +236,7 @@ Provide service names for each plugin. Accepts comma separated `plugin:service-n
 A string for the minimum log level for the tracer to use when debug logging is enabled, for example, `error`, `debug`.
 
 
-For more options including the programmatic configuration API, see the [API documentation][4].
+For more options including the programmatic configuration API, see the [API documentation][3].
 
 ## Further Reading
 
@@ -245,4 +245,3 @@ For more options including the programmatic configuration API, see the [API docu
 [1]: /tracing/compatibility_requirements/nodejs
 [2]: /getting_started/tagging/unified_service_tagging/
 [3]: https://datadog.github.io/dd-trace-js/#tracer-settings
-[4]: /help/
