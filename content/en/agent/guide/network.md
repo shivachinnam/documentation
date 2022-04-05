@@ -57,10 +57,6 @@ API test results for worker v>0.1.6 `intake.synthetics.`{{< region-param key="dd
 Browser test results for worker v>0.2.0 `intake-v2.synthetics.`{{< region-param key="dd_site" code="true" >}}<br>
 API test results for worker v<0.1.5 `api.`{{< region-param key="dd_site" code="true" >}}
 
-<<<<<<< HEAD
-[Network Device Monitoring][12]
-: `ndm-intake.`{{< region-param key="dd_site" code="true" >}}
-=======
 {{< site-region region="us" >}}
 
 [Logs][1] & [HIPAA logs][2]
@@ -149,7 +145,6 @@ Other: See [logs endpoints][3]
 [3]: /logs/log_collection/#logging-endpoints
 
 {{< /site-region >}}
->>>>>>> master
 
 All other Agent data
 : `<VERSION>-app.agent.`{{< region-param key="dd_site" code="true" >}}<br>
@@ -336,11 +331,7 @@ See [default NTP targets][2].
 
 ## Using proxies
 
-<<<<<<< HEAD
-For a detailed configuration guide on proxy setup, see [Agent Proxy Configuration][13].
-=======
 For a detailed configuration guide on proxy setup, see [Agent Proxy Configuration][9].
->>>>>>> master
 
 ## Data buffering
 
@@ -361,21 +352,9 @@ To avoid running out of storage space, the Agent stores the metrics on disk only
 [2]: /database_monitoring/
 [3]: /infrastructure/livecontainers/
 [4]: /infrastructure/process/
-<<<<<<< HEAD
-[5]: /logs/
-[6]: /security/logs/#hipaa-enabled-customers
-[7]: /logs/log_collection/#logging-endpoints
-[8]: /infrastructure/livecontainers/#kubernetes-resources-1
-[9]: /real_user_monitoring/
-[10]: /tracing/profiler/
-[11]: /synthetics/private_locations
-[12]: /network_monitoring/devices
-[13]: /agent/proxy/
-=======
 [5]: /infrastructure/livecontainers/#kubernetes-resources-1
 [6]: /real_user_monitoring/
 [7]: /tracing/profiler/
 [8]: /synthetics/private_locations
 [9]: /agent/proxy/
 [10]: /network_monitoring/devices
->>>>>>> master
