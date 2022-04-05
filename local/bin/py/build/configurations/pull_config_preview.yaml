@@ -220,7 +220,7 @@
   - repo_name: datadog-serverless-functions
     contents:
     - action: pull-and-push-file
-      branch: master
+      branch: bryce/add-note-about-lambda-layer
       globs:
       - 'aws/logs_monitoring/README.md'
       options:
