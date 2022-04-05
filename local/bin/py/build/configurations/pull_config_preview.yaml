@@ -60,7 +60,7 @@
     contents:
 
     - action: integrations
-      branch: prod
+      branch: bryce/add-amazon-keyspaces-integration
       globs:
       - integration/*/*_metadata.csv
       - integration/*/manifest.json
