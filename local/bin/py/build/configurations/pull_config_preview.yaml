@@ -60,7 +60,7 @@
     contents:
 
     - action: integrations
-      branch: prod
+      branch: bryce/update-permissions-section
       globs:
       - integration/*/*_metadata.csv
       - integration/*/manifest.json
