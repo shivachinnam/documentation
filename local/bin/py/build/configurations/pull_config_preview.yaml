@@ -72,7 +72,7 @@
     contents:
 
     - action: integrations
-      branch: master
+      branch: bryce/update-password-parameter
       globs:
       - "*/metadata.csv"
       - "*/manifest.json"
