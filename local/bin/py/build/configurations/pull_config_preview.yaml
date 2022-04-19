@@ -60,7 +60,7 @@
     contents:
 
     - action: integrations
-      branch: prod
+      branch: bryce/add-shortcode-for-aws-permissions
       globs:
       - integration/*/*_metadata.csv
       - integration/*/manifest.json
