@@ -22,12 +22,7 @@ The Datadog PHP Profiler is in public beta. Datadog recommends evaluating the pr
 
 ## Requirements
 
-The Datadog Profiler requires at least PHP 7.1, on 64-bit Linux.
-
-The following are **not** supported:
-- PHP 8.1
-- ZTS builds of PHP
-- PHP debug builds
+The Datadog Profiler requires PHP 7.1 to 8.0, on 64-bit Linux. ZTS and debug builds are not supported.
 
 {{< tabs >}}
 {{% tab "GNU C Linux" %}}
