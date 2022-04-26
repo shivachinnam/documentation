@@ -72,7 +72,7 @@
     contents:
 
     - action: integrations
-      branch: master
+      branch: bryce/teradata-preview
       globs:
       - "*/metadata.csv"
       - "*/manifest.json"
