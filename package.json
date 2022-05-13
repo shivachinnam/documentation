@@ -101,8 +101,7 @@
         "rimraf": "^3.0.2",
         "run-sequence": "^2.2.1",
         "sass": "^1.26.10",
-        "serialize-javascript": "^2.1.1",
-        "terser-webpack-plugin": "^2.2.3"
+        "serialize-javascript": "^2.1.1"
     },
     "hugo-bin": {
         "buildTags": "extended"
